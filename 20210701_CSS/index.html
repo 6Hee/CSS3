@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css class</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+</head>
+<body>
+    <h3>링크 관련 가상 행동 선택자</h3>
+    <a class="a_focus" href="">리스트 항목으로 바로가기</a>
+    <a class="a_active" href="">active 활성화</a>
+
+
+    <h3>속성(attribute) 선택자 : 태그 내부의 속성을 선택하여 스타일을 적용시 사용</h3>
+    <div class="attr_selector_01">
+        <div>
+            <input type="text" placeholder="아이디 입력">
+            <input type="password" placeholder="비밀번호 입력">
+            <input type="email" placeholder="이메일 입력">
+        </div>
+    </div>
+
+
+    <div class="attr_selector_02">
+        <p class="dessert food">Bread</p>
+        <p class="food dessert milk">Milk</p>
+        <p class="water food" kjh>Coffee</p>
+        <p class="diet dishes">Steak</p>
+        <p class="dishes milk">Pie</p>
+    </div>
+
+    <body>
+        <ul class="attr_ex">
+            <li><a href="index.html">메인화면</a></li>
+            <li><a href="project.html">프로젝트</a></li>
+            <li><a href="about.html">본인 소개</a></li>
+        </ul>
+
+
+        <h3>수도 선택자(나는 몇번째 자식인가?)</h3>
+
+        <ul class="nth_selector">
+            <li>HTML5</li>          <!--1-->
+            <li>CSS3</li>           <!--2-->
+            <li>Javascript</li>     <!--3-->
+            <li>jQuery</li>         <!--4-->
+            <li>MySQL</li>          <!--5-->
+            <span>플래시</span>
+        </ul>
+
+        <ul class="nthType_selector">
+            <h3>나모웹에디터</h3>
+            <li>HTML5</li>          <!--1-->
+            <li>CSS3</li>           <!--2-->
+            <li>Javascript</li>     <!--3-->
+            <li>jQuery</li>         <!--4-->
+            <li>MySQL</li>          <!--5-->
+            <span>플래시</span>
+        </ul>
+
+        <body>
+            <ul class="nth_ex">
+                <li><a href="index.html">Main</a></li>
+                <li><a href="project.html">Project</a></li>
+                <li><a href="about.html">About Me</a></li>
+            </ul>
+        </body>
+        <div class="contain_selector">
+            <p>아이폰12</p>
+            <p class="myfav">갤럭시21</p>
+            <p>g9</p>
+        </div>
+
+
+        <div class="contain_ex">
+            <div>section-1</div>
+            <div id="space" class="place">section-2</div>
+            <div>section-3</div>
+            <div>section-4</div>
+        </div>
+
+        <h3>css 선택자의 명시도(점수 부여법)</h3>
+        <h4>아이디 : 100점</h4>
+        <h4>클래스 : 10점</h4>
+        <h4>태그(요소)명 : 1점</h4>
+        <div id="css_score">
+            <p id="score" class="level">명시도에 의한 색상변환</p>
+        </div>
+
+        <div id="section">
+            <div class="part">
+                <p id="txt_test" class="txt_cont">문장 
+                    명시도 테스트</p>
+            </div>
+        </div>
+    </body>
+</body>
+</html>

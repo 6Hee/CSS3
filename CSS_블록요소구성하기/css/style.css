@@ -1,0 +1,196 @@
+@charset "uft-8";
+
+*{}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+#ex_03{width: 400px; height: 401px; background-color: #ddd;}
+#ex_03 div{width: 100%; height: 200px; background-color: #ff9900;}
+#ex_03 hr{margin: 0; border: none; border-top: 1px solid #999;}
+
+#ex_04{width: 300px;height: 300px; background-image: url(../img/table.jpg); 
+    background-position: 50% 50%; background-size: cover;
+    padding: 50px;}
+#ex_04 div{width: 296px;height: 296px;border: 2px solid red; 
+    background-image: url(../img/table.jpg); background-position: 50% 50%; background-size: cover;
+}
+
+#ex_05{width: 400px;height: 500px; padding: 50px; background-color: #ff9900;}
+#ex_05 img{width: 100%; height: 260px; display: block;}
+#ex_05 h4{font-size: 20px; padding: 10px 0 20px;}
+#ex_05 p{font-size: 14px;}
+
+#ex_06{width: 400px; height: 500px; padding: 50px; background-color: #ff9900;}
+#ex_06 div{width: 100%; height: 260px; background-image: url(../img/dog.jpg);
+    background-position: 50% 50%;}
+#ex_06 h4{font-size: 20px; padding-top: 10px;}
+#ex_06 p{font-size: 14px; padding-top: 20px;}
+
+
+
+
+.home_01{width: 400px; height: 300px; background-color: #ff9900;
+padding: 50px;}
+.home_01 > .home_02{width: 100%; height: 100%; background-image: url(../img/dog.jpg)
+    ; background-position: 50% 50%; display: table;}
+.home_01 > .home_02 div{display: table-cell; vertical-align: middle; text-align: center;}
+p{font-size: 24px; color: #fff;}
+
+
+
+
+
+.home_03{width: 400px; height: 300px; background-color: #ff9900;
+    padding: 50px;}
+.home_03 > .home_04{width: 100%; height: 100%; background-image: url(../img/dog.jpg)
+        ; background-position: 50% 50%; display: table;}
+.home_03 > .home_04 div{display: table-cell; vertical-align: bottom; text-align: right;}
+p{font-size: 24px; color: #fff; padding: 0 20px 20px 0;}
+
+
+
+/* 선생님이 한 답 */
+#ex_07{width: 400px; height: 300px; padding: 50px; 
+    background-color: #ff9900; }
+#ex_07 > div{width: 100%; height: 100%; background-image: url(../img/dog.jpg);
+background-position: 50% 50%; display: table;}
+#ex_07 > div > h3{display: table-cell; text-align: center; vertical-align: middle; 
+color: white; font-size: 24px; text-shadow: 1px 1px 2px #333 ;}
+
+/* text-shadow : x축으로 이동 y축으로 이동 spread(blur) 색상 */
+/* box-shadow : x축으로 이동 y축으로 이동 spread(blur) 색상 */
+
+#ex_08{width: 400px;height: 300px;padding: 50px; background-color: #ff9900;}
+#ex_08 > div{width: 100%; height: 100%; background-image: url(../img/dog.jpg);
+background-position: 50% 50%; display: table;}
+#ex_08 > div > h3{display: table-cell; text-align: right; vertical-align: bottom; 
+color: white; font-size: 24px; padding-right: 20px; padding-bottom: 20px;
+text-shadow: 1px 1px 2px #333;}
+
+#ex_09{width: 500px; height: 400px; background: #aaffff; position: relative;}
+#ex_09 .in_img1{background-image: url(../img/pet-01.jpg); width: 300px;height: 200px;
+                background-size: cover; position: absolute;
+                right: 50px; bottom: 50px;}
+#ex_09 .in_img2{background-image: url(../img/pet-02.jpg); width: 300px;height: 200px;
+                background-size: cover; position: absolute;
+                left: 50px; top: 50px; opacity: 0.75;}
+
+
+
+#ex_10{background-image: url(../img/dog.jpg); position: relative;
+    width: 500px;height: 400px; background-position: 50% 50%; }
+#ex_10 > div{width: 392px; height: 292px; border: #ffff00; border-style:solid;
+    position: absolute; left: 50px; top: 50px;}
+/* left, top, right, bottom의 위치값을 해제하고자 할 때는 auto라는 값을
+넣음으로써 기존 값의 영향에서 벗어날 수 있음 */
+#ex_11{width: 500px;height: 400px; background-size: cover;
+background-image: url(../img/dog.jpg); background-position: 50% 50%;
+position: relative; margin: 50px;}
+#ex_11 > img{width: 120px; position: absolute;}
+#ex_11 > img:first-child{top: -9px; right: -9px;}
+#ex_11 > img:last-child{transform: rotate(180deg);
+left: -9px; bottom: -9px;}
+
+
+
+/* 실습12_1(분기점에 대한 float 적용 */
+
+#ex_12_01{width: 1000px; height: 300px; background-color: #ffcc99; padding: 50px 0;}
+#ex_12_01 div{width: 150px; height: 300px; background-color: #ee7777; float: left; margin: 0 50px;} 
+
+/* 실습12_2(분기점에 대한 display:inline-block 적용) */
+
+#ex_12_02{width: 1000px;height: 300px;background-color: #ffcc99; padding: 50px 0; font-size: 0;}
+#ex_12_02 div{background-color: #ee7777; width: 150px;height: 300px;
+display: inline-block; margin: 0 50px; font-size: 16px;}
+
+
+#ex_13{width: 1000px; height: 300px; background-color: #ffcc99; padding: 50px 0; font-size: 0; 
+    margin: 0 auto;}
+#ex_13 > div{width: 150px;height: 300px; background-color: #ee7777; display: inline-block;
+    font-size: 16px; vertical-align: top; margin: 0 50px;}
+#ex_13 > div:nth-child(2){background-color: transparent;} 
+#ex_13 > div:nth-child(2) > div{width: 150px; height: 100px; background-color: #ee7777;}
+#ex_13 > div:nth-child(2) > div:nth-child(2){margin-top: 100px;}
+
+
+/* 실습14 */
+
+#ex_14{width: 1000px; height: 300px; 
+        background-color: #ffcc99; padding: 50px 0; font-size: 0;}
+#ex_14 > div{width: 150px; height: 300px; display:inline-block; vertical-align: top; 
+    font-size: 16px; margin: 0 50px; background-color: #ee7777;}
+#ex_14 > div:nth-child(1){background-color: transparent; width: 400px;}
+#ex_14 > div:nth-child(1) > div{height: 100px; background-color: #ee7777;}
+#ex_14 > div:nth-child(1) > div:nth-child(2){margin-top: 100px;}
+#ex_14 > div:nth-child(2){background-color: transparent;}
+#ex_14 > div:nth-child(2) > div{width: 150px;height: 100px; background-color: #ee7777;}
+#ex_14 > div:nth-child(2) > div:nth-child(2){margin-top:100px ;}
+#ex_14 > div:nth-child(2) > div:nth-child(1){border-radius: 8px; background-color: #aaaaff;}
+
+
+#ex_15{width: 1000px;height: 300px; background-color: #ffcc99;
+padding: 50px 0;}
+#ex_15 > div{width: 400px; height: 300px; float: left;
+    margin: 0 50px;}
+ /* =====================첫번째 단========================= */
+#ex_15 > div > div{width: 400px; height: 100px; background-color: #ee7777;}
+#ex_15 > div > div:nth-child(2n){margin-top: 100px;}
+#ex_15 > div:nth-child(1) > div:nth-child(1){background-color:transparent;}
+#ex_15 > div:nth-child(1) > div:nth-child(1) div{width: 150px; height: 100px; 
+    background-color: #ee7777;}
+    #ex_15 > div:nth-child(1) > div:nth-child(1) > div > div{margin-left: 250px;}
+
+ /* =====================두번째 단========================= */
+#ex_15 > div:nth-child(2) > div:nth-child(2){background-color: transparent;}
+
+#ex_15 > div:nth-child(2) > div:nth-child(2){background-color:transparent;}
+#ex_15 > div:nth-child(2) > div:nth-child(2) div{width: 150px; height: 100px; 
+    background-color: #ee7777;}
+#ex_15 > div:nth-child(2) > div:nth-child(2) > div > div{margin-left: 250px;}
+
+/* ===========================선생님 답============================= */
+
+#ex_15_1{width: 1000px;height: 300px;background-color: #ffcc99;
+padding: 50px 0; margin: 0 auto; font-size: 0;}
+#ex_15_1 > .left{width: 400px;height: 300px; display: inline-block; vertical-align: top; margin: 0 50px;
+}
+#ex_15_1 > .left > .top{width: 400px;height: 100px;}
+#ex_15_1 > .left > .top > .in_left{width: 150px;height: 100px; 
+    background-color: #ee7777; display: inline-block;}
+#ex_15_1 > .left > .top > .in_right{width: 150px;height: 100px; 
+    background-color: #ee7777; display: inline-block; margin-left: 100px;}
+#ex_15_1 > .left > .bottom{width: 400px;height: 100px; 
+    background: #ee7777; margin-top: 100px;}
+
+
+#ex_15_1 .right{width: 400px;height: 300px; display: inline-block; 
+    /*display를 사용할때 무조껀 vertical-align:top;을 사용해야 깨지지 않는다*/ 
+    vertical-align: top; margin: 0 50px;
+    }
+#ex_15_1 > .right> .top{width: 400px;height: 100px; background: #ee7777;}
+#ex_15_1 > .right > .bottom{width: 400px;height: 100px; margin-top: 100px;}
+#ex_15_1 > .right > .bottom > .in_left{width: 150px;height: 100px; 
+    background-color: #ee7777; display: inline-block;}
+#ex_15_1 > .right > .bottom > .in_right{width: 150px;height: 100px; 
+    background-color: #ee7777; display: inline-block; margin-left: 100px;}
+
+
+/* =================================선생님 답 축소========================== */
+
+#ex_15_2{width: 1000px;height: 300px;background-color: #ffcc99; 
+padding: 50px 0; margin: 0 auto;}
+#ex_15_2 > div{width: 400px;height: 300px; float: left; margin: 0 50px;
+/*background: #ffa;*/}
+
+#ex_15_2 > div > div{width: 400px;height: 100px; /*background: #aff;*/}
+#ex_15_2 > div > div:last-child{margin-top: 100px;}
+#ex_15_2 > div:first-child > div:last-child, #ex_15_2 > div:last-child > div:first-child{background-color: #ee7777;}
+
+#ex_15_2 > div > div > div{width: 150px;height: 100px;
+    background-color: #ee7777; float: left;}
+#ex_15_2 > div > div > div:last-child{margin-left:100px}
+

@@ -1,0 +1,284 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+*{}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+/* =========과제 19번========= */
+#ex_19{
+    padding: 30px 0;
+    background-color: #000;
+    font-size: 0;
+}
+#ex_19 .wrap{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+}
+#ex_19 .wrap .title{
+    font-size: 40px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #d50037;
+    color: #fff;
+}
+#ex_19 .wrap .cont{
+    padding-top: 20px;
+    font-family: 'Noto Sans KR', sans-serif;
+    font-size: 18px;
+    font-weight: 100;
+    color: #fff;
+    height: 100%;
+    display: table;
+}
+#ex_19 .wrap .cont .txt_part{
+    display: inline-block;
+    left: 0;
+    margin: 0 auto;
+    display: table-cell;
+    vertical-align: middle;
+}
+#ex_19 .wrap .cont h3{
+    font-size: 40px;
+    padding-bottom: 20px;
+}
+#ex_19 .wrap .cont h4{
+    font-size: 24px;
+    padding-bottom: 10px;
+    font-weight: 300;
+    color: #d50037;
+}
+#ex_19 .wrap .cont p{
+    font-size: 18px;
+    font-weight: 100;
+}
+#ex_19 .wrap .img_part{
+    width: 350px;
+    height: 450px;
+    background-image: url(../img/img_p_coffeestory.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin-left: 50px;
+    display: inline-block;
+}
+
+/* =========과제 20번========= */
+
+#ex_20{
+    padding: 30px 0;
+    background-color: #eee;
+    font-size: 0;
+}
+#ex_20 .wrap{
+    width: 1200px;
+    margin: 0 auto;
+}
+#ex_20 .wrap .title{
+    font-size: 40px;
+    padding-bottom: 19px;
+    border-bottom: 1px solid #d50037;
+}
+#ex_20 .wrap .cont{
+    width: 1200px;
+    padding-top: 20px;
+}
+#ex_20 .wrap .cont .box{
+    width: calc(25% - 20px);
+    margin: 0 10px;
+    vertical-align: top;
+    display: inline-block;
+    position: relative;
+}
+
+#ex_20 .wrap .cont .box .cont_img{
+    height: 320px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+#ex_20 .wrap .cont .box:nth-child(1) .cont_img{
+    background-image: url(../img/img_t_menu01.png);
+}
+#ex_20 .wrap .cont .box:nth-child(2) .cont_img{
+    background-image: url(../img/img_t_menu02.png);
+}
+#ex_20 .wrap .cont .box:nth-child(3) .cont_img{
+    background-image: url(../img/img_t_menu03.png);
+}
+#ex_20 .wrap .cont .box:nth-child(4) .cont_img{
+    background-image: url(../img/img_t_menu04.png);
+}
+
+#ex_20 .wrap .cont .box .cont_img span{
+    font-size: 16px;
+    color: #fff;
+    background: #000;
+    padding: 5px 10px;
+    top: 10px;
+    left: -5px;
+    position: absolute;
+}
+#ex_20 .cont_txt{
+    font-family: 'Noto Sans KR', sans-serif;
+    padding: 20px 0;
+    vertical-align: top;
+}
+#ex_20 .wrap .cont .box .cont_txt h3{
+    font-size: 19px;
+    padding-bottom: 10px;
+    color: #333;
+}
+#ex_20 .wrap .cont .box .cont_txt .tit_en{
+    font-size: 13px;
+    padding-bottom: 20px;
+    color: #999;
+    display: inline-block;
+}
+#ex_20 .wrap .cont .box .cont_txt p{
+    font-size: 15px;
+    font-weight: 300;
+    color: #555;
+}
+#ex_20 .wrap .cont .box .cont_txt .add_comment{
+    font-size: 13px;
+    font-weight: 100;
+    color: #999;
+}
+
+/* =========과제 21번========= */
+#ex_21{
+    padding: 40px 0;
+    font-size: 0;
+}
+#ex_21 .wrap{
+    width: 1400px;
+    height: auto;
+    margin: 0 auto;
+}
+#ex_21 .wrap .cont{
+
+}
+#ex_21 .wrap .cont .img_part{
+    width: calc(50% - 80px);
+    height: 700px;
+    margin: 0 40px;
+    background-image: url(../img/WeatherproofE8_1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    display: inline-block;
+    vertical-align: middle;
+}
+#ex_21 .wrap .cont .img_part img{
+    width: 100px;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+    position: absolute;
+}
+
+#ex_21 .wrap .cont .txt_part{
+    width: calc(50% - 80px);
+    height: auto;
+    margin: 0 40px;
+    display: inline-block;
+    color: #222;
+    vertical-align: middle;
+}
+#ex_21 .wrap .cont .txt_part h5{
+    font-size: 22px;
+    padding-bottom: 20px;
+    font-weight: 100;
+}
+#ex_21 .wrap .cont .txt_part h3{
+    font-size: 24px;
+    font-weight: 300;
+}
+#ex_21 .wrap .cont .txt_part p{
+    font-size: 16px;
+    font-weight: 100;
+}
+#ex_21 .wrap .cont .txt_part .mini_line{
+    width: 60px;
+    height: 2px;
+    background: rgb(228, 37, 37);
+    margin: 40px 0;
+}
+
+/* =========과제 22번========= */
+#ex_22{
+    padding: 40px 0;
+    font-size: 0;
+}
+#ex_22 .wrap{
+    width: 1100px;
+    height: auto;
+    margin: 0 auto;
+    background: #000;
+}
+#ex_22 .wrap .top{
+    height: 360px;
+    background-image: url(../img/higherAravica_bigImg01.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+#ex_22 .wrap .bottom{
+    height: 280px;
+    padding: 40px 0;
+}
+#ex_22 .wrap .bottom .img_part{
+    width: calc(50% - 80px);
+    height: 280px;
+    margin: 0 40px;
+    background-image: url(../img/higherAravica_bigImg02.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+}
+#ex_22 .wrap .bottom .img_part img{
+    width: 50px;
+    top: 20px;
+    left: 20px;
+    position: absolute;
+}
+#ex_22 .wrap .bottom .txt_part{
+    width: calc(50% - 80px);
+    margin: 0 40px;
+    height: 280px;
+    display: inline-block;
+    vertical-align: middle;
+    position: relative;
+    text-align: center;
+}
+#ex_22 .wrap .bottom .txt_part img{
+    width: 240px;
+    top: -160px;
+    left: calc(50% - 120px);
+    position: absolute;
+}
+#ex_22 .wrap .bottom .txt_part .d_table{
+    display: table;
+    height: 280px;
+}
+#ex_22 .wrap .bottom .txt_part .d_table .d_tableCell{
+    display: table-cell;
+    height: 100%;
+    vertical-align: middle;
+    text-align: center;
+    font-family: 'Noto Sans KR', sans-serif;
+}
+#ex_22 .wrap .bottom .txt_part .d_table .d_tableCell h3{
+    font-size: 22px;
+    padding-bottom: 20px;
+    color: #fff;
+}
+#ex_22 .wrap .bottom .txt_part .d_table .d_tableCell p{
+    font-size: 17px;
+    font-weight: 100;
+    padding: 0 20px;
+    color: #fff;
+}

@@ -1,0 +1,85 @@
+@charset "uft-8";
+
+/* <div> 태그가 갖고 있는 기본 성질(block 성질) ==> width:100%; height:auto; => 가로는 부모의 영역을 상속한다.
+세로는 자식의 높이 모두 가져온다.*/
+.fixed_unit_px{width: 300px; height: 100px;
+background-color: #fa0;}
+.change_unit_percent{width: 50%;height: 100%;
+background-color: #aaf;}
+.change_unit_vw{width: 100vw; height: 100px;
+background-color: #faa;}
+.calc_unit_px{width: calc(400px - 50px); height: 100px; 
+background-color: #09f;}
+.calc_unit_percent{width: calc(50% - 20px); height: 100px; 
+    background-color: #faf;}
+.full_height{width: 100%; height: 100vh;
+background-color: #ffa;}
+
+.padding_space_01{width: 400px; height: 300px;
+background-color: #6af; padding: 50px;}
+
+.padding_space_02{width: 400px;height: 300px;
+background-color: #aff; 
+padding:30px 10px 40px 20px}
+
+.padding_space_02 .inbox{width: 100%; height: 100%;
+background-color: #ff5;}
+
+.padding_space_03{width: 400px;height: 300px;
+background-color: #f82; padding: 10px 20px;}
+
+.padding_space_03 .inbox{width: 100%;height: 100%;
+background-color: #77f;}
+
+.padding_space_04{width: 400px;height: 300px;
+background-color: #acf; padding: 20px 30px 40px;}
+.padding_space_04 .inbox{width: 100%;height: 100%;
+background-color: #cfc;}
+
+
+.border_solid{width: 200px;height: 200px;
+background-color: #ffa; border:5px solid #f00;}
+.border_dashed{width: 200px;height: 200px;
+background-color: #abf; border: 5px dashed #a6f;}
+.border_dotted{width: 200px;height: 200px;
+background-color: #fca; border: 5px dotted #f70;}
+.border_double{width: 200px;height: 200px;
+background-color: #cfc; border: 5px double #595;}
+.border_groove{width: 200px;height: 200px;
+background-color: #ccf; border: 5px groove #558;}
+.border_ridge{width: 200px;height: 200px;
+background-color: #fcf; border: 5px ridge #b9b;}
+.border_inset{width: 200px;height: 200px;
+background-color: #fcc; border: 5px inset #b88;}
+.border_outset{width: 200px;height: 200px;
+background-color: #dda; border: 5px outset #f70;}
+
+
+.border_none{width: 280px;height: 60px;
+border:none; border-bottom: 1px solid #5dd;}
+
+.margin_space_01{width: 300px;height: 300px;
+background-color: #f77; margin: 50px;}
+
+.m_space_01{width: 200px;height: 200px;margin: 50px; background-color: #aff;}
+.m_space_02{width: 200px;height: 200px;margin: 20px; background-color: #ff7;}
+
+.txt_space{width: 400px;height: 200px;background-color: #ee3535; color: #fff;}
+.txt_space h2{margin: 0; padding-top: 20px;}
+
+.main_space{width: 100%;height: 300px;
+background-color: #ff8;}
+.reservationBox{width: 60%;height: 80px;
+background-color: #f92; margin: -40px auto 0;}
+
+
+.box_01{width: 400px; height: 200px; 
+        background-color: #ffff00;
+        padding:100px 100px;}
+.box_01 .box_02{width: 100%;height: 100%;
+            background-color: #ff00ff;}
+
+
+.box_03{width: 330px;height: 310px; background-color: #ffff00;
+padding: 10px 50px 60px 40px;}
+.box_03 .box_04{width: 100%;height: 100%; background-color: #ff00ff;}

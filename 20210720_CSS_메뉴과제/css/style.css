@@ -1,0 +1,228 @@
+@charset "utf-8";
+
+*{box-sizing: border-box;}
+html, body{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+#ex_04{}
+#ex_04 .top_space{
+    height: 30px;
+    background: #326ced;
+}
+#ex_04 .top_space .info{}
+#ex_04 .top_space .info p{}
+#ex_04 .top_space .sns{
+    float: right;
+    padding: 7px 0;
+}
+#ex_04 .top_space .sns ul{}
+#ex_04 .top_space .sns ul li{}
+#ex_04 .top_space .sns ul li:last-child{
+    margin-right: 0;
+}
+#ex_04 .top_space .sns ul li a{}
+#ex_04 .top_space .sns ul li a img{
+    display: block;
+    height: 16px;
+}
+
+#ex_04 .main_space{
+    height: 120px;
+    background: #eee;
+    padding: 0 40px;
+    position: relative;
+}
+#ex_04 .main_space .logo{
+    position: absolute;
+    left: 40px;
+    top: 0;
+    padding: 30px 0;
+}
+#ex_04 .main_space .logo a{}
+#ex_04 .main_space .logo a img{
+    display: block;
+    height: 60px;
+}
+#ex_04 .main_space .menu{}
+#ex_04 .main_space .menu ul{
+    font-size: 0;
+    text-align: center;
+}
+#ex_04 .main_space .menu ul li{
+    display: inline-block;
+    margin: 0 30px;
+}
+#ex_04 .main_space .menu ul li a{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    line-height: 120px;
+    position: relative;
+}
+#ex_04 .main_space .menu ul li a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+}
+#ex_04 .main_space .menu ul li:hover a{
+    color: #326ced;
+}
+#ex_04 .main_space .menu ul li:hover a:after{
+    background-color: #326ced;
+}
+#ex_04 .main_space .btn{
+    position: absolute;
+    right: 40px;
+    top: 0;
+    padding: 40px 0;
+}
+#ex_04 .main_space .btn a{
+    display: block;
+    width: 130px;
+    height: 40px;
+    background-color: #326ced;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+
+#ex_05{}
+#ex_05 .top_space{
+    height: 30px; 
+    background-color: #326ce5; 
+    padding: 0 40px;
+}
+#ex_05 .top_space .info{
+    float: left;
+}
+#ex_05 .top_space .info p{
+    font-size: 14px; color:#fff; 
+    line-height: 30px;
+}
+
+#ex_05 .top_space .sns{
+    float: right; padding: 7px 0;
+}
+#ex_05 .top_space .sns ul{}
+#ex_05 .top_space .sns ul li{
+    float: left; margin: 0 8px;
+}
+#ex_05 .top_space .sns ul li:last-child{
+    margin-right: 0;
+}
+#ex_05 .top_space .sns ul li a{}
+#ex_05 .top_space .sns ul li a img{
+    display: block; height: 16px;
+}
+
+#ex_05 .main_space{
+    height: 190px;
+    padding: 0 40px;
+}
+#ex_05 .main_space .main_top{
+    height: 120px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+#ex_05 .main_space .main_top .logo{
+    position: absolute;
+    left: 0;
+    top: 0;
+    padding: calc(59px / 2) 0;
+}
+#ex_05 .main_space .main_top .logo a{}
+#ex_05 .main_space .main_top .logo a img{
+    display: block;
+    height: 60px;
+}
+
+#ex_05 .main_space .main_top .btn{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: calc(79px / 2) 0;
+}
+#ex_05 .main_space .main_top .btn a{
+    display: block;
+    width: 130px;
+    height: 40px;
+    background-color: #326ced;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 20px;
+    font-weight: bold;
+}
+
+#ex_05 .main_space .main_top .menu{}
+#ex_05 .main_space .main_top .menu ul{
+    font-size: 0;
+    text-align: center;
+}
+#ex_05 .main_space .main_top .menu ul li{
+    display: inline-block;
+    margin: 0 30px;
+}
+#ex_05 .main_space .main_top .menu ul li a{
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #555;
+    line-height: 119px;
+    position: relative;
+}
+#ex_05 .main_space .main_top .menu ul li a:after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 4px;
+}
+#ex_05 .main_space .main_top .menu ul li:hover a{
+    color: #326ced;
+}
+#ex_05 .main_space .main_top .menu ul li:hover a:after{
+    background-color: #326ced;
+}
+#ex_05 .main_space .main_bottom{
+    height: 70px;
+    padding: 15px 0;
+}
+#ex_05 .main_space .main_bottom .search_box{
+    width: 600px;
+    height: 40px;
+    background: #ddd;
+    margin: 0 auto;
+    border-radius: 20px;
+    padding: 0 20px;
+    font-size: 0;
+}
+#ex_05 .main_space .main_bottom .search_box input{
+    vertical-align: top;
+    width: calc(100% - 40px);
+    height: 40px;
+    border: none;
+    background-color: transparent;
+    font-size: 18px;
+}
+#ex_05 .main_space .main_bottom .search_box button{
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/search.png);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    border: none;
+    background-color: transparent;
+    vertical-align: top;
+    cursor: pointer;
+}

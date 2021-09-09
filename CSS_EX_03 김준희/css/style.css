@@ -1,0 +1,100 @@
+@charset "uft-8";
+
+@font-face {
+    font-family: 'Ubuntu';
+    src: url('../fonts/Ubuntu-Regular.eot');
+    src: url('../fonts/Ubuntu-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Ubuntu-Regular.woff2') format('woff2'),
+        url('../fonts/Ubuntu-Regular.woff') format('woff'),
+        url('../fonts/Ubuntu-Regular.ttf') format('truetype'),
+        url('../fonts/Ubuntu-Regular.svg#Ubuntu-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Nanum Pen';
+    src: url('../fonts/NanumPen.eot');
+    src: url('../fonts/NanumPen.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/NanumPen.woff2') format('woff2'),
+        url('../fonts/NanumPen.woff') format('woff'),
+        url('../fonts/NanumPen.ttf') format('truetype'),
+        url('../fonts/NanumPen.svg#NanumPen') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+*{font-family: Nanum Pen;}
+h4{font-family: Ubuntu;}
+#ex_01{width: 600px;
+    height: 100px;
+    font-size: 24px;
+    color: #fff;
+    text-align: center;
+    line-height: 4.166666666666667em;
+    line-height: 100px;
+    background-color: #ff7800;}
+
+#ex_02{
+    width: 800px;
+    height: 400px;
+    background-image: url(../img/land_01.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#ex_03{
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/character_01.png);
+    background-size: 40px;
+    background-position: center center;    
+}
+
+#ex_04 {
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/bg_04.png);
+    background-size: 250px;
+    background-position: center;
+    background-repeat: repeat;
+    
+}
+.inner_img{
+    width: 500px;
+    height: 500px;
+    background-image: url(../img/ryon.gif);
+    background-position: 100% 100%;
+    background-repeat: no-repeat;
+    background-size: 250px 250px;
+}
+
+#ex_05{
+    width: 600px;
+    background-color: #ddd;
+}
+.bg_img{
+    background-image: url(../img/bg_01.jpg);
+    height: 200px;
+    background-position: center;
+    background-size: cover;
+    
+}
+.dark{
+    height: 200px;
+    background-color:rgba(0, 0, 0, 0.5);
+}
+h3{
+    font-size: 28px;
+    font-family: Ubuntu;
+    color: white;
+    text-align: center;
+    line-height: 200px;
+    text-transform: capitalize;
+}
+p{
+    font-size: 18px;
+    color: #555;
+    font-family: Ubuntu;
+}

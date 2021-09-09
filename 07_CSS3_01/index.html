@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 - 문법 1</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h3>border-radius : 모서리를 둥글게 처리하는 선언</h3>
+    <p>border-radius : 20px; => 좌상단, 우상단, 우하단, 좌하단의 모든 모서리를 원형의 반지름 값인 20px로 둥글게 처리해라</p>
+
+    <div class="radius_01"></div>
+    <div class="radius_02"></div>
+
+    <p>border-radius : 10px 20px 30px 40px; => 좌상단으로부터  시계방향의 모서리를 각각 적용된 값으로 둥글게 처리해라. border-radius: 좌상단 우상단 우하단 좌하단;</p>
+
+    <div class="radius_03"></div>
+
+    <p>border-radius : 10px 40px => 좌상단(우하단) 우상단(좌하단)</p>
+
+    <div class="radius_04"></div>
+
+    <p>border-radius : 10px 40px 0px => 좌상단 우상단(좌하단) 우하단</p>
+    <div class="radius_05"></div>
+
+    <p>1/4 원을 구성할 때 : width값과 height 값은 동일한 선조건</p>
+    <div class="quarter_radius"></div>
+
+    <p>1/2 원을 구성할 때 :width값 또는 Height 값이 상대적으로 두배일 때 가능</p>
+    <div class="half_radius"></div>
+
+    <p>타원을 구성할 때 : width 값과 height 값이 동일하지 않을 때 가능 + 50%이상의 라디우스 적용</p>
+    <div class="ellipse_radius"></div>
+
+    <p>캡슐형태를 구성할 때 : width값과 height 값이 동일하지 않을 때 가능 + 고정px</p>
+    <div class="capsule_radius"></div>
+
+
+    <h3>실습과제 #01</h3>
+    <div id="ex_01"></div>
+    <div id="ex_02"></div>
+    <div id="ex_03"></div>
+    <div id="ex_04"></div>
+
+
+    <p>border-radius를 활용한 불규칙한 원 형태를 구성하기 : border-radius 1회 선언에서 두번 적용</p>
+    <div class="unbalance_radius"></div>
+
+    <h3>box-shadow (공간에 대한 그림자를 부여) :X-offset 값  Y-offset값
+        스프레드(번짐정도) 색상
+    </h3>
+
+    <div class="shadow_space_rect"></div>
+    <div class="shadow_space_circle"></div>
+
+    <p>Inner Shadow</p>
+    <div class="inner_shadow"></div>
+
+    <p>neomorphism: 부드러운 그림자 테두리를 구성하여 
+        배경화면과 조화를 이루게끔 구성하는 디자인 형태 => 복수의 box-shadow의 값을
+        통해서 입체적인 효과로 접근 가능 각 그림자의 선언값은 콤마를 기준으로 다수의
+        그림자를 부여가능</p>
+    <div class="neomorphism_box">
+        <div></div>
+    </div>
+
+    <h3>Gradient</h3>
+    <h4>linear-gradient : 선형 그라디언트</h4>
+    <div class="gr_linear"></div>
+
+    <h4>radial-gradient : 원형 그라디언트 (타원형태 - ellipse / 정원 형태 - circle)</h4>
+    <div class="gr_radial_01"></div>
+    <div class="gr_radial_02"></div>
+
+
+
+    <h3>멀티백그라운드 구성</h3>
+    <div class="multi_bg"></div>
+
+    <h3>확장형(맞춤복) vs 축소형(기성복)</h3>
+
+    <p>box-sizing : content-box; (기본값) => 확장형 박스</p>
+
+    <div class="content_box">
+        <div></div>
+    </div>
+
+    <hr>
+
+    <div class="border_box">
+        <div></div>
+    </div>
+
+    <div id="kakao">
+        <div>
+            <img src="./img/kakao_01.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/kakao_02.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/kakao_03.jpg" alt="">
+        </div>
+        <div>
+            <img src="./img/kakao_04.jpg" alt="">
+        </div>
+    </div>
+    
+</body>
+</html>

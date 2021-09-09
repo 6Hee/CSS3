@@ -1,0 +1,162 @@
+@charset "utf-8";
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+/* PC */
+.res_box1{
+    width: 600px; height: 600px;
+    background: #aff;
+}
+
+/* Tablet : 1200px 이하로 조정시(~769px) */
+/*조건문에 ; 은 찍지 않는다.*/
+
+/* 큰 가로값부터 작은 가로값을 지정!!*/
+@media (max-width:1200px){
+    .res_box1{width: 400px; height: 400px; background: #faf; transition: 0.5s;}
+}
+
+
+/*768px 이하로 브라우저 사이즈 조정시 가로/세로값을 300px로 조정하고 배경색상을 #afa로 변경해 보세요.*/
+/*미디어쿼리에서 조건문 이후에 작성된 {}중괄호는 하나의 시점 메모리 영역이 됨(블록 메모리)*/
+
+/* Mobile : 768px 이하로 조정시 */
+@media (max-width:768px){
+    .res_box1{width: 300px; height: 300px; background: #afa;}
+}
+
+
+.res_box2{width: 300px; height: 300px; background: #f00;}
+
+
+
+
+/* 작은 가로값부터 큰 가로값을 지정!!*/
+@media (min-width:769px){
+    .res_box2{width: 400px; height: 400px; background: #ff0;}
+}
+
+/*위의 max-width 시점과 맞춰서 사이즈가 동일하게(가로 세로 600px) 조정되게 min-width를 활용하여 코딩하시오. (배경색상은 #00f)*/
+
+
+@media (min-width:1201px){
+    .res_box2{width: 600px; height: 600px; background: #00f;}
+}
+
+
+/*
+#h_01{
+    width: 100%; height: 60px; 
+    background: #ccc;
+}
+#h_01 .wrap{
+    width: 1200px; height: 100%; 
+    margin: 0 auto;
+    background: #faf;
+}
+@media (max-width:1200px){
+    #h_01 .wrap{width: 100%;}
+}
+
+#h_02{width: 100%; height: 60px; background: #ffa; position: relative;}
+#h_02 .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    background: #aff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#h_02 .wrap .menu{}
+#h_02 .wrap .menu ul{display: flex;}
+#h_02 .wrap .menu ul li{margin: 0 3%;}
+#h_02 .wrap .menu ul li a{
+    display: block;
+}
+#content{height: 400px; background: #aaf;}
+
+
+#h_02 input[type="radio"]{
+    display: none;  
+    position: absolute;
+    top: 0; 
+    left: calc(10px * var(--a));
+    각 태그마다 선언된 --i라는 변수에 담긴 데이터 값을 가져온다.
+}
+#h_02 label{display: none;}
+
+
+@media (max-width:1200px){
+    #h_02 .wrap{width: 100%;}
+}
+
+@media (max-width:767px){
+    #h_02 .wrap .menu{
+        position: absolute;
+        top: 60px; left: 0;
+        width: 100%; text-align: center;
+        background: #04c;
+    }
+    #h_02 .wrap .menu ul{flex-direction: column;}
+    #h_02 .wrap .menu ul li{}
+    #h_02 .wrap .menu ul li a{
+        color: #fff;
+        line-height: 40px;
+        border-bottom: 1px solid #fff;
+    }
+    #h_02 .wrap .menu ul li:last-child a{border: none;}
+}
+*/
+
+
+#h_02{width: 100%; height: 60px; background: #ffa; position: relative;}
+#h_02 .wrap{width: 1200px; height: 100%; margin: 0 auto; background: #aff; display: flex;  flex-wrap: wrap; justify-content: center; align-items: center;}
+#h_02 .wrap .menu{}
+#h_02 .wrap .menu ul{display: flex; flex-wrap: wrap; justify-content: center;}
+#h_02 .wrap .menu ul li{margin: 0 15px;}
+#h_02 .wrap .menu ul li a{display: block; width: 100%;}
+#content{height: 400px; background: #aaf;}
+
+#h_02 input[type="radio"]{/*display: none;*/ 
+    position: absolute; 
+    top:0; 
+    left:calc(40px * var(--a));
+    /*각 태그마다 선언된 --i라는 변수에 담긴 데이터 값을 가져온다.*/
+}
+
+#h_02 label{display: none;}
+
+
+
+@media (max-width:1200px){
+    #h_02 .wrap{width: 100%;}
+}
+
+@media (max-width:767px){
+    #h_02 .wrap .menu{position: absolute; top:60px; left:0; width: 100%; text-align: center; background: #04c; padding: 0 20px; max-height:0; overflow: hidden;}
+    #h_02 .wrap .menu ul{flex-direction: column;}
+    #h_02 .wrap .menu ul li{}
+    #h_02 .wrap .menu ul li a{color:#fff; line-height: 40px; border-bottom: 1px solid #fff;}
+    #h_02 .wrap .menu ul li:last-child a{border:none;}
+
+
+    #h_02 label.res_btn{position: absolute; top:15px; right:15px; display: block; cursor: pointer;}
+    #h_02 label.res_btn img{display: block; height: 30px;}
+
+    #h_02 label.close{position: absolute; top:15px; right:15px; display: none; cursor: pointer;}
+    #h_02 label.close img{display: block; height: 30px;}
+
+
+    #h_02 input#openMenu:checked ~ .wrap .menu{max-height:200px; transition: max-height 0.5s;}
+
+    #h_02 input#openMenu:checked ~ label.res_btn{display: none;}
+    #h_02 input#openMenu:checked ~ label.close{display: block;}
+
+
+
+
+}

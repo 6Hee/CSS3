@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스타일시트 적용 문법</title>
+    <style>p{color: #ff0000;}</style>
+    <link rel="stylesheet" href="./CSS/style.css"><!-- 외부 스타일 시트 -->
+  
+</head>
+<body>
+    <h2>스타일 적용의 우선순위 테스트</h2>
+    <h3>스타일시트의 종류</h3>
+    <p style="color: #0000ff;">인라인 스타일시트 : 태그 내부에서 style이라는 속성을 선언하고 그 값으로 
+        각 스타일을 직접 적용할 때 사용(가장 우선순위가 높음) - 직접 스타일 적용</p>
+    <p>내부 스타일 시트 : HTML 문서 내부에서 style 태그를 선언하여 해당하는 선택자의 스타일을 적용할 때 사용</p>
+
+    <style>
+        /* p{color: #ff8800;} */
+    </style>
+</body>
+</html>

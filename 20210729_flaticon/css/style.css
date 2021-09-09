@@ -1,0 +1,16 @@
+@charset "utf-8";
+
+.glyph .flaticon {
+    padding: 10px;
+    display: block;
+    font-family: "Flaticon";
+    font-size: 64px;
+    line-height: 1;
+}
+
+.glyph .flaticon:before {
+    font-size: 64px;
+    /* color: #5f7d95; */
+    margin-left: 0;
+}
+.glyph .flaticon.f_icon_1:before{color: red; font-size: 24px;}

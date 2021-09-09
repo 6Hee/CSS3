@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - 배경 구성하기</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h3>배경색상 (background-color) - 문자(red,orange 등)
+        16진수 코드(#ff0000 = #f00) , rgba(255, 0, 0,5),
+        hsb(색상각도(deg), 채도비율(%), 명도비율(%))
+    </h3>
+
+    <div class="bg_color_txt"></div>
+    <div class="bg_color_rgba">
+        <div class="dark"></div>
+    </div>
+    <div class="bg_color_code"></div>
+
+    <h3>배경 이미지 (background-image:url(이미지의 파일 및 경로))
+    </h3>
+    <div class="bg_image_01"></div>
+    <div class="bg_image_02" style="
+        width: 300px; height: 300px; 
+        background-image:url(./img/university_02.jpg);">
+        </div>
+
+    <h3>배경의 위치 (background-position : 수평위치, 수직위치)
+    </h3>
+    <p>수평위치 선언 가능한 값 : left, center, right /
+        0%~100% / px</p>
+
+    <p>수직위치 선언 가능한 값 : top, center(middle은 사용불가)
+        bottom / 0%~100%
+    </p>
+    <div class="bg_position_01"></div>
+
+    <div class="bg_position_small"></div>
+
+    <!-- 
+        <img> 태그를 사용해야할 경우 : 로고, 아이콘
+        (웹사이트 내부의 아이콘, sns 아이콘, 메뉴항목에 위치시킬 
+        썸네일 아이콘) => 원본 유지가 필수
+        background-image를 선언할 경우 : 일반적인 사진 이미지
+     -->
+
+     <h3>배경의 크기 (background-size : 가로사이즈 세로사이즈 /
+         cover / contain )
+     </h3>
+     <p>가로사이즈 및 세로사이즈에 적용 가능한 단위 : %, px emd /
+         auto : 가로 또는 세로가 고정으로 지정되었을 때 나머지의 비율
+         에 의해 맞춰준다.
+     </p>
+
+     <div class="bg_size"></div>
+     <div class="bg_size_cover"></div>
+     <div class="bg_size_cover2"></div>
+
+     <h3>parallax 효과를 구현할 수 있는 배경 붙이기 (background-attachment 
+         : scroll(기본값) / fixed)
+     </h3>
+
+     <div class="bg_attach"></div>
+
+     <hr>
+
+     <h3>통함 background</h3>
+     <p>background : 배경색상, 배경이미지, 반복여부, 배경 위치
+         배경 사이즈, 배경 붙이기
+     </p>
+     <div class="total_bg"></div>
+
+
+
+</body>
+</html>

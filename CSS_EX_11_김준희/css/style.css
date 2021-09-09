@@ -1,0 +1,254 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+
+#ex_01{}
+#ex_01 .top_nav{
+    width: 420px;
+}
+#ex_01 .top_nav_ul{
+    font-size: 0;
+}
+#ex_01 .top_nav_ul li{
+    display: inline-block;
+    width: calc(420px / 3);
+    height: 44px;
+    background: #111;
+    text-align: center;
+}
+#ex_01 .top_nav_ul li a{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 44px;
+}
+/* ==============서브 메뉴 라인============*/
+#ex_01 .top_nav_sub{
+    width: 100%;
+    height: 120px;
+    background: #aaffaa;
+    font-size: 0;
+    opacity: 0;
+}
+#ex_01 .top_nav:hover .top_nav_sub{
+    opacity: 1;
+}
+#ex_01 .top_nav_sub ul{
+    display: inline-block;
+    vertical-align: top;
+}
+#ex_01 .top_nav_sub li{
+    display: block;
+    width: 140px;
+    height: 40px;
+    text-align: center;
+}
+#ex_01 .top_nav_sub li a{
+    display: block;
+    font-size: 18px;
+    line-height: 40px;
+    color: #363636;
+}
+#ex_01 .top_nav_sub li:hover a{
+    text-shadow:1px 1px 2px #000;
+}
+
+
+
+#ex_02{font-family: 'Roboto', sans-serif;}
+/*================ 상단 헤더 라인======================*/
+#ex_02 .top{
+    width: 100%;
+    height: 36px;
+    background: #00131b;
+}
+#ex_02 .top .t_wrap{
+    width: 1024px;
+    height: auto;
+    padding: 0 10px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+/*================= 하단 헤더 라인====================*/
+#ex_02 .bot{
+    width: 100%;
+    height: 74px;
+    background: #051621;
+}
+#ex_02 .bot .b_wrap{
+    width: 1024px;
+    height: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+    text-align: center;
+    vertical-align: top;
+    font-size: 0;
+}
+/*================= 하단 헤더 왼쪽 이미지 ==================*/
+#ex_02 .bot .b_wrap .left_img{
+    display: block;
+    float: left;
+    height: 40px;
+    margin: 17px 0;
+}
+/*================== 하단 헤더 메뉴 ===================*/
+#ex_02 .bot .b_wrap .center_txt{
+    display: inline-block;
+}
+#ex_02 .bot .b_wrap .center_txt ul{}
+#ex_02 .bot .b_wrap .center_txt ul li{
+    display: inline-block;
+}
+#ex_02 .bot .b_wrap .center_txt ul li a{
+    display: block;
+    font-size: 16px;
+    line-height: 74px;
+    color: #fff;
+    margin-right: 40px;
+}
+/* =================하단 헤더 티켓 버튼 =================*/
+#ex_02 .bot .b_wrap .center_txt .btn{
+    display: inline-block;
+    padding-left: 40px;
+    border-left: 1px solid #fff;
+}
+#ex_02 .bot .b_wrap .center_txt .btn a{
+    font-size: 16px;
+    line-height: 1;
+    color: #fe454d;
+}
+/*================ 하단 헤더 오른쪽 이미지============*/
+#ex_02 .bot .b_wrap .right_img{
+    float: right;
+    width: 40px;
+    height: 40px;
+    background-image: url(../img/flower.png);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 17px 0;
+}
+
+
+
+
+
+#ex_03{
+    height: 80px;
+}
+#ex_03 .wrap{
+    width: 1000px;
+    height: 100%;
+    background: #aaeeff;
+    margin: 0 auto;
+    padding: 0 20px; 
+}
+/*================== 헤더 로고 =========================*/
+#ex_03 .wrap .logo{
+    float: left;
+}
+#ex_03 .wrap .logo img:first-child{
+    padding-right: 5px;
+    width: 50px;
+    height: 50px;
+    margin: 15px 0;
+}
+#ex_03 .wrap .logo img:last-child{
+    width: 250px;
+    height: 40px;
+    margin: 20px 0;
+}
+
+/*============ 헤더 중앙 메뉴 ======================*/
+#ex_03 .wrap .menu{
+    float: right;
+    text-align: center;
+    font-size: 0;
+}
+#ex_03 .wrap .menu > ul > li{
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 40px;
+}
+/*================헤더 상단 메뉴 네비===================*/
+#ex_03 .wrap .menu > ul > li > a{
+    display: block;
+    font-size: 14px;
+    line-height: 80px;  
+    color: #555;
+    position: relative;
+}
+#ex_03 .wrap .menu > ul > li:nth-child(n+3) > a{
+    padding-right: 24px;
+}
+#ex_03 .wrap .menu > ul > li:hover > a{
+    color: #222;
+}
+#ex_03 .wrap .menu > ul > li:nth-child(n+3) > a:after{
+    content: "";
+    display: block;
+    position: absolute;
+    top: calc(50% - 3px);
+    right: 4px;
+    border-bottom: 5px solid transparent;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent; 
+    border-top: 5px solid #555;
+    transition: transform 0.5s;
+}
+#ex_03 .wrap .menu > ul > li:nth-child(n+3):hover > a:after{
+    transform-origin: 50% 25% 0; 
+    transform: rotate(180deg);
+    
+}
+/*============== 서브 메뉴 ==========================*/
+#ex_03 .wrap .menu > ul > li > ul{
+    border: 1px solid #999;
+    border-radius: 4px;
+    padding: 10px;
+    opacity: 0;
+}
+#ex_03 .wrap .menu > ul > li:hover > ul{
+    opacity: 1;
+}
+#ex_03 .wrap .menu > ul > li > ul > li > a{
+    display: block;
+    font-size: 14px;
+    padding: 10px 0;
+    background-color: #fff;
+    color: #555;
+}
+#ex_03 .wrap .menu > ul > li > ul > li:hover > a{
+    color: #222;
+}
+
+/*========== 헤더 오른쪽 버튼 =========================*/
+#ex_03 .wrap .menu .right_btn{
+    width: 150px;
+    height: 36px;
+    float: right;
+    position: relative;
+}
+#ex_03 .wrap .menu .right_btn a{
+    position: absolute;
+    display: block;
+    font-size: 14px;
+    width: 100px;
+    height: 36px;
+    line-height: 36px;
+    color: #fff;
+    background: #0000ff;
+    border-radius: 4px;
+    margin: 22px 0;
+    text-align: center;
+    right: 0;
+}

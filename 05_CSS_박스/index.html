@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - 박스</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h3>width와 height0</h3>
+    <p>단위 : px, %(스크롤바의 영역 제외), vw(스크롤바의 영역을 포함), vh,</p>
+    <p>계산된 단위 : calc(100% - 20px)</p>
+    <div class="fixed_unit_px">고정형 단위(px)</div>
+    <div class="change_unit_percent">유동형 단위(%)</div>
+
+    <div class="change_unit_vw">유동형 단위(vw)</div>
+    <div class="calc_unit_px"></div>
+    <div class="calc_unit_percent">계산된 유동형 상자</div>
+    <div class="full_height"></div>
+
+    <h3>padding 영역 : 컨텐츠 영역(실제 내부 내용 공간)과 
+        보더 영역(전체 공간의 영역) 사이에 존재하는
+        공간
+    </h3>
+    <p>padding 작성시, padding:20px; => 패딩 영역을
+        상하좌우의 모든 공간에 동일하게 20px을 부여하겠다는 의미
+    </p>
+    <div class="padding_space_01"></div>
+
+    <p>padding 작성시, padding-left:20px; padding-top:30px;
+        padding-right: 100px; padding--bottom: 40px; => 통합(상단으로부터
+        시계방향으로 각 방위에 대한 값을 부여가능)=> padding:30px 10px 40px 20px
+    </p>
+
+    <div class="padding_space_02">
+        <div class="inbox"></div>
+    </div>
+
+    <p>padding 작성시, padding:10px 20px; / 
+        padding:상하 좌우; </p>
+
+    <div class="padding_space_03">
+        <div class="inbox"></div>
+    </div>
+
+    <p>padding 작성시, padding:20px 30px 40px; /
+    padding : 상 좌우 하;</p>
+
+    <div class="padding_space_04">
+        <div class="inbox"></div>
+    </div>
+
+    <h3>border : 형태의 범위를 지정한 마지막 외곽 라인</h3>
+    <p>
+        border : 두께 선스타일 색상; 
+    </p>
+    <div class="border_solid"></div>
+    <div class="border_dashed"></div>
+    <div class="border_dotted"></div>
+    <div class="border_double"></div>
+    <div class="border_groove"></div>
+    <div class="border_ridge"></div>
+    <br>
+    <div class="border_inset"></div>
+    <div class="border_outset"></div>
+
+    <input class="border_none" type="text" placeholder="검색어 입력하세요">
+    <h3> 바깥쪽 여백의 공간을 지침. 주변사람과의 간격을 띄우는 역할을 담당</h3>
+    <div class="margin_space_01"></div>
+
+    <p>상하의 마진영역을 두 공간에 동시에 배치시</p>
+    <div class="space">
+        <div class="m_space_01"></div>
+        <div class="m_space_02"></div>
+    </div>
+
+    <p>부모자식 관계에서 자식이 마진 상단값을 갖고 있다면 부모의 영역을
+        함께 끌어내리는 현상이 나타남 = 해결방법 > 자식의 마진값을 제거 후 패딩으로
+        대체한다.
+    </p>
+    <div class="txt_space">
+        <h2>Title</h2>
+    </div>
+
+    <p>마진 영역을 통해서 음수를 지정가능</p>
+    <div class="minus_space">
+        <div class="main_space"></div>
+        <div class="reservationBox"></div>
+    </div>
+
+    <div class="box_01">
+        <div class="box_02"></div>
+    </div>
+
+    <h2>실습2</h2>
+    <div class="box_03">
+        <div class="box_04"></div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid 실습</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+
+
+    <section id="ex_01">
+
+
+        <input type="radio" name="iloom" id="photo2">
+        <input type="radio" name="iloom" id="photo3">
+        <input type="radio" name="iloom" id="photo4">
+        <input type="radio" name="iloom" id="photo5">
+    
+        <div class="wrap">
+            <div class="box main"></div>
+            <div class="box p_02"><label for="photo2"></label></div>
+            <div class="box p_03"><label for="photo3"></label></div>
+            <div class="box p_04"><label for="photo4"></label></div>
+            <div class="box p_05"><label for="photo5"></label></div>
+            <div class="box"><a href="#"><img src="./img/iloom_logo.png" alt=""></a></div>
+        </div>
+    </section>
+
+
+    <section id="ex_02">
+        <div class="wrap">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </section>
+
+
+
+    <h3>이미지의 내부 확대</h3>
+    <p>#1. 배경 이미지로 적용된 상자에 마우스 오버시 이미지의 확대 표현 - 하나의 태그에서 구현 가능</p>
+
+    <article id="test1">
+        <a href="#">Detail More</a>
+    </article>
+
+
+    <p>#2. img 태그를 사용할 때, 마우스 오버시 내부 이미지의 확대 표현 - 외부박스가 반드시 존재해야하며, overflow:hidden도 적용되어 있어야 함</p>
+
+    <article id="test2">
+        <img src="./img/o_bg.jpg" alt="">
+        <a href="#">Detail More</a>
+    </article>
+
+
+</body>
+</html>

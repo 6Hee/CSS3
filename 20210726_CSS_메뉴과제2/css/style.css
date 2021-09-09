@@ -1,0 +1,399 @@
+@charset "utf-8";
+
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0; }
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+#drop{
+    width: 100%;
+    height: 80px;
+}
+#drop .wrap{
+    width: 1000px;
+    height: 100%;
+    margin: 0 auto;
+    padding: 0 20px;
+    background-color: #aaeeff;
+}
+#drop .wrap .logo{
+    float: left;
+    width: 300px;
+    padding: 25px 0;
+}
+#drop .wrap .logo a{}
+#drop .wrap .logo a img{
+    display: inline-block;
+    vertical-align: middle;
+}
+#drop .wrap .logo a img:nth-child(1){
+    height: 30px;
+}
+#drop .wrap .menu{
+    float: right;
+}
+#drop .wrap .menu > ul{
+    float: left;
+}
+#drop .wrap .menu > ul > li{
+    float: left;
+    margin-left: 40px;
+}
+#drop .wrap .menu > ul > li > a{
+    display: block;
+    background-color: #f60;
+    /* line-height: 80px;
+    font-size: 14px;
+    color: #555; */
+}
+#drop .wrap .menu > ul > li > a > span{
+    display: inline-block;
+    line-height: 80px;
+    font-size: 14px;
+    color: #555;
+}
+#drop .wrap .menu > ul > li:nth-child(3) > a > span, #drop .wrap .menu > ul > li:nth-child(4) > a > span{
+    display: inline-block;
+    vertical-align: middle;
+}
+#drop .wrap .menu > ul > li > a > .arrow{
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 5px solid #555;
+    transition: transform 0.5s;
+}
+
+#drop .wrap .menu > ul > li:hover > a > .arrow{
+    transform: rotate(180deg);
+}
+#drop .wrap .menu > ul > li > ul{
+    padding: 10px 0;
+    background-color: #fff;
+    /* border: 1px solid #999; */
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 1px 1px #999;
+    display: none;
+}
+#drop .wrap .menu > ul > li > ul:before{
+    content: "";
+    border-bottom: 5px solid #fff;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    position: absolute;
+    top: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    /* box-shadow: 0 -2px 1px #999; */
+
+}
+#drop .wrap .menu > ul > li:hover > ul{
+    display: block;
+}
+#drop .wrap .menu > ul > li > ul > li{
+    padding: 10px 0;
+}
+#drop .wrap .menu > ul > li > ul > li > a{
+    font-size: 14px;
+    color: #555;
+}
+#drop .wrap .menu > ul > li:last-child > ul > li > a{
+    display: inline-block;
+    padding-left: 25px;
+    background-size: auto 14px;
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+}
+#drop .wrap .menu > ul > li:last-child > ul > li:nth-child(1) > a{
+    background-image: url(../img/dropbox-chat-icon.svg);
+}
+#drop .wrap .menu > ul > li:last-child > ul > li:nth-child(2) > a{
+    background-image: url(../img/dropbox-mail-icon.svg);
+    background-size: auto 12px;
+}
+#drop .wrap .menu .btn{
+    float: left;
+    width: 150px;
+    text-align: right;
+    padding: 22px 0;
+}
+#drop .wrap .menu .btn a{
+    display: inline-block;
+    width: 100px; height: 36px;
+    background-color: #00f;
+    color: #fff;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 36px;
+}
+
+
+#opera{}
+#opera .wrap{
+    width: 1024px; height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+#opera .top{
+    height: 36px;
+    background-color: #00131b;
+    text-align: center;
+    padding: 7px 0;
+}
+#opera .top .wrap img{
+    height: 22px;
+}
+#opera .main{
+    height: 74px;
+    background: #051621;
+}
+#opera .main .wrap{
+    width: 1024px; height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+    position: relative;
+}
+#opera .main .wrap .logo{
+    position: absolute;
+    top: 17px;
+    height: 10px;
+}
+#opera .main .wrap .logo a{}
+#opera .main .wrap .logo a img{
+    display: block;
+    height: 40px;
+}
+
+#opera .main .wrap .menu{text-align: center;}
+#opera .main .wrap .menu ul{
+    display: inline-block;
+    vertical-align: middle;
+    padding-right: 20px;
+}
+#opera .main .wrap .menu ul li{
+    float: left;
+    margin: 0 20px;
+}
+#opera .main .wrap .menu ul li a{
+    display: block;
+    line-height: 74px;
+    color: #fff;
+    font-size: 16px;
+}
+
+#opera .main .wrap .ticket{
+    display: inline-block;
+    vertical-align: middle;
+}
+#opera .main .wrap .ticket a{
+    display: block;
+    line-height: 1;
+    padding-left: 40px;
+    border-left: 1px solid #fff;
+    color: #fe4545;
+}
+
+#opera .main .wrap .btn{
+    position: absolute;
+    top: 17px;
+    right: 10px;
+}
+#opera .main .wrap .btn a{}
+#opera .main .wrap .btn a img{
+    display: block;
+    height: 40px;
+}
+
+
+#mad{
+    width: 1200px; height: 84px;
+    margin: 0 auto;
+    background: #000;
+    position: relative;
+}
+#mad .logo{
+    position: absolute;
+    top: 31px;
+    left: 20px;
+}
+#mad .logo a{}
+#mad .logo a img{display: block;}
+
+
+/* =============상단 메뉴파트 ========================*/
+#mad .menu{text-align: center;}
+#mad .menu > ul{}
+#mad .menu > ul > li{
+    display: inline-block;
+    margin: 0 20px;
+    vertical-align: top;
+}
+#mad .menu > ul > li > a{
+    display: block;
+    font-size: 14px;
+    color: #7f7f7f;
+    font-weight: bold;
+    line-height: 84px;
+}
+
+/* ===========상단 메뉴의 서브 메뉴 파트=============== */
+#mad .menu > ul > li > ul{
+    position: absolute;
+    left: 0;
+    width: 100%; height: 55px;
+    background: #ccc;
+    border-top: 1px solid #9f9f9f;
+    display: none;
+}
+#mad .menu > ul > li:hover > ul{
+    display: block; 
+}
+
+#mad .menu > ul > li > ul > li{
+    display: inline-block;
+    margin: 0 20px;
+}
+#mad .menu > ul > li > ul > li > a{
+    display: block;
+    font-size: 12px;
+    color: #333;
+    line-height: 55px;
+}
+
+
+/* =============상단 우측 로그인 파트 ================ */
+#mad .mypage{
+    position: absolute;
+    top: 36px;
+    right: 10px;
+}
+#mad .mypage ul{}
+#mad .mypage ul li{float: left;}
+#mad .mypage ul li a{
+    display: block;
+    line-height: 1;
+    color: #7f7f7f;
+    font-size: 12px;
+    padding: 0 10px;
+    border-right: 1px solid #9f9f9f;
+}
+#mad .mypage ul li:nth-child(2) a{
+    border-right: 1px solid #fff;
+}
+#mad .mypage ul li:nth-child(4) a{
+    border: none;
+}
+#mad .mypage ul li:hover a{color: #fff;}
+
+
+
+
+
+/*=============== sk 상단 수업실습 ================== */
+
+#sk{
+    width: 100%; height: 55px;
+    background: #ededed;
+    position: relative;
+}
+
+/* ============ 좌측 sk 로고 ============== */
+#sk .logo{
+    position: absolute;
+    top: 5px;
+    left: 20px;
+}
+#sk .logo a{}
+#sk .logo a img{
+    display: block;
+    height: 45px;
+}
+
+
+
+/*================ 중앙 메인 메뉴 =============== */
+#sk .menu{text-align: center;}
+#sk .menu > ul{font-size: 0;}
+#sk .menu > ul > li{
+    display: inline-block;
+    vertical-align: top;
+    margin: 0 20px;
+}
+#sk .menu > ul > li > a{
+    display: block;
+    font-size: 14px;
+    line-height: 55px;
+    color: #7f7f7f;
+    font-weight: bold;
+}
+
+/* ================ 중앙 서브 메뉴 ================ */
+#sk .menu > ul > li > ul{
+    position: absolute;
+    width: 100%;
+    left: 0;
+    /* top: 56px; */
+    height: 44px;
+    border-top: 1px solid #999;
+    background: #ededed;
+    max-height: 0;
+    overflow: hidden;
+}
+#sk .menu > ul > li:hover > ul{
+    max-height: 44px;
+    transition: max-height 0.5s;
+}
+#sk .menu > ul > li:nth-child(1) > ul{}
+#sk .menu > ul > li:nth-child(2) > ul{}
+#sk .menu > ul > li:nth-child(3) > ul{}
+#sk .menu > ul > li:nth-child(4) > ul{padding-left: 300px;}
+#sk .menu > ul > li > ul > li{
+    display: inline-block;
+    margin: 0 20px;
+}
+#sk .menu > ul > li > ul > li > a{
+    font-size: 11px;
+    color: #7f7f7f;
+    line-height: 43px;
+}
+
+
+/* ==================우측 링크 버튼================ */
+#sk .link{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+#sk .link ul{}
+#sk .link ul li{float: left;}
+#sk .link ul li:first-child{
+    width: 54px;
+}
+#sk .link ul li:first-child a{
+    display: block;
+    height: 55px;
+    background-color: #fff;
+    background-image: url(../img/sk-search.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+}
+#sk .link ul li:last-child{
+    width: 112px;
+    height: 55px;
+    background-color: #f00;
+    text-align: center;
+}
+#sk .link ul li:last-child a{
+    display: inline-block;
+    line-height: 55px;
+    color: #fff;
+    padding-right: 12px;
+    background-image: url(../img/sk-right_triangle.png);
+    background-repeat: no-repeat;
+    background-position: 100% 50%;
+}

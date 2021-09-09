@@ -1,0 +1,6 @@
+@charset "utf-8";
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+header, section, footer, nav{display: block;}
+a{text-decoration: none;}

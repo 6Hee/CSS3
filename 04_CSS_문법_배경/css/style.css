@@ -1,0 +1,127 @@
+@charset "utf-8";
+
+.bg_color_txt{
+    width: 200px;
+    height: 200px;
+    background-color: pink;
+}
+.bg_color_rgba{
+    width: 200px;
+    height: 200px;
+    background-color: rgba(255, 255, 0, 1);
+    background-color: #ff0;
+}
+
+.bg_color_rgba:hover .dark{
+    width: 100%; /*부모의 가로영역을 그대로 계승한다. 100%*/
+    height: 100%; /*부모의 세로영역을 그대로 계승한다. 100%*/
+    background-color: rgba(0,0,0,0.5);
+}
+
+/* rgba(red 수치(0~255), green 수치(0~255), blue 수치
+    (0~255), 0(완전투명)~1(완전불투명)); => 불완전한 투명
+    : 하위 자식들에게 영향을 주지 않는다.
+
+    opacity : 0(완전투명)~1(완전불투명) => 완벽한 투명
+    : 하위자식까지 모두 투명해짐
+*/
+
+.bg_color_code{
+    width: 200px;
+    height: 200px;
+    background-color: #aaaaff;
+}
+
+.bg_image_01{
+    width: 300px;
+    height: 300px;
+    background-image: url(../img/university_01.jpg);
+    background-color: #aff;
+    /*배경색은 현재 공간의 베이스컬러를 지정한 것뿐이다.
+    이미지가 선언되면 배경색보다 전면으로 배치된다.*/
+}
+
+.bg_position_01{
+    width: 300px;
+    height: 300px;
+    background-image: url(../img/university_01.jpg);
+    background-position: 0 0;
+    background-position: 50% 50%;
+    background-position: center center;
+    background-position: 50% center;
+    background-position: center 100%;
+}
+
+.bg_position_small{
+    width: 300px;
+    height: 300px;
+    background-color: #afff;
+    background-image: url(../img/snoopy.png);
+    background-position: center center;
+    background-repeat: no-repeat;
+    /*패턴화를 막는다*/
+    background-repeat: repeat-x;
+    background-repeat: repeat-y;
+    background-repeat: repeat; /*이미지를 불러오는
+    순간 패턴화가 된다. 기본값*/
+}
+.bg_size{
+    width: 400px;
+    height: 400px;
+    background-color: #faf;
+    background-image: url(../img/university_03.jpg);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: 100% auto;
+     /*배경의 가로 사이즈를 width값이 400px인 공간
+     에 맞춰주겠다는 의미 가로 사이즈를 선언했다면
+     세로 사이즈는 auto로 지정하여 이미지의 원본 Ratio(비율)
+     를 유지시키면서 적용하겠다는 의미(이때, 가로사이즈만
+     선언했다면 세로의  사이즈 auto는 생략가능)*/
+
+     background-size: auto 100%;
+     /*배경의 세로 사이즈를 height 값이 400px인 공간
+     에 맞춰주겠다는 의미. 유지는 위와 동일.
+     가로 사이즈를 세로의 기준에 맞춰줄 때는 auto
+     값을 생략할 수 없다.*/
+}
+
+.bg_size_cover{
+    width: 100%;
+    height: 400px;
+    background-color: #ffa;
+    background-image: url(../img/university_01.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+
+}
+/* 배경 이미지로써 잘려도 무방한 일반사진을 배경으로
+넣을 때 사용 */
+.bg_size_cover2{
+    width: 100%;
+    height: 400px;
+    background-color: #aaf;
+    background-image: url(../img/jan.png);
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+/*background-size: contain; 공간의 높이값만 무조껀 
+맞춘다. 배경에 로고 및 아이콘을 넣어야 할때 사용*/
+
+.bg_attach{
+    width: 100%;
+    height: 300px;
+    margin-bottom: 100px;
+    background-image: url(../img/wallpaper.png);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.total_bg{
+    width: 100%;
+    height: 300px;
+    background: #faf url(../img/university_02.jpg)
+    no-repeat fixed 50% 50%/cover;
+}

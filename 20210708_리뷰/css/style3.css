@@ -1,0 +1,139 @@
+@charset "utf-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins&display=swap');
+
+*{}
+html, body{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6 p{margin: 0;}
+ul, ol{margin: 0;padding: 0;list-style: none;}
+a{text-decoration: none;}
+
+
+.float_frame_01{width: 100%; height: 300px; background: #fbb; padding: 20px 40px;}
+.float_frame_01 div{width: 300px; height: 300px; background: #aff; font-size: 50px; text-align: center; line-height: 300px; background-size: cover; background-position: 50% 50%; color: #fff; float: left; margin: 0 10px; }
+.float_frame_01 div:nth-child(1){background-image: url(../img/class_01.png);} 
+.float_frame_01 div:nth-child(2){background-image: url(../img/class_02.png);} 
+.float_frame_01 div:nth-child(3){background-image: url(../img/class_03.png);} 
+
+
+.float_frame_02{width: 100%; height: 300px; background: #afc; padding: 20px 40px;}
+.float_frame_02 div{width: 300px; height: 300px; background: #aff; font-size: 50px; text-align: center; line-height: 300px; background-size: cover; background-position: 50% 50%; color: #fff; float: right; margin: 0 10px; }
+.float_frame_02 div:nth-child(1){background-image: url(../img/class_01.png);} 
+.float_frame_02 div:nth-child(2){background-image: url(../img/class_02.png);} 
+.float_frame_02 div:nth-child(3){background-image: url(../img/class_03.png);} 
+
+
+
+.float_frame_03{width: 100%; height: auto; background: #ffa; padding: 20px 0;
+margin-top: 50px;}
+
+.float_frame_03.bottom{background: #faa;}
+
+.float_frame_03:after{content:""; display: block; clear: both;}
+
+.float_frame_03 div{width: 300px; height: 300px; background: #aff; font-size: 50px; text-align: center; line-height: 300px; background-size: cover; background-position: 50% 50%; color: #fff; float: left; margin: 0 10px; }
+.float_frame_03 div:nth-child(1){background-image: url(../img/class_01.png);} 
+.float_frame_03 div:nth-child(2){background-image: url(../img/class_02.png);} 
+.float_frame_03 div:nth-child(3){background-image: url(../img/class_03.png);} 
+
+
+.display_block{height: 200px; background: #a77; padding: 0 50px;}
+
+.width_100per{width: 100%; height: 200px; background: #00a; padding: 0 50px;} 
+
+
+
+/* ================== 과제 12 ============= */
+
+#ex_12{background: #a11; padding: 20px;}
+#ex_12 .ex_12_top{background-image: url(../img/img_12_01.jpeg); width: 300px;height: 400px; background-size: cover;  background-position: 50% 50%;}
+#ex_12 .ex_12_bottom{background-image: url(../img/img_12_02.jpeg);width: 300px;height: 400px; background-size: cover; background-position: 50% 50%;}
+
+
+/* ================== 과제 13 ================ */
+#ex_13{height: 400px; padding: 20px; border: 1px solid #a11;}
+
+#ex_13 div{float: left;}
+
+#ex_13 .ex_13_left{background-image: url(../img/img_13_01.jpeg); width: 300px; height: 400px; background-size: cover; background-position: 50% 50%;}
+
+#ex_13 .ex_13_right{background-image: url(../img/img_13_02.jpeg); width: 300px; height: 400px; background-size: cover; background-position: 50% 50%;}
+
+
+/* ================== 과제 14 ================ */
+
+#ex_14{width: 1200px; height: 400px; margin: 0 auto; padding: 40px 0; background: #fdd;}
+#ex_14 > div{width: 380px; height: 400px; margin: 0 10px; background: #ccf; float: left; background-size: cover; background-position: 50% 25%;}
+
+#ex_14 > div:nth-child(1){background-image: url(../img/w_01.jpg);} 
+#ex_14 > div:nth-child(2){background-image: url(../img/w_02.jpg);}
+#ex_14 > div:nth-child(3){background-image: url(../img/w_03.jpg);}
+
+
+/* ================== 과제 15 ================ */
+#ex_15{width: 1200px; height: 400px; margin: 0 auto; padding: 40px 0; background: #fdd;}
+
+#ex_15 > div{width:280px; height: 440px; float: left;margin-left: 10px; margin-right: 10px;}
+#ex_15 div{background-size: cover; background-position: 50% 25%; }
+
+#ex_15 > div:nth-child(1) >.img{background-image: url(../img/f_01.jpeg); width: 100%; height: 400px;}
+#ex_15 > div:nth-child(2) >.img{background-image: url(../img/f_02.jpeg); width: 100%; height: 400px;}
+#ex_15 > div:nth-child(3) >.img{background-image: url(../img/f_03.jpeg); width: 100%; height: 400px;}
+#ex_15 > div:nth-child(4) >.img{background-image: url(../img/f_04.jpeg); width: 100%; height: 400px;}
+
+
+#ex_15 h4{font-family: 'Poppins', sans-serif; font-size: 22px; font-weight: 500; line-height: 40px; text-align: center;}
+
+
+/* ================== 과제 16 ================ */
+#ex_16{width: 800px; height: 400px; padding: 20px; background: #caa; margin: 0 auto;}
+#ex_16 > div:nth-child(1){width: 300px; height: 400px; background-image: url(../img/img_12_01.jpeg); background-size: cover; background-position: 50% 50%; float: left; }
+#ex_16 > div:nth-child(2){width: 400px;height: 400px; margin-left: 100px; float: left; color: #fff;}
+#ex_16 > div:nth-child(2) > h4{font-size: 32px; font-family: 'Great Vibes', cursive; padding: 20px 0;}
+#ex_16 > div:nth-child(2) > p{font-size: 17px; font-weight: 300; font-family: 'Poppins', sans-serif;}
+
+
+/* ================== 과제 17 ================ */
+#ex_17{width: 800px; height: auto; margin: 0 auto; padding: 20px; background: #caa;}
+
+#ex_17:after{content:""; clear: both; display: block;} 
+
+#ex_17 > .img_part{width: 300px;height: 400px; background-image: url(../img/img_17_01.jpeg); background-size: cover; background-position: 50% 50%; float: left;}
+#ex_17 > .txt_part{width: 400px;height: 400px; margin-left: 100px; float: left; color: #fff;}
+#ex_17 > .txt_part h4{font-size: 32px; font-family: 'Great Vibes', cursive;
+padding: 20px;}
+#ex_17 > .txt_part p{font-size: 17px; font-family: 'Poppins', sans-serif; font-weight: 300;}
+
+
+
+/* ================== 과제 18 ================ */
+#ex_18{width: 800px; height: auto; margin: 0 auto; padding: 20px; background: #caa;}
+
+#ex_18 .top:after{content:""; clear: both; display: block; padding-bottom: 100px;} 
+#ex_18 .bottom:after{content:""; clear: both; display: block;} 
+
+
+#ex_18 > .top > .img_part{width: 300px;height: 400px; background-image: url(../img/f_01.jpeg); float: left;
+background-size: cover; background-position: 50% 50%;}
+
+#ex_18 > .bottom > .img_part{background-image: url(../img/f_02.jpeg); float: right; width: 300px;height: 400px; background-size: cover; background-position: 50% 50%;}
+
+#ex_18  > .top > .txt_part{width: 400px; height: 400px; margin-left: 100px; float: left; color: #fff;}
+#ex_18 h4{font-size: 32px; font-family: 'Great Vibes', cursive; padding: 20px; }
+#ex_18 p{font-size: 17px; font-family: 'Poppins', sans-serif; font-weight: 300;}
+
+#ex_18  > .bottom > .txt_part{width: 400px; height: 400px; margin-right: 100px; float: left; color: #fff;}
+
+
+.img_space .bottom_box{position: relative;}
+
+.img_space_table {width: 280px; height: 300px; background-image: url(../img/w_04.jpg); background-size: cover; background-position: 50% 33%;}
+.img_space_table .dark{width: 100%; height: 100%; background: rgba(0,0,0,0.5); color: #fff; 
+    display: table; display: none;}
+
+.img_space_table:hover .dark{display: table;}
+
+.img_space_table .dark div{display: table-cell; text-align: center; vertical-align: middle;} /* 내부의 콘텐츠가 복수로 존재할 때, 그룹핑 역할을 담당한다.*/
+
+.img_space_table .dark div h3{font-size: 24px;}
+.img_space_table .dark div p{font-size: 18px; padding-top: 20px;}

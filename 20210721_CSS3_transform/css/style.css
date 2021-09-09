@@ -1,0 +1,100 @@
+@charset "utf-8";
+*{box-sizing: border-box;}
+
+
+
+.tr_rotate_01{
+    width: 240px;
+    height: 240px;
+    background: #faa;
+    transition: transform 1s;
+    transform-origin:left top;
+    transform-origin:100% 100%;
+    transform-origin: 240px 120px;
+}
+.tr_rotate_01:hover{
+    transform: rotate(45deg);
+
+}
+
+.tr_rotate_02{
+    width: 240px;
+    height: 240px;
+    background: #aaf;
+    transition: transform 1s;
+    transform-origin: 66% 50%;
+}
+.tr_rotate_02:hover{
+    transform: rotateY(180deg);
+}
+
+
+.outer{
+    width: 240px;
+    height: 240px;
+    background-image: url(../img/menu_2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.outer .inner{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 175, 175, 0.75);
+    transform: rotateY(60deg);
+    transform-origin: 0 0;
+    transition: transform 1s;
+}
+.outer:hover .inner{
+    transform: rotateY(0deg);
+}
+
+.scale_wrap{
+    text-align: center;
+}
+
+.tr_scale_01{
+    display: inline-block;
+    width: 240px;
+    height: 240px;
+    background: #4af;
+    transform: scale(1); /*scale(1) => 원본 사이즈를 그대로 유지*/
+    transition: transform 0.5s;
+    margin: 5px;
+}
+.tr_scale_01:hover{
+    transform: scale(1.1); /*scale(1.2) => 최초 사이즈 대비 110%로 확대*/
+    box-shadow: 0 0 12px #f70;
+}
+
+
+.tr_scale_02{
+    width: 200px;
+    height: 200px;
+    background: #aff;
+    overflow: hidden;
+    position: relative;
+    
+}
+.tr_scale_02 .inphoto{
+    width: 100%;
+    height: 100%;
+    background-image: url(../img/menu_3.jpg);
+    background-size: 115%;
+    background-position: 50% 50%;
+    transition: transform 0.5s;
+}
+.tr_scale_02:hover .inphoto{
+    transform: scale(1.05) rotate(5deg);
+}
+.tr_scale_02 .dark{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+}
+.tr_scale_02:hover .dark{
+    opacity: 1;
+}

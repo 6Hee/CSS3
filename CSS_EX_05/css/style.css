@@ -1,0 +1,355 @@
+@charset "utf-8";
+
+*{}
+html, body{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0;padding  0;list-style: none;}
+a{text-decoration: none;}
+
+/* ==================과제 1번==================== */
+#layout_01{
+    width: 100%; 
+    height: 500px;
+    background: #ccc;
+    text-align: center;
+}
+#layout_01 > div{
+    width: 1200px;
+    height: 300px;
+    display: inline-block;
+    margin: 100px 0;
+}
+#layout_01 > div > div:nth-child(1){
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_1.jpg);
+    float: left;
+}
+#layout_01 > div > div:nth-child(2){
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_2.jpg);
+    float: left;
+}
+#layout_01 > div > div:nth-child(3){
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_3.jpg);
+    float: left;
+}
+#layout_01 > div > div:nth-child(4){
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_4.jpg);
+    float: left;
+}
+/* ==================과제 2번==================== */
+#layout_02{
+    width: 100%; 
+    height: 600px;
+    background: #ccc;
+    text-align: center;
+}
+#layout_02 > .in_box{
+    width: 1200px;
+    height: 400px;
+    display: inline-block;
+    margin: 100px 0;
+}
+#layout_02 > div > div > h2{
+    font-size: 40px;
+    line-height: 50px;
+    padding-bottom: 50px;
+}
+
+#layout_02 > div > div:nth-child(2) > div:nth-child(1){
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_1.jpg);
+    float: left;
+}
+#layout_02 > div > div:nth-child(2) > div:nth-child(2){
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_2.jpg);
+    float: left;
+}
+#layout_02 > div > div:nth-child(2) > div:nth-child(3){
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_3.jpg);
+    float: left;
+}
+#layout_02 > div > div:nth-child(2) > div:nth-child(4){
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_4.jpg);
+    float: left;
+}
+
+/* ==================과제 3번==================== */
+
+#layout_03{
+    width: 100%; 
+    height: 700px;
+    background: #ccc;
+    text-align: center;
+}
+#layout_03 .in_box{
+    width: 1200px;
+    height: 500px;
+    display: inline-block;
+    margin: 100px 0;
+}
+#layout_03 > .in_box > .Title > h2{
+    font-size: 40px;
+    line-height: 50px;
+    padding-bottom: 50px;
+}
+
+/* <<<<img_artist>>>> */
+#layout_03 .img_01{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_1.jpg);
+    float: left;
+}
+#layout_03 .img_02{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_2.jpg);
+    float: left;
+}
+#layout_03 .img_03{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_3.jpg);
+    float: left;
+}
+#layout_03 .img_04{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_4.jpg);
+    float: left;
+}
+
+/* <<<<name_tag>>>> */
+#layout_03 .name_tag{
+    width: 100%;
+    height: 80px;
+    background-color: #fff;
+    bottom: -310px;
+    position: relative;
+}
+#layout_03 .name_tag > h2{
+    font-size: 24px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+#layout_03 .name_tag > p{
+    clear: both;
+    font-size: 18px;
+    float: left;
+    margin-left: 10px;
+}
+
+/* ==================과제 4번==================== */
+
+#layout_04{
+    width: 100%; 
+    height: 600px;
+    background: #ccc;
+    text-align: center;
+}
+#layout_04 > .in_box{
+    width: 1200px;
+    height: 400px;
+    display: inline-block;
+    margin: 100px 0;
+}
+#layout_04 > .in_box > .Title > h2{
+    font-size: 40px;
+    line-height: 50px;
+    padding-bottom: 50px;
+}
+
+/* <<<<Name_tag>>>> */
+#layout_04 .name_tag{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position:absolute;
+    bottom: -80px;
+    transition: bottom 0.5s;
+    /*position: relative;
+    bottom: -220px;*/
+}
+
+
+#layout_04 .img_01:hover .name_tag{
+    bottom: 0;
+}
+#layout_04 .img_02:hover .name_tag{
+    bottom: 0;
+}
+#layout_04 .img_03:hover .name_tag{
+    bottom: 0;
+}
+#layout_04 .img_04:hover .name_tag{
+    bottom: 0;
+}
+
+
+#layout_04 .name_tag > h2{
+    font-size: 24px;
+    float: left;
+    margin-left: 10px;
+    margin-bottom: 20px;
+}
+#layout_04 .name_tag > p{
+    clear: both;
+    font-size: 18px;
+    float: left;
+    margin-left: 10px;
+}
+
+/* <<<<img_artist>>>> */
+#layout_04 .img_01{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_1.jpg);
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+#layout_04 .img_02{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_2.jpg);
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+#layout_04 .img_03{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_3.jpg);
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+#layout_04 .img_04{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_4.jpg);
+    float: left;
+    position: relative;
+    overflow: hidden;
+}
+
+/* ==================과제 5번==================== */
+
+
+#layout_05{
+    width: 100%; 
+    height: 600px;
+    background: #ccc;
+    text-align: center;
+}
+#layout_05 > .in_box{
+    width: 1200px;
+    height: 400px;
+    display: inline-block;
+    margin: 100px 0;
+}
+#layout_05 > .in_box > .Title > h2{
+    font-size: 40px;
+    line-height: 50px;
+    padding-bottom: 50px;
+}
+/* <<<<Name_tag>>>> */
+#layout_05 .name_tag{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    display: table;
+    display: none;
+}
+
+
+#layout_05 .img_01:hover .name_tag{
+    display: table;
+}
+#layout_05 .img_02:hover .name_tag{
+    display: table;
+}
+#layout_05 .img_03:hover .name_tag{
+    display: table;
+}
+#layout_05 .img_04:hover .name_tag{
+    display: table;
+}
+
+#layout_05 .name_tag div{
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+}
+#layout_05 .name_tag h2{
+    font-size: 24px;
+    line-height: 1;
+    padding: 10px;
+}
+#layout_05 .name_tag p{
+    font-size: 18px;
+    line-height: 1;
+    padding: 10px;
+}
+/* <<<<img_artist>>>> */
+#layout_05 .img_01{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_1.jpg);
+    float: left;
+}
+#layout_05 .img_02{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_2.jpg);
+    float: left;
+}
+#layout_05 .img_03{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_3.jpg);
+    float: left;
+}
+#layout_05 .img_04{
+    width: 280px;
+    height: 300px;
+    margin: 0 10px;
+    background-image: url(../img/artist_4.jpg);
+    float: left;
+}

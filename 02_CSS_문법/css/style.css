@@ -1,0 +1,49 @@
+@charset "utf-8";
+
+/*전체 선택자*/
+*{/*color: blue;*/}
+
+/* 태그 선택자 */
+h3{color: violet;}
+
+/* 클래스 선택자 */
+.fav_icon{color: red;}
+.mySelect{background-color: #afa;}
+/* .1{color: green;} */
+.hit{font-weight: bold;}
+.hit_01{color: orange;}
+
+/* 아이디 선택자 */
+#car{color: #ffaaff;}
+#txt_1{color: orangered;}
+
+/* 자식 선택자 / 자손 선택자 */
+.menu>li>a{color: red;}
+.menu a{background-color: #ffffaa;}
+
+/* 인접 선택자 */
+.cur_page + li{background-color: #aaf;}
+.cur_page + li + .target_page{background-color: #faf;}
+
+/* .target_page - li{background-color: #09f;} */
+
+
+.current ~ .partnership{background-color: #ffa;}
+
+.several_selector p, .several_selector > h6 {color: hotpink;}
+
+/* 가상 공간 선택자 */
+.port:before{content:"홍길동의 ";} /* 가상의 공간에서 content의 선언은 빈공간이라도 구성을 해주겠다는 의미. 가상
+공간의 구성 선행 조건은 content:"";이 작성되어야 함*/
+.port:after{content:" 바로가기";}
+
+/* 마우스 오버 관련 선택자 => 선택자:hover */
+.change_bg{width: 200px; height: 200px; background-color: #0099ff; transition: all 1s;}
+.change_bg:hover{background: #ff9900; }
+
+.com_menu{}
+.com_menu > ul{}
+.com_menu > ul > li{}
+.com_menu > ul > li > a{color: #555;}
+
+.com_menu > ul > li > a:hover{color: #f00;}

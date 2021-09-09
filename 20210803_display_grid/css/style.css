@@ -1,0 +1,88 @@
+@charset "utf-8";
+
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+
+#ex_01 .wrapper{
+    width: 100%;
+    height: auto;
+    background: #ffa;
+    display: grid;
+    grid-template-columns: 200px 200px 200px; /*grid-template-columns 가로방향으로 몇단을 구성할 것인가와 단의 가로폭을 제어할 수 있음*/
+    grid-template-rows: 100px 200px 300px;
+    /*grid-template-rows 세로방향으로 몇줄을 구성할 것인가와 줄(행)의 높이를 제어*/
+
+    grid-template-rows: minmax(20px, auto);
+    /*각 영역에서 자식의 콘텐츠가 많은 경우 minmax() 함수를 사용. minmax(최소값, 최대값)를 사용하면 내부의 콘텐츠 양만큼 자동으로 조정됨 */
+
+    grid-template-columns: 1fr 2fr 1fr;
+    /* fr(fraction : 부분 또는 분수) : 부모영역을 전체로 나누었을 때 차지하는 공간의 비율을 지칭 */
+
+    grid-template-columns: repeat(2, 1fr) 2fr;
+    /*repeat() 함수는 반복 진행할 그리드 수를 지정 + 얼마만큼의 비율을 가져갈 것인가를 정함*/
+
+    grid-column-gap: 40px; /*가로방향 열단위에서 그리드 사이의 간격을 조정*/
+    grid-row-gap: 20px; /*세로방향 행단위에서 그리드 사이의 간격을 조정*/
+    grid-gap: 30px; /*동일한 간격 부여시*/
+    grid-gap: 20px 40px; /*grid-gap : (grid-row-gap) (grid-column-gap)*/
+}
+#ex_01 .wrapper .item{
+    width: auto; height: auto;
+    padding: 10px 20px;
+    background: #aff;
+}
+#ex_01 .wrapper .item:nth-child(2n){
+    background: #faf;
+}
+
+
+
+#ex_02 .wrapper{
+    width: 600px; height: 600px;
+    margin: 50 auto;
+    background: #ccc;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+#ex_02 .wrapper .item{width: auto; height: auto;}
+#ex_02 .wrapper .item:nth-child(1){background: #faf; grid-column: 1/4;}
+#ex_02 .wrapper .item:nth-child(2){background: #aaf; grid-column: 3/4; grid-row: 3/4;}
+#ex_02 .wrapper .item:nth-child(3){background: #faa; grid-column: 2/3; grid-row: 2/3;}
+#ex_02 .wrapper .item:nth-child(4){background: #ffa;}
+#ex_02 .wrapper .item:nth-child(5){background: #afa;}
+#ex_02 .wrapper .item:nth-child(6){background: #aff;}
+
+
+
+#ex_03 .wrapper{
+    height: 600px; width: 600px;
+    margin: 50px auto;
+    background: #ccc;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+#ex_03 .wrapper .item{width: auto; height: auto; display: table;}
+#ex_03 .wrapper .item p{
+    display: block;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+#ex_03 .wrapper .item:nth-child(1){background: #faf; grid-column: 1/3; grid-row: 1/2;}
+#ex_03 .wrapper .item:nth-child(2){background: #aaf; grid-row: 1/3;}
+#ex_03 .wrapper .item:nth-child(3){background: #faa; grid-row: 3/4; grid-column: 2/4;}
+#ex_03 .wrapper .item:nth-child(4){background: #ffa; grid-row: 2/4;}
+#ex_03 .wrapper .item:nth-child(5){background: #afa;}
+
+#ex_03 .wrapper:hover .item:nth-child(1){background: #faf; grid-column: 2/4; grid-row: 1/2;}
+#ex_03 .wrapper:hover .item:nth-child(2){background: #aaf; grid-column: 3/4; grid-row: 2/4;}
+#ex_03 .wrapper:hover .item:nth-child(3){background: #faa; grid-column: 1/3;}
+#ex_03 .wrapper:hover .item:nth-child(4){background: #ffa; grid-column: 1/2; grid-row: 1/3;}
+#ex_03 .wrapper:hover .item:nth-child(5){background: #afa; grid-column: 2/3; grid-row: 2/3;}

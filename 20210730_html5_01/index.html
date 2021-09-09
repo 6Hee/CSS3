@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML5_01</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h1>시멘틱스 구조</h1>
+    <!-- 헤더 영역-->
+    <header id="ver_pc">
+        <div class="wrap">
+            <div class="logo">
+                <a href="#">LOGO</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">MENU_1</a></li>
+                    <li><a href="">MENU_1</a></li>
+                    <li><a href="">MENU_1</a></li>
+                    <li><a href="">MENU_1</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- <header id="ver_mobile">
+        <div class="wrap">
+            <div class="logo">
+                <a href="#">LOGO</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="">MENU_1</a></li>
+                    <li><a href="">MENU_1</a></li>
+                    <li><a href="">MENU_1</a></li>
+                    <li><a href="">MENU_1</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header> -->
+    <!-- 대표하는 공간 : <hn> 태그가 하나라도 존재해야 한다. -->
+    <main>
+        <div class="wrap">
+            <h2>title</h2>
+        </div>
+    </main>
+    <section id="cakes">
+        <article>
+            <h3>article1 in section1</h3>
+        </article>
+        <article>
+            <h3>article2 in section1</h3>
+        </article>
+        <article>
+            <h3>article3 in section1</h3>
+        </article>
+    </section>
+
+    <section id="service">
+        <article>
+            <h3>article1 in section2</h3>
+        </article>
+        <article>
+            <h3>article2 in section2</h3>
+        </article>
+        <article>
+            <h3>article3 in section2</h3>
+        </article>
+    </section>
+
+
+    <footer>
+        <p>Copyright</p>
+    </footer>
+
+
+    <hr>
+
+    <h3>time 태그 : 지정한 날짜 정보를 속성에 넣는 기능 => 브라우저에서 인식을 하여 자동으로 갱신해 주는  </h3>
+    <time datetime="2021-08-02">오늘 날짜</time>
+
+    <h3>detail 태그 : 상세보기</h3>
+    <div class="details_tag">
+        <h4>녹차의 효능</h4>
+        <details>
+
+            <summary>+Detail More</summary>
+            <p>그린푸드의 대표적인 식품이라고 할 수 있는 녹차(綠茶)는 발효시키지 않은 찻잎을 사용해서 만든 차로, 녹차의 찻잎은 중국의 후피향(厚皮香) 나무과의 상록활엽관목의 잎을 이용한 한 것입니다.
+
+ 
+
+                찻잎의 제조과정에서 발효 여부에 따라 녹차, 홍차, 우롱차로 나뉩니다. 녹차는 상쾌하면서도 쌉싸름한 풍미가 매우 매력적인 차이기도 한데요. 마늘, 브로콜리, 토마토 등과 함께 미국의 시사주간지 [타임(Time)]이 선정한 ‘세계 10대 건강식품’에 속할 정도로 인간에게 이로운 식품으로 다양한 효능을 가지고 있습니다.
+                
+                 
+                
+                몸에 좋다는 녹차는 우리 몸에 어떤 영향을 끼치는 것일까요? 지금부터 함께 알아보도록 하겠습니다.</p>
+        </details>
+    </div>
+    
+
+    <hr>
+
+
+    <h3>figure 태그 : 콘텐츠에 대한 설명 또는 명시를 하기 위한 태그</h3>
+    <figure>
+        <img src="./img/KakaoTalk_20210802_095812991.png" alt="라인 캐릭터">
+        <figcaption>그림1. 라인 캐릭터</figcaption>
+    </figure>
+
+
+
+    <h3>mark 태그 : 확정된 주요 사항을 표시하기 위한 태그. 약관에서 주로 사용됨</h3>
+    <p class="ch_terms">본 이용약관은 <mark>2021년 1월 1일</mark>부터 적용됩니다.</p>
+
+<br><hr>
+
+    <h3>input 태그 다중역할</h3>
+    <p>type = "text" / "password" / "email" / "radio" / "checkbox" / "file" / "submit" / "button" / "reset"</p>
+
+    <input type="search" placeholder="검색어 입력"> <br>
+    <input type="tel" value="010-1234-5678"><br>
+    <input type="url" placeholder="https://www.myblog.com"><br>
+
+    <input type="range" min="1" max="10" value="2" onchange="chValue(this.value);">
+    <span id="result">2</span>
+    <!--onchange 이벤트 : 사용자가 직접 무언가를 변경했을 때 이벤트가 발생하여 관련한 함수구문을 작동시킨다.-->
+    <script>
+        function chValue(a){
+            document.getElementById("result").innerText = a;
+            //문서상의 "result"라는 아이디를 갖고 있는 요소의 내부 텍스트를 a로 변경해주세요.
+        }
+    </script>
+
+    
+    <h4>날짜 관련한 입력상자</h4>
+    <input type="date"><!--일단위--><br>
+    <input type="week"><!--주단위--><br>
+    <input type="month"><!--월단위--><br>
+    <input type="time"><!--시간단위--><br>
+    <input type="datetime-local"><br><!--일단위 + 시간단위-->
+    <input type="datetime" value="2021-08-02"><br>
+    <!--게시판의 날짜 관련한 파트에 의해서 최신순으로 정렬을 시키는 개념에서 접근 가능 => sort의 역할로 접근-->
+
+    <h4>기타 입력 박스</h4>
+    <input type="number" placeholder="숫자만 입력 가능"><br>
+    <input type="color"><br> <!--추후에 자바스크립트 영역에서 prop()메서드를 통해서 값을 가져올 수 있음-->
+
+    <h3>progress 태그 : 진행상황 관련한 표기시 사용</h3>
+    <p>예시, 잡코리아에서 현재 진행단계가 어딘지를 알려주는 막대기형태</p>
+    <progress max="100" value="50"></progress>
+
+
+    <h3>output 태그 : 계산된 결과값을 도출시 사용</h3>
+    <form action="">
+        <div>
+            <label for="pd1">상품1</label>
+            <input type="number" id="pd1" value="150">
+        </div>
+        <div>
+            <label for="pd2">상품2</label>
+            <input type="number" id="pd2" value="550">
+        </div>
+
+        <div class="calc_btn">
+            <input type="button" value="계산하기" onclick="func_calc();">
+        </div>
+
+        <div class="total_result">
+            <label for="calc_rst">최종결과값</label>
+            <output id="calc_rst" ></output>
+        </div>
+    </form>
+
+    <script>
+        function func_calc(){
+            var pd_1 = document.getElementById("pd1").value;
+            var pd_2 = document.getElementById("pd2").value;
+            document.getElementById("calc_rst").innerText = Number(pd_1) + Number(pd_2);
+        }
+    </script>
+
+<!--
+    HTML 영역은 확장된 개념
+
+    svg, canvas - 오리지널 자바스크립트로 구성
+    
+    audio(파일을 가져오는 방법), video(파일을 가져오는 방법), iframe(유튜브 연동하는 방법) - 음향과 영상을 브라우저에 제공
+
+    geolocation(제공된 스크립트 파일을 이용) - 현재 위치를 브라우저에 뿌려주는 방법
+-->
+</body>
+</html>

@@ -1,0 +1,62 @@
+@charset "utf-8";
+*{}
+html, body{margin: 0;padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0;padding: 0;list-style: none}
+a{text-decoration: none;}
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Nanum+Pen+Script&display=swap');
+
+#home_1 p:hover{color: red;}
+#home_1{font-weight: bold;}
+
+
+#home_2{color: orange; font-size: 24px; font-weight: bold;}
+
+
+#ex_03 > .colorTxt2 > a{color: #fff; background-color: #0088cc;}
+
+.ex_04 > li > a > span{color: #f00; font-style: italic;}
+
+#ex_05 > div > div > span > span{background: #f66;
+color: #f00; font-weight: bold;}
+
+#ex_06 > li:nth-child(2) > a{background: #0a3; color: white;}
+
+#ex_07{display: inline-block;}
+#ex_07 > p:nth-child(5){background: #fa3; font-size: 30px;}
+
+#ex_08 a{color: #777;}
+#ex_08 > li:nth-child(3) > a{color: #2b3;}
+#ex_08 > li:nth-child(3) > li:nth-child(2){font-size: 25px;}
+#ex_08 > li:nth-child(2) > ul > li:nth-child(1) a{color: #f85;}
+#ex_08 > li:nth-child(3) > ul > li:nth-child(2) a{font-size: 25px; color: blue;}
+
+
+#ex_09 div{width: 100px;height: 100px;background: #aaa; 
+text-align: center; line-height: 100px;}
+#ex_09 > div:nth-child(2n){background: #faf;}
+
+
+#ex_10{text-align: center; float: left;}
+#ex_10 img{width: 120px;}
+#ex_10 > h4{font-size: 26px; color: #27e; 
+    font-family: 'Nanum Gothic', sans-serif;
+    margin: 0;}
+#ex_10 > h4 span{font-size: 28px; 
+    font-family: 'Nanum Pen Script', cursive;}
+
+.ex_10_1{display: block; clear: both;}
+
+
+
+#ex_11{width: 1400px; font-family: 'Poppins', sans-serif;
+    text-align: center; margin: 0 auto;}
+#ex_11 > div{background-image: url(../img/KakaoTalk_20210708_150930787.jpg);
+width: 100%;height: 600px; background-position: 50% 50%;
+background-size: cover;}
+#ex_11 > h5{font-size: 13px; color: rgba(166,5,5,1);
+font-weight: 300; margin: 40px 0 30px;}
+#ex_11 > h2{font-size: 32px;color: #333; font-weight: 500;
+margin-bottom: 30px;}
+#ex_11 > p{font-size: 17px;font-weight: 200;}

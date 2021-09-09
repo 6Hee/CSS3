@@ -1,0 +1,149 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Microsoft Sans Serif';
+    src: url('MicrosoftSansSerif.eot');
+    src: url('MicrosoftSansSerif.eot?#iefix') format('embedded-opentype'),
+        url('MicrosoftSansSerif.woff2') format('woff2'),
+        url('MicrosoftSansSerif.woff') format('woff'),
+        url('MicrosoftSansSerif.ttf') format('truetype'),
+        url('MicrosoftSansSerif.svg#MicrosoftSansSerif') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Arial Narrow';
+    src: url('ArialNarrow.eot');
+    src: url('ArialNarrow.eot?#iefix') format('embedded-opentype'),
+        url('ArialNarrow.woff2') format('woff2'),
+        url('ArialNarrow.woff') format('woff'),
+        url('ArialNarrow.ttf') format('truetype'),
+        url('ArialNarrow.svg#ArialNarrow') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+
+/* font-family: 'Open Sans', sans-serif; */
+
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+
+#sk_header{
+    font-family: 'Open Sans', sans-serif;
+    height: 55px;
+}
+#sk_header .wrap{
+    height: 100%;
+    background: #ededed;
+    border-bottom: 1px solid #cfcfcf;
+    position: relative;
+    font-size: 0;
+}
+
+/* ==================좌측 로고 =============== */
+#sk_header .wrap .logo{
+    position: absolute;
+    left: 20px;
+    top: 5px;
+}
+#sk_header .wrap .logo a img{
+    height: 45px;
+}
+
+
+/* ============== 중앙 메뉴================== */
+#sk_header .wrap .main{text-align: center; font-family: 'Microsoft Sans Serif';}
+#sk_header .wrap .main > ul{}
+#sk_header .wrap .main > ul > li{
+    display: inline-block; 
+    vertical-align: top;
+    padding: 0 20px;
+}
+#sk_header .wrap .main > ul > li > a{
+    display: block;
+    font-size: 14px;
+    line-height: 54px;
+    color: #7f7f7f;
+}
+#sk_header .wrap .main > ul > li:hover > a{
+    color: #555;
+}
+
+
+/*  ============하단 서브 메뉴 =============== */
+#sk_header .wrap .main > ul > li > ul{
+    position: absolute;
+    width: 100%; height: 44px;
+    left: 0;
+    background: #ededed;
+    display: none;
+}
+#sk_header .wrap .main > ul > li:hover > ul{
+    display: block;
+}
+#sk_header .wrap .main > ul > li > ul > li{
+    display: inline-block; 
+    margin: 0 20px;}
+#sk_header .wrap .main > ul > li > ul > li > a{
+    display: block;
+    font-size: 11px;
+    color: #7f7f7f;
+    line-height: 44px;
+}
+#sk_header .wrap .main > ul > li > ul > li:hover > a{
+    color: #555;
+}
+
+
+
+/*=========== 우측 검색바, 클릭 링크 버튼 ================*/
+#sk_header .wrap .right_btn{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0;
+}
+#sk_header .wrap .right_btn a:first-child{
+    display: inline-block;
+    width: 54px; height: 54px;
+    border-left: 1px solid #cfcfcf;
+    background: #fff;
+    text-align: center;
+    vertical-align: middle;
+}
+#sk_header .wrap .right_btn a:first-child > img{
+    height: 19px;
+    margin: 18px 0;
+}
+#sk_header .wrap .right_btn a:last-child{
+    display: inline-block;
+    width: 112px;
+    height: 54px;
+    background: #ff0000;
+    vertical-align: top;
+    text-align: center;
+}
+#sk_header .wrap .right_btn a:last-child span{
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 54px;
+}
+
+
+
+
+
+
+
+/* ================== 수업 실습 ==================== */

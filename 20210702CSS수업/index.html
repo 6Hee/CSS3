@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h3>서체 변경</h3>
+
+    <h3>폰트 스타일(font-style) - normal, italic</h3>
+    <p class="font_style_italic">폰트 스타일 적용하기</p>
+
+    <h3>문단의 가로 방향 정렬(text-align) -
+         left(기본값),center,right,justify
+        [글자 가로방향으로 움직일 수 있는 공간]
+    </h3>
+
+    <p class="textalign_left">1. 문단의 정렬</p>
+    <p class="textalign_center">2. 문단의 정렬</p>
+    <p class="textalign_right">3. 문단의 정렬</p>
+    <p class="textalign_justify">4. 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬 문단의 정렬</p>
+
+    <div class="block_space">
+    <a class="inline_align" href="">네이버 바로가기</a>
+    <a class="inline_align" href="">다음 바로가기</a>
+    </div>
+
+    <hr>
+
+    <div class="block_space">
+        <img class="img_align" src="./img/smurf_01.png" alt="">
+        <img class="img_align" src="./img/snoopy_01.png" alt="">
+    </div>
+
+    <h3>수직방향 정렬(vertical-align) - top, middle,
+         bottom</h3>
+
+    <p>인라인 성질을 갖고 있는 태그의 세로 정렬 과정상
+        현재의 수직방향 위치를 결정</p>
+
+    <div class="v_align">
+        <img src="./img/snoopy_03.png" alt="">
+        <img src="./img/snoopy_04.png" alt="">
+        <img src="./img/snoopy_05.png" alt="">
+        <img src="./img/snoopy_06.png" alt="">
+        <a href="">스누피 특별전 체험하기</a>
+    </div>
+
+    <div class="cart">
+        <a href=""><img src="./img/cart.png" alt="">
+            <span>CART</span>
+        </a>
+    </div>
+    <p>수직방향 정렬은 형제의 성질이 모두 인라인 성질을
+        갖고 있을 때 가능
+    </p>
+
+    <h3>들여쓰기와 내여쓰기(text-indent = ti)</h3>
+    <div class="txt_indent">들여쓰기(양의 수) 
+        내여쓰기(음의 실수)</div>
+
+    <h3>글자의 대소문자 변경(text_transform : tt)</h3>
+    <h4 class="tr_uppercase">uppercase 대문자로 변경</h4>
+    <h4 class="tr_lowercase">LOWERCASE 소문자로 변경</h4>
+    <h4 class="tr_capitalize">capitalize 첫글자만 대문자로
+        변경 league of legend
+    </h4>
+
+    <h3>글자(또는 문장)의 줄긋기 위치 구성
+        (text-decoration = td) - underline, overline,
+    line-through, none</h3>
+    
+    <h4 class="txtDeco_underline">아랫 줄 긋기</h4>
+    <h4 class="txtDeco_overline">윗 줄 긋기</h4>
+    <h4 class="txtDeco_lineThrough">중앙 줄 긋기
+        (취소선 - del 태그의 기본 속성 중 하나)
+    </h4>
+    <a href="" class="txtDeco_none">메뉴1</a>
+
+
+
+    <h3>자간조정 (letter-spacing : ls) - px, %, em</h3>
+    <h4 class="letter_spacing">자간 조정</h4>
+    <p>공간 대비 글자의 전체 폭을 조정시 사용. 
+        -2px이하로 조정시 글자의 가독성을 담보할 수가 없음
+        미세조정시 소수점 이하의 단위까지 인정이 됨
+    </p>
+
+    <h3>문단의 높이(line-height) - 배수(1.2, 1 - 폰트
+        사이즈 대비하여 font-size의 값 *1.2), 고정px</h3>
+    
+    <div class="lineHeight">
+        <a href="">logo</a>    
+    </div>
+    <p>웹브라우저상에서 line-height의 역할은 단어 또는
+        문장을 공간 대비하여 새로방향 중앙에 위치시키는
+        역할도 담당
+    </p>
+
+    <h2>폰트 관련된 대부분의 스타일 선언은 하위 자식에게 
+        상속(inherit)되는 개념이 존재함
+    </h2>
+    <p>단, 서체(font-family)는 부모가 h(n) 태그라고 하더라도
+        자식이 span 태그로 존재한다면 서체가 상속이 안됨(주요
+        서체가 전체 선택자에 선언되었을 때)
+    </p>
+    <h3 class="title">
+        Our
+        <span>Memory</span>
+    </h3>
+</body>
+</html>

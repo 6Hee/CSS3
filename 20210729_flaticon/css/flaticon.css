@@ -1,0 +1,23 @@
+@font-face {
+    font-family: "flaticon";
+    src: url("../font/flaticon.ttf?b71798cad919b35ebe61c77cdbe9af66") format("truetype"),
+url("../font/flaticon.woff?b71798cad919b35ebe61c77cdbe9af66") format("woff"),
+url("../font/flaticon.woff2?b71798cad919b35ebe61c77cdbe9af66") format("woff2"),
+url("../font/flaticon.eot?b71798cad919b35ebe61c77cdbe9af66#iefix") format("embedded-opentype"),
+url("../font/flaticon.svg?b71798cad919b35ebe61c77cdbe9af66#flaticon") format("svg");
+}
+
+i[class^="flaticon-"]:before, i[class*=" flaticon-"]:before {
+    font-family: flaticon !important;
+    font-style: normal;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.flaticon-truck:before {
+    content: "\f101";
+}

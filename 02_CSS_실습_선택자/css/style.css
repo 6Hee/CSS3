@@ -1,0 +1,25 @@
+@charset "uft-8";
+
+#ex_01 .txt3{color: #33cc33;}
+#ex_01 #text_04{font-size: 28px;}
+/*
+#ex_02 .smurf_01{height: 150px;}
+#ex_02 .smurf_02{height: 150px;}
+#ex_02 .smurf_03{height: 150px;}
+#ex_02 .smurf_04{height: 150px;}
+*/
+#ex_02 img{height: 150px;}
+#ex_02 .smurf{height: 150px;}
+
+#ex_03 .title{font-size: 30px; color: #0099ee;}
+#ex_03 .title + span{font-size: 17px; color:#ff7700;}
+
+#ex_04 h3{font-size: 20px; color: #0000ff;}
+.txt_5{font-weight: bold;}
+#ex_04 .comment{font-size: 14px; background-color: #bbb;}
+
+#ex_05 .title{font-size: 25px; color: #333;}
+#ex_05 p:nth-child(even){background-color: #ffffaa;}
+
+#ex_06 img[src$="01.png"]{background-color: #0099ee;}
+#ex_06 img:nth-child(3){background-color: #ff9977;}

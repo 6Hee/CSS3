@@ -1,0 +1,52 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Pacifico&family=Poppins&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@font-face {
+    font-family: 'AHNJUNGGEUN';
+    src: url('AHNJUNGGEUN.eot');
+    src: url('AHNJUNGGEUN.eot?#iefix') format('embedded-opentype'),
+        url('AHNJUNGGEUN.woff2') format('woff2'),
+        url('AHNJUNGGEUN.woff') format('woff'),
+        url('AHNJUNGGEUN.ttf') format('truetype'),
+        url('AHNJUNGGEUN.svg#AHNJUNGGEUN') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+/* *{font-family:'Pacifico', 'Gaegu', cursive;} */
+
+/* *{font-family: 'AHNJUNGGEUN';} */
+
+{font-family: 'Poppins', sans-serif;}
+.unit_px{font-size: 20px;}
+.unit_pt{font-size: 20pt;}
+.unit_em{font-size: 36px;}
+.unit_em .em_txt{font-size: 1em; line-height: 1;} 
+/*부모의 영역에서 font-size를 설정하지 않았다면 1em = 16px*/
+/* 부모의 영역에서 font-size : 24px;를 선언했다면 1em = 24px */
+
+html{font-size: 24px}
+.unit_rem .rem_txt{font-size: 1rem; line-height: 1;}
+/* 최상위 조상의 영역에서 font-size : 24px를 선언했다면 1rem = 24px */
+
+.vw_txt{font-size: 5vw;}
+/* 우측의 스크롤바 영역까지 포함한 브라우저의 가로 사이즈 (vw : viewport width)
+=> 전체 브라우저의 가로 사이즈를 선정 100vw */
+
+.vh_txt{font-size: 5vh;}
+/* 브라우저의 세로 사이즈(vh : viewport height) => 전체 브라우저의 세로 사이즈
+를 선정 100vh*/
+
+/* 폰트의 가중치 */
+.fw_100{font-weight: 100;}
+.fw_200{font-weight: 200;}
+.fw_300{font-weight: 300;}
+.fw_400{font-weight: 400;}
+.fw_500{font-weight: 500;}
+.fw_600{font-weight: 600;}
+.fw_700{font-weight: 700;}
+.fw_800{font-weight: 800;}
+.fw_900{font-weight: 900;}

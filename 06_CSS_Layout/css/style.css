@@ -1,0 +1,280 @@
+@charset "utf-8";
+
+/*브라우저의 영향을 모두 재설정하기위한 스타일 선언 => 스타일 초기화*/
+
+*{}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+
+.float_left{width: 100%; height: 60px; background-color: #ccc;}
+.float_left ul{}
+.float_left ul li{float:left; margin:0 20px;}
+.float_left ul li a{display: block; line-height:60px; background-color: #ffa;}
+
+.float_right{width: 100%; height: 60px; background-color: #ccc;}
+.float_right ul{}
+.float_right ul li{float:right; margin:0 20px;}
+.float_right ul li a{display: block; line-height:60px; background-color: #ffa;}
+
+.box_left{width: 100%; height: auto; /*자식이 float으로 선언되었다면 auto = 0*/ background-color: #eeaaaa;}
+
+.box_left:after{content:""; display:block; clear:both;}
+
+.box_left .bx{width: 100px; height: 100px; background-color: #aff; margin: 0 10px 20px; float:left;}
+/* .box_left .bx2{height: 200px;} */
+
+
+.bottom_box{width:100%; height: 100px; background-color: #f00;}
+
+
+
+.pd_list{width: 100%; height: auto; background-color: #ffb;}
+
+.pd_list:after{content:""; display:block; clear:both;}
+
+.pd_list .pd_box{width: 100px; height: 100px; background-color: #aaf; float:left;}
+
+.pd_list .pd_box:nth-child(2n){background-color: #cfa;}
+
+
+.pd_list_external{width: 100%; height: auto; background-color: #ffb;}
+
+.pd_list_external .pd_box{width: 100px; height: 100px; background-color: #aaf; float:left;}
+
+.pd_list_external .pd_box:nth-child(2n){background-color: #cfa;}
+
+.clear{clear: both;}
+
+.evt{clear: both;}
+
+
+/*상단 헤더 구성하기*/
+#header{width: 100%; height: 50px; background-color: #ddd;}
+
+#header .logo{float: left; padding: 11px 10px;}
+#header .logo a{display: block; font-size: 28px; color:#555; line-height:1; background-color: #faf;}
+
+
+#header .menu{background-color: #aff; float: right;}
+#header .menu ul{}
+#header .menu ul li{float: left; margin: 0 10px; padding: 18px 0;}
+
+#header .menu ul li a{display: block; font-size: 14px; color:#777; line-height: 1; background-color: #fa4;}
+
+
+
+
+.float_style_01{background-color: #aaa; }
+.float_style_01:after{content:""; display: block; clear: both;}
+.float_style_01 li{float: left; margin: 0 20px; background-color: #aff;}
+
+
+.float_style_02{background-color: #aaa; }
+.float_style_02 li{float: left; margin: 0 20px; background-color: #aff;}
+.float_style_02 h2{font-size: 14px; clear: both;}
+
+
+.float_style_03 > div[class^="bo"]{width: 100px;height: 100px; float: left;}
+.float_style_03 > div.box_01{background: #faf;}
+.float_style_03 > div.box_02{background: #aaf;}
+.float_style_03 > div.box_03{background: #faa;}
+.float_style_03 > div.box_04{background: #aff;}
+
+.float_style_04 > div[class^="bo"]{width: 100px; height: 100px; float: right;}
+.float_style_04 > div.box_01{background: #faf;}
+.float_style_04 > div.box_02{background: #aaf;}
+.float_style_04 > div.box_03{background: #faa;}
+.float_style_04 > div.box_04{background: #aff;}
+
+
+.snoopy{width: 1200px; height: auto; background-color: #ddd; margin: 0 auto;}
+.snoopy:after{content:""; display: block; clear: both;} /* 중요 */
+.snoopy .image{width:calc(25% - 20px); height: 280px; background: #aff; background-size: cover;
+    background-position: 50% 50%; float: left; margin: 
+    0 10px 20px;}
+.snoopy .image:nth-child(1){background-image: url(../img/snoopy_01.png); width: calc(50% - 20px); height: 580px;}
+.snoopy .image:nth-child(2){background-image: url(../img/snoopy_02.png);}
+.snoopy .image:nth-child(3){background-image: url(../img/snoopy_03.png);}
+.snoopy .image:nth-child(4){background-image: url(../img/snoopy_04.png);}
+.snoopy .image:nth-child(5){background-image: url(../img/snoopy_05.png);}
+
+
+/* display 속성 */
+.d_block{}
+.d_block > div{display: block; height: 120px; padding: 20px 0;}
+.d_block > div:nth-child(1){background: #aff;}
+.d_block > div:nth-child(2){background: #faa;}
+.d_block > div:nth-child(3){background: #afa;}
+
+
+.d_inline{}
+.d_inline > div{display: inline; height: 300px; width: 200px; /*padding: 20px 0;*/}
+.d_inline > div:nth-child(1){background: #aff;}
+.d_inline > div:nth-child(2){background: #faa;}
+.d_inline > div:nth-child(3){background: #afa;}
+/*[인라인 요소가 갖고 있는 특징]
+ - 본인이 갖고  있는 콘텐츠 영역만을 공간으로 확정(가로, 세로 공간 값이 의미가 없음)
+ - 인라인 요소는 문서상의 엔터값을 별도의 공간으로 가져간다. (공간의 가로폭은 
+ 폰트 사이즈의 기준)
+
+ -html 문서상의 엔터 공간을 제거하기 위해서는 인라인 요소를 갖고 있는 부모(조상포함)의 영역에
+ font-size:0 을 설정함으로서 엔터 공간을 제거가능 
+ - font 관련된 스타일과 text 관련된 스타일은 자동 상속(inherit)
+ */
+
+
+
+
+.d_inlineBlock{font-size: 0; text-align: center;}
+.d_inlineBlock > div{display: inline-block; width:200px;  height: 300px;
+     font-size: 16px; margin: 0 10px; vertical-align: middle;}
+.d_inlineBlock > div:nth-child(1){background: #aff; font-size: 40px;}
+.d_inlineBlock > div:nth-child(2){background: #faa; height: 150px;}
+.d_inlineBlock > div:nth-child(3){background: #afa; font-size: 30px;} 
+/*
+[인라인블록의 특징]
+- 가로 배치가 가능
+- 자식이 갖고 있는 콘텍스트의 하단에 정렬 기본값으로 가져온다(vertical-align : baseline)
+    -> 반드시 통제해야할 대상
+- 인라인 블록요소는 문서상의 엔터값을 별도의 공간으로 가져간다. (공간의 가로폭은 폰트사이즈의 기준)
+- html 문서상의 엔터 공간을 제거하기 위해서는 인라인 블록 요소를 갖고 있는 부모(조상 포함)의
+    영역에
+*/
+
+
+.v_align{}
+.v_align img{height: 60px; vertical-align: middle; display: inline-block;}
+.v_align span{font-size: 20px; background: #ffa; 
+    vertical-align: middle; display: inline-block; line-height: 100px;}
+
+
+.center_menu{width: 1200px; height: auto; margin: 0 auto; background-color: #ffc; 
+    font-size: 0; text-align: right;}
+.center_menu li{display: inline-block; font-size: 19px; margin: 0 15px; 
+    background-color: #afa;}
+ 
+
+
+    /* ======================== display:table; ===================================== */
+
+.d_table{width: 240px; height: 240px; background: #3af; display: table;}
+.d_table h3{display: table-cell; text-align: center; vertical-align: middle;}
+
+
+.d_table span{display: table-cell; text-align: center; vertical-align: middle;}
+.lineH_center{width: 240px; height: 240px; background: #ff7;
+    }
+.lineH_center h3{text-align: center; line-height: 120px; }
+.lineH_center p{text-align: center; line-height: 120px;}
+
+
+.d_table_01{width: 240px; height: 240px; background: #faa; display: table;}
+.d_table_01 h3{display: table-cell; text-align: center; vertical-align: middle;}
+/* 
+<table>
+    <tr>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
+*/
+
+.d_group_table{width: 240px; height: 240px; background-color: #bbf; 
+    display: table;}
+.d_group_table > div{display: table-cell; text-align: center; vertical-align: middle;}
+
+.d_group_table > div h3:first-child{padding-bottom: 20px;}
+
+
+
+.product_item{width: 300px; height: 300px; background-image: url(../img/chair.jpg); 
+background-position: 50% 50%; background-size: cover;}
+.product_item .dark{width: 100%; height: 100%; background: rgba(0,0,0,0.5);
+color: #fff; display: table;}
+.product_item .dark div{display: table-cell; text-align: center; vertical-align: middle;}
+
+.product_item .dark h3{font-size: 17px; padding-bottom: 15px;}
+.product_item .dark a{display: inline-block; padding: 10px 16px; border: 1px solid #fff; color: #fff; }
+
+.product_item .dark div a:hover{background: #fff; color: #333;}
+
+/* position */
+.static_box{width: 400px;height: 400px;background: #ffa;
+    position: static; margin-top: -200px;}
+.po_relative{width: 500px;height: 300px;background: #bff; 
+    top: -100px; left: 100px; position:relative;}
+    /* position:relative;를 선언한 공간은 일반적인 적층형태의 영역보다 전면으로 배치
+    => 서브메뉴가 하단의 영역위로 덮어지면서 나오게 하는 파트가 적용 예시 */
+
+
+.po_absolute_space{width: 400px;height: 300px;background: #09f; 
+    position: relative; left: 100px; top: 100px;}
+.po_absolute_space .absolute1{width: 100px;height: 100px;background: #f00;
+    position: absolute; top: 100px; left:100px; z-index: 1;}
+.po_absolute_space .absolute2{width: 150px;height: 150px;background: #ff0;
+position: absolute;}
+
+
+.ad_photo{width: 200px;height: 100px; background-image: url(../img/chair.jpg);
+background-position: 50% 50%; background-size: cover; position: relative;}
+.ad_photo img{width: 80px;height: 60px;background-color: rgba(255,255,50,0.5);
+position: absolute; left:calc(50% - 40px); top:calc(50% - 30px);}
+.ad_photo i{font-size: 36px; color: red; position: absolute; top: 10px; right: 10px;}
+
+
+
+.po_fixed_space{width: 400px;height: 300px; background: #ccc;}
+
+.po_fixed_space a{position: fixed; right: 20px; bottom: 20px; font-size: 40px;}
+
+/* [position : relative / absolute / fixed 특징]
+   < 공통 특징 >
+   - z-index 선언이 가능
+   - 위치에 따라 지정한 선언 : left / right / top / bottom 유효해짐
+   - 동일한 z-index라면 마지막에 선언된 영역이 전면으로 배치된다.
+*/
+
+.cover_01{width: 100%;height: auto;
+background: #ccc; text-align: center;}
+.cover_01 .inspace{ width: 960px;height: 100px;
+background: #07c; margin: 0 auto;}
+.cover_01 a{display: block; width: 180px; line-height: 40px;
+background-color: #f00; color: white; text-align: center;
+margin: 0 auto;}
+
+.cover_02{width: 100%;height: auto; background: #ccc;
+text-align: center; font-size: 0;}
+.cover_02 .inspace{display: inline-block; width: 960px;
+height: 100px; background: #07c;}
+.cover_02 a{display: block; width: 180px; line-height: 40px;
+    background-color: #f00; color: white; text-align: center;
+    margin: 0 auto; font-size: 16px;}
+
+
+
+
+
+
+    
+
+.home1 div:first-child{width: 100%; height: 120px; 
+    background: #a61dff; float: left;}
+.home1 div:last-child{width: 100%; height: 240px; 
+    background: #b5ff40;}
+
+
+.home2{width: 100%; height: 120px; 
+    background: #a61dff; text-align: center;}
+.home2 > div{width: 1200px; height: 120px;
+background: #b5ff40; display: inline-block;}
+
+
+.home3{width: 100%; height: 120px; background: #a61dff; }
+.home3 div:first-child{width: 200px;height: 120px;
+    background: #b5ff40; float: left;}
+.home3 div:last-child{width: 200px;height: 120px;
+    background: #b5ff40; float: right;}

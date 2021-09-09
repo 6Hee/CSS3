@@ -1,0 +1,650 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic:wght@400;700&display=swap');
+
+
+*{box-sizing: border-box; font-family: 'Nanum Gothic', sans-serif;}
+html, body{margin: 0; padding: 0;}
+header, section, article, aside, main, nav, footer{display: block;}
+header:after, section:after, article:after, aside:after, main:after, nav:after, footer:after{content: ""; display: block; clear: both;}
+
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+/* ================== 헤더 상단 ==================== */
+header .top{
+    height: 40px;
+    background: #363636;
+}
+header .top .wrap{
+    width: 1200px; height: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+    font-size: 0;
+}
+header .top .wrap p{
+    display: inline-block;
+    font-size: 14px;
+    color: #ccc;
+    line-height: 40px;
+}
+/* ================ 헤더 상단 로그인 버튼 ================== */
+header .top .wrap .loginbtn{
+    float: right;
+}
+header .top .wrap .loginbtn ul{
+}
+header .top .wrap .loginbtn ul li{
+    margin: 13px 0;
+    float: left;
+}
+header .top .wrap .loginbtn ul li a{
+    display: block;
+    font-size: 14px;
+    line-height: 1;
+    color: #ccc;
+    padding: 0 5px;
+    border-right: 1px solid #ccc
+}
+header .top .wrap .loginbtn ul li:last-child a{
+    border: none;
+    padding-right: 0;
+}
+header .top .wrap .loginbtn ul li:hover a{
+    color: #fff;
+}
+
+
+/* ============== 헤더 메인 메뉴 ============ */
+header .main{
+    height: 80px;
+    background: #fff; 
+    position: relative;
+}
+
+/* ================ 헤더 서브 메뉴 ================== */
+header .main .wrap .menu > ul > li > .sub_menu{
+    position: absolute;
+    display: block;
+    width: 100%; height: 40px;
+    left: 0;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.6);
+    display: none;
+    z-index: 10;
+}
+header .main .wrap .menu > ul > li:nth-child(5) > .sub_menu{
+    padding-left: 600px;
+}
+header .main .wrap .menu > ul > li:nth-child(6) > .sub_menu{
+    padding-left: 700px;
+}
+header .main .wrap .menu > ul > li > .sub_menu > li{
+    display: inline-block;
+}
+header .main .wrap .menu > ul > li > .sub_menu > li a{
+    font-size: 14px;
+    line-height: 40px;
+    color: #777;
+    padding: 12px 20px;
+}
+header .main .wrap .menu > ul > li > .sub_menu > li:hover a{
+    background: rgba(225, 225, 225, 0.8);
+    color: #004ea1;
+}
+header .main .wrap .menu > ul > li:hover > .sub_menu{
+    display: block;
+}
+
+
+/* ==================== 헤더 메인 메뉴 ======================= */
+header .main .wrap{
+    width: 1200px; height: 100%;
+    padding: 0 10px;
+    margin: 0 auto;
+}
+header .main .wrap .logo{
+    display: inline-block;
+}
+header .main .wrap .logo a{}
+header .main .wrap .logo a img{
+    display: block;
+    height: 56px;
+    margin: 12px 0 12px 5px;
+}
+header .main .wrap .menu{
+    float: right;
+}
+header .main .wrap .menu > ul{}
+header .main .wrap .menu > ul > li{float: left;}
+header .main .wrap .menu > ul > li > a{
+    display: block;
+    font-size: 22px;
+    font-weight: bold;
+    color: #363636;
+    margin: 0 15px;
+    line-height: 80px;
+    position: relative;
+}
+header .main .wrap .menu > ul > li > a:after{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background: #004ea1;
+    bottom: 0;
+    left: 50%;
+}
+header .main .wrap .menu > ul > li > a:before{
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 4px;
+    background: #004ea1;
+    bottom: 0;
+    right: 50%;
+}
+header .main .wrap .menu > ul > li:hover > a{
+    color: #004ea1;
+}
+header .main .wrap .menu > ul > li:hover > a:before{
+    width: 50%;
+    transition: width 0.5s;
+}
+header .main .wrap .menu > ul > li:hover > a:after{
+    width: 50%;
+    transition: width 0.5s;
+}
+
+
+/*============ 메인 ================*/
+main{
+    height: 280px;
+    overflow: hidden;
+    position: relative;
+}
+main .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+}
+/*============ 메인 텍스트  ================*/
+main .wrap .txtbox{
+    width: 480px; height: 140px;
+    margin-top: 140px;
+    margin-left: 690px;
+}
+main .wrap .txtbox h2{
+    font-size: 48px;
+    font-weight: bold;
+    color: #363636;
+}
+/*============ 메인 이미지 ================*/
+main .slider{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 300%; height: 100%;
+    animation: 10s side_slider infinite;
+    z-index: -33;
+}
+main .slider div{
+    width: calc(100% / 3); height: 100%;
+    float: left;
+    background-size: cover;
+    background-position: 50% 85%;
+}
+main .slider div:nth-child(1){background-image: url(../img/main-01.jpg);}
+main .slider div:nth-child(2){background-image: url(../img/main-02.jpg);}
+main .slider div:nth-child(3){background-image: url(../img/main-01.jpg);}
+
+@keyframes side_slider{
+    0%{margin-left: 0;}    
+    50%{margin-left: -100%;}    
+    100%{margin-left: -200%;}    
+}
+
+
+#img_nav{
+    background: #d3dce5;
+}
+#img_nav .wrap{
+    width: 1200px;
+    margin: 0 auto;
+    padding: 20px 0;
+}
+#img_nav .wrap ul{font-size: 0;}
+#img_nav .wrap ul li{
+    display: inline-block;
+    vertical-align: top;
+    width: calc(100% / 12); height: 80px;
+    padding: 0 10px;
+}
+#img_nav .wrap ul li a{
+    display: block;
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: background 0.5s;
+}
+
+#img_nav .wrap ul li a img{
+    width: 100%; height: 100%;
+    transition: all 1s;
+}
+
+#img_nav .wrap ul li:nth-child(2) a{
+    background-image: url(../img/quick_02_off.png);
+}
+#img_nav .wrap ul li:nth-child(2):hover a{
+    background-image: url(../img/quick_02_on.png);
+}
+#img_nav .wrap ul li:nth-child(3) a{
+    background-image: url(../img/quick_03_off.png);
+}
+#img_nav .wrap ul li:nth-child(3):hover a{
+    background-image: url(../img/quick_03_on.png);
+}
+#img_nav .wrap ul li:nth-child(4) a{
+    background-image: url(../img/quick_04_off.png);
+}
+#img_nav .wrap ul li:nth-child(4):hover a{
+    background-image: url(../img/quick_04_on.png);
+}
+#img_nav .wrap ul li:nth-child(5) a{
+    background-image: url(../img/quick_05_off.png);
+}
+#img_nav .wrap ul li:nth-child(5):hover a{
+    background-image: url(../img/quick_05_on.png);
+}
+#img_nav .wrap ul li:nth-child(6) a{
+    background-image: url(../img/quick_06_off.png);
+}
+#img_nav .wrap ul li:nth-child(6):hover a{
+    background-image: url(../img/quick_06_on.png);
+}
+#img_nav .wrap ul li:nth-child(7) a{
+    background-image: url(../img/quick_07_off.png);
+}
+#img_nav .wrap ul li:nth-child(7):hover a{
+    background-image: url(../img/quick_07_on.png);
+}
+#img_nav .wrap ul li:nth-child(8) a{
+    background-image: url(../img/quick_08_off.png);
+}
+#img_nav .wrap ul li:nth-child(8):hover a{
+    background-image: url(../img/quick_08_on.png);
+}
+#img_nav .wrap ul li:nth-child(9) a{
+    background-image: url(../img/quick_09_off.png);
+}
+#img_nav .wrap ul li:nth-child(9):hover a{
+    background-image: url(../img/quick_09_on.png);
+}
+#img_nav .wrap ul li:nth-child(10) a{
+    background-image: url(../img/quick_10_off.png);
+}
+#img_nav .wrap ul li:nth-child(10):hover a{
+    background-image: url(../img/quick_10_on.png);
+}
+#img_nav .wrap ul li:nth-child(11) a{
+    background-image: url(../img/quick_11_off.png);
+}
+#img_nav .wrap ul li:nth-child(11):hover a{
+    background-image: url(../img/quick_11_on.png);
+}
+#img_nav .wrap ul li:nth-child(12) a{
+    background-image: url(../img/quick_12_off.png);
+}
+#img_nav .wrap ul li:nth-child(12):hover a{
+    background-image: url(../img/quick_12_on.png);
+}
+
+
+/*================= 예약 파트 ====================*/
+
+
+#reservation{
+    height: 620px;
+    background: #efedef;
+}
+#reservation .wrap{
+    width: 1200px; height: 100%;
+    padding: 20px 10px;
+    margin: 0 auto;
+    font-size: 0;
+}
+#reservation .wrap div{
+    display: inline-block;
+    vertical-align: top;
+}
+#reservation .wrap div h2{
+    font-size: 36px; font-weight: bold;
+    color: #fff;
+    margin-bottom: 30px;
+}
+#reservation .wrap div p{
+    font-size: 18px;
+    color: #fff;
+}
+
+/* ===================== 파트 별 설정 ===================*/
+
+#reservation .wrap div:nth-child(1){
+    width: 280px; height: 280px; 
+    margin: 0 20px 24px 0;
+    background: #004ea1;
+    padding: 20px;
+    position: relative;
+}
+#reservation .wrap div:nth-child(2){
+    width: 280px; height: 280px; 
+    margin: 0 20px 24px 0;
+    background: #03d365;
+    padding: 20px;
+    position: relative;
+}
+#reservation .wrap div .btn{
+    position: absolute;
+    bottom: 20px;
+    text-align: center;
+}
+#reservation .wrap div a:nth-child(1){
+    float: left;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;
+    width: 121px; height: 40px;
+    border: 2px solid #fff;
+}
+#reservation .wrap div a:nth-child(2){
+    float: left;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;
+    width: 121px; height: 40px;
+    border: 2px solid #fff;
+    border-left: none;
+}
+#reservation .wrap div .btn a:hover{
+    background: rgba(255, 255, 255, 0.5);
+}
+/*================== div 3,4 파트 =======================*/
+#reservation .wrap > div:nth-child(3){
+    width: 580px; height: 280px;
+    padding: 20px;
+    background-image: url(../img/cont-001.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+#reservation .wrap > div:nth-child(3) > h2{
+    color: #363636;
+    margin-bottom: 50px;
+}
+#reservation .wrap > div:nth-child(3) > p{
+    font-size: 24px;
+    color: #363636;
+}
+#reservation .wrap > div:nth-child(3) > .btn > input{
+    width: 240px; height: 40px;
+    padding: 10px;
+    border: 2px solid #004ea1;   
+    outline: none;
+}
+#reservation .wrap > div:nth-child(3) > .btn > input::placeholder{
+    color: #999;
+    font-size: 16px;
+}
+#reservation .wrap > div:nth-child(3) > .btn > button{
+    width: 120px; height: 40px;
+    font-size: 16px;
+    color: #fff;
+    background: #004ea1;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    position: absolute;
+}
+#reservation .wrap > div:nth-child(4){
+    width: 580px; height: 280px;
+    padding: 20px;
+    background: #fff;
+    margin-right: 20px;
+}
+#reservation .wrap > div:nth-child(4) > .brand_logo{
+    float: left;
+    width: 240px; height: 240px;
+    background-image: url(../img/prize.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+#reservation .wrap > div:nth-child(4) > h2{
+    color: #363636;
+    margin-bottom: 50px;
+}
+#reservation .wrap > div:nth-child(4) > p{
+    font-size: 14px;
+    color: #363636;
+}
+
+#reservation .wrap div:nth-child(5){
+    width: 280px; height: 280px; 
+    margin: 0 20px 24px 0;
+    background: #004ea1;
+    padding: 20px;
+    position: relative;
+}
+#reservation .wrap div a:nth-child(5){
+    float: left;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;
+    width: 121px; height: 40px;
+    border: 2px solid #fff;
+}
+#reservation .wrap div:nth-child(6){
+    width: 280px; height: 280px; 
+    background: #03d365;
+    padding: 20px;
+    position: relative;
+}
+#reservation .wrap div a:nth-child(6){
+    float: left;
+    font-size: 16px;
+    line-height: 40px;
+    color: #fff;
+    width: 121px; height: 40px;
+    border: 2px solid #fff;
+    border-left: none;
+}
+
+/* 배너 파트*/
+section#banner{
+    height: 464px;
+    background-image: url(../img/health-care.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+section#banner .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    position: relative;
+}
+section#banner .wrap .txt_box{
+    position: absolute;
+    top: 164px;
+    left: 750px;
+}
+section#banner .wrap .txt_box h2{
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+}
+section#banner .wrap .txt_box .logo{
+    text-align: center;
+}
+section#banner .wrap .txt_box .logo img{
+    width: 180px; height: 66px;
+    margin-top: 42px;
+}
+
+
+/* ===============건강 정보 파트================*/
+
+section#health_info{
+    height: 555px;
+}
+section#health_info .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    padding: 0 10px 40px;
+    font-size: 0;
+}
+section#health_info .wrap .title{
+    text-align: center;
+}
+section#health_info .wrap .title > h2{
+    font-size: 36px;
+    font-weight: bold;
+    line-height: 60px;
+    color: #363636;
+    margin: 20px 0;
+}
+section#health_info .wrap .title > p{
+    font-size: 20px;
+    color: #363636;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+section#health_info .wrap > .menu{
+    display: inline-block;
+    width: 280px; height: 376px;
+    margin-right: 20px;
+    background: #faf;
+    vertical-align: top;
+    text-align: center;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+    overflow: hidden;
+}
+section#health_info .wrap > .menu .dark{
+    width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    position: absolute;
+    top: 376px;
+    transition: top 0.7s;
+}
+section#health_info .wrap > .menu:hover .dark{
+    top: 0;
+}
+section#health_info .wrap > .menu:last-child{
+    margin-right: 0;
+}
+section#health_info .wrap > .menu .dark h2{
+    display: block;
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+    padding: 60px 0 18px;
+}
+section#health_info .wrap > .menu .dark span{
+    display: block;
+    width: 80px; height: 4px;
+    background: #fff;
+    margin: 0 auto;
+}
+section#health_info .wrap > .menu .dark p{
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    color: #fff;
+    margin-top: 20px;
+}
+section#health_info .wrap > .menu:last-child .dark .snsbtn{
+    display: inline-block;
+    background: transparent;
+    text-align: center;
+    margin-top: 29px;
+}
+section#health_info .wrap > .menu:last-child .dark .snsbtn a{
+    display: block;
+    font-size: 18px;
+    line-height: 40px;
+    font-weight: bold;
+    color: #fff;
+    width: 120px; height: 41px;
+    border: 2px solid #fff;
+}
+section#health_info .wrap > .menu:last-child .dark .snsbtn a:nth-child(n+2){
+    border-top: none;
+}
+section#health_info .wrap > .menu:last-child .dark .snsbtn a:hover{
+    background: rgba(255, 255, 255, 0.25);
+}
+section#health_info .wrap > div:nth-child(2){
+    background-image: url(../img/cont-002.jpg);
+}
+section#health_info .wrap div:nth-child(3){
+    background-image: url(../img/cont-003.jpg);
+}
+section#health_info .wrap div:nth-child(4){
+    background-image: url(../img/cont-004.jpg);
+}
+section#health_info .wrap div:nth-child(5){
+    background-image: url(../img/cont-005.jpg);
+}
+
+
+/*===================== 꼬리말 파트 ======================*/
+
+footer{
+    padding: 20px 0;
+    color: #ccc;
+    background-color: #363636;
+    text-align: center;
+    font-size: 13px;
+}
+footer .wrap{
+    width: 1200px; 
+    margin: 0 auto;
+}
+footer .wrap .f_info{
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+}
+footer .wrap .f_info ul{
+    display: flex;
+    justify-content: center;
+}
+footer .wrap .f_info ul li{}
+footer .wrap .f_info ul li p{
+    line-height: 1;
+    padding: 0 10px;
+    border-right: 1px solid #aaa;
+}
+footer .wrap .f_info ul li:last-child p{border: none;}
+
+footer .wrap .f_main{padding-top: 15px;}
+footer .wrap .f_main .link{}
+footer .wrap .f_main .link ul{
+    display: flex;
+    justify-content: center;
+}
+footer .wrap .f_main .link ul li{}
+footer .wrap .f_main .link ul li a{
+    display: block;
+    color: #ccc;
+    line-height: 1;
+    padding: 0 10px;
+    border-right: 1px solid #aaa;
+}
+footer .wrap .f_main .link ul li:last-child a{border: none;}
+footer .wrap .f_main .link ul li:hover a{color: #fff;}
+
+footer .wrap .f_main .info{padding-top: 15px; padding-bottom: 25px;}
+footer .wrap .f_main img{height: 45px;}
+footer .wrap .f_main .copy{
+    padding-top: 25px;
+}

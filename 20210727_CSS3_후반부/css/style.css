@@ -1,0 +1,895 @@
+@charset "utf-8";
+
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+
+.text_shadow{
+    width: 100%; height: 300px;
+    background-image: url(../img/bg_2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    display: table;
+}
+.text_shadow h2{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 0, 0.85);
+    font-size: 45px;
+}
+
+
+.text_gr{
+    width: 100%; height: 200px;
+    background-color: #999;
+    display: table;
+}
+.text_gr h2{
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 45px;
+    background: -webkit-linear-gradient(#f00, #00f);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+.text_overflow{
+    background: #aff;
+    width: 360px;
+    text-overflow: ellipsis; 
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+/* wrap => 감싼다(복수의 줄을 허용) / 
+nowrap => 감싸지 않는다(한줄만 허용)*/
+
+
+.word_space_01{
+    width: 200px; height: 200px;
+    background-color: #ffa;
+}
+.word_space_01 p{
+    word-wrap: break-word;
+}
+/* word-wrap 선언의 의미는 부모가 또는 본인이 갖고 있는 최대의 가로 공간을 기준으로 어떻게 넣을 것인가를 정의
+break-word : 공간에 넘치는 단어를 깨서 내리겠다는 의미 (연속된 알파벳과 숫자) */
+
+.word_space_02{
+    width: 20%; height: auto;
+    background: #faa;
+}
+.word_space_02 p{
+    word-break: keep-all;
+}
+
+/* 스페이스바를 한번 눌러서 단어와 단어 사이를 띄운 상태 => 한글 적용시 */
+
+
+.word_space p{
+    font-size: 19px;
+    word-spacing: -2px;
+}
+
+.letter_space p{
+    font-size: 19px;
+    letter-spacing: -2px;
+}
+/* 음수로 너무 많은 값을 부여하면 가독성이 떨어진다. minimum으로 -2px로 통제 */
+/* font-size에서는 소수점 값을 적용 불가. 사이 공간에서는 소수점 이하의 단위를 적용하여 미세조정 가능 */
+
+.white_space{
+    width: 200px; height: 500px;
+    background: #7af;
+}
+.white_space .default{
+    white-space: normal;
+}
+.white_space .noWrap{
+    white-space: nowrap;
+}
+.white_space .pre{
+    white-space: pre;
+}
+
+
+
+/* =======================로그인 박스 설정 =================== */
+label.login{
+    position: fixed;
+    display: block;
+    top: 20px;
+    right: 20px;
+    width: 100px; height: 40px;
+    cursor: pointer;
+    background: #09f;
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 4px;
+    z-index: 5;
+}
+
+label.close{
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    display: block;
+    width: 40px; height: 40px;
+    border-radius: 50%;
+    border: 1px solid #fff;
+    font-size: 28px;
+    color: #fff;
+    text-align: center;
+    line-height: 1.2;
+    cursor: pointer;
+    z-index: -1;
+    opacity: 0;
+}
+input#loginBtn{
+    display: none;
+}
+input#login_close{
+    display: none;
+}
+
+input#loginBtn:checked ~ label.close{
+    z-index: 10;
+    opacity: 1;
+}
+
+
+.dark{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
+input#loginBtn:checked ~ .dark{
+    z-index: 9;
+    opacity: 1;
+    transition: opacity 0.5s;
+}
+
+
+.popup{
+    position: fixed;
+    width: 400px;
+    height: auto;
+    background-color: #fff;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 8px rgba(0, 0, 0, 0.8);
+    z-index: -1;
+    opacity: 0;
+}
+
+input#loginBtn:checked ~ .popup{
+    z-index: 10;
+    opacity: 1;
+}
+
+
+.popup .close{
+    position: absolute; 
+    top: -40px;
+    right: -32px;
+    font-size: 40px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.popup .cont{font-size: 0;}
+.popup .cont div{
+    padding: 4px 0;
+}
+.popup .cont div label{
+    width: 100px;
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+}
+.popup .cont div input{
+    width: calc(100% - 100px);
+    display: inline-block;
+    vertical-align: middle;
+    font-size: 16px;
+    border: none;
+    border-bottom: 1px solid #cfcfcf;
+    height: 40px;
+}
+.popup .cont div.submit_btn{
+    border-top: 1px solid #999; 
+    margin-top: 20px;
+    padding-top: 20px;
+    text-align: right;
+}
+.popup .cont div.submit_btn input{
+    width: 160px; height: 40px;
+    border: none;
+    background-color: #f00;
+    color: #fff;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+
+
+.blur_fx{
+    width: 200px; height: 160px;
+    background-image: url(../img/img1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 50px;
+    transition: filter 0.5s;
+    filter: blur(2px);
+}
+.blur_fx:hover{
+   filter: blur(0);
+}
+
+.brightness_fx{
+    width: 200px; height: 160px;
+    background-image: url(../img/img2.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 50px;
+    filter: brightness(0%); /*완전 어둡게(검정)*/
+    filter: brightness(50%); /*중간 어둡게*/
+    filter: brightness(100%); /*원본 명도*/
+    filter: brightness(150%); 
+    filter: brightness(200%); /*빛의 노출을 강하게 적용*/
+}
+.contrast_fx{
+    width: 200px; height: 160px;
+    background-image: url(../img/img3.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 50px;
+    filter: contrast(0);  /*대조 없음 (중간톤-회색)*/
+    filter: contrast(50%); /*반투명 회색톤*/
+    filter: contrast(100%); /*원본 대조 구성*/
+    filter: contrast(150%); /*밝은 색상은 더 밝게, 
+                                어두운 색상은 더 어둡게*/
+    filter: contrast(200%);
+}
+.grayscale_fx{
+    width: 200px; height: 160px;
+    background-image: url(../img/img4.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 50px;
+    filter: grayscale(0%); /*원본 색상 유지*/
+    filter: grayscale(100%); /*흑백톤으로 변경*/
+}
+.hue_rotate{
+    width: 200px; height: 160px;
+    background-image: url(../img/img5.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 50px;
+    filter: hue-rotate(180deg);
+}
+.invert{
+    width: 200px; height: 160px;
+    background-image: url(../img/img6.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 50px;
+    filter: invert(0);
+    filter: invert(50%);
+    filter: invert(100%);
+}
+.saturate{
+    width: 200px; height: 160px;
+    background-image: url(../img/img7.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 50px;
+    filter: saturate(0);
+    filter: saturate(150%); /*vivid 컬러로 진행되는 효과를 부여가능*/
+}
+.sepia_fx{
+    width: 200px; height: 160px;
+    background-image: url(../img/img7.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    margin: 50px;
+    filter: sepia(100%); /*세피아 효과 적용*/
+}
+.sepia_fx:hover{
+    filter: sepia(0%); /*세피아 효과 제거*/
+}
+
+
+.ani_01{
+    width: 100%; height: 400px;
+    background: #ccc;
+    position: relative;
+}
+/* animation : (전체 시간) (키프레임과 연동 가능한 이름) (반복여부 : 정수 또는 infinite(계속반복)) (시간대비효과) (시작 연기(delay) 시간)*/
+/* 
+[시간대비 효과]
+ease (ease-in-out 비슷) : 시작 속도를 천천히, 중간속도는 빠르게, 도착 속도는 천천히
+ease-in : 시작 속도만 천천히, 그 이후 속도는 빠르게 진행
+ease-out : 도착속도만 천천히, 그 이전 속도는 빠르게 진행
+linear : 시간대비 속도가 동일하게 적용
+ */
+.ani_01 img{
+    position: absolute;
+    height: 80px;
+    animation: 5s ani_cart infinite linear 5s;
+}
+/* @keyframes ani_cart{
+    from{top: 0; left: 0;}
+    to{top: 50%; left: 75%;}
+} */
+@keyframes ani_cart{
+    0%{top: 0; left: 0;}
+    25%{top: 0; left: 80%;}
+    50%{top: 80%; left: 80%;}
+    75%{top: 80%; left: 0;}
+    100%{top: 0; left: 0;}
+}
+
+
+
+.fadeImg{
+    width: 100%; height: 400px;
+    background-color: #aff;
+    background-size: cover;
+    background-position: 50% 50%;
+    background-image: url(../img/img1.jpg);
+    animation: 20s fadeImages infinite;
+    animation-delay: 4s; /* 4초 후에 애니메이션을 시작하세요.*/
+}
+
+@keyframes fadeImages{
+    0%{background-image: url(../img/img1.jpg);}
+    25%{background-image: url(../img/img2.jpg);}
+    50%{background-image: url(../img/img3.jpg);}
+    75%{background-image: url(../img/img4.jpg);}
+    100%{background-image: url(../img/img1.jpg);}
+}
+
+
+.slider1{
+    width: 100%; height: 340px;
+    padding: 20px 0;
+    /* background: #aaf; */
+    overflow: hidden;
+}
+.slider1 .slide_cover{
+    width: 300%; height: 100%;
+    /* background: #aee; */
+    padding: 10px 0;
+    animation: 20s side_slider infinite;
+}
+
+.slider1 .slide_cover div{
+    width: calc(100% / 3); height: 100%;
+    float: left;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+.slider1 .slide_cover div:nth-child(1){
+    background-image: url(../img/img1.jpg);
+}
+.slider1 .slide_cover div:nth-child(2){
+    background-image: url(../img/img2.jpg);
+}
+.slider1 .slide_cover div:nth-child(3){
+    background-image: url(../img/img3.jpg);
+}
+@keyframes side_slider{
+    0%{margin-left: 0;}
+    25%{margin-left: -100%;}
+    50%{margin-left: -200%;}
+    75%{margin-left: -100%;}
+    100%{margin-left: 0;}
+}
+
+/* 클릭 요소에 따른 색상 변화 */
+
+#click_test1{
+    width: 500px; height: 300px;
+    position: relative;
+}
+#click_test1 input[type="radio"]{
+    display: none;
+}
+#click_test1 label{
+    position: absolute;
+    width: 80px; height: 40px;
+    left: 0;
+    display: block;
+    border: 1px solid #f00;
+}
+#click_test1 label:nth-of-type(1){
+    background: #faf;
+    top: 0;
+}
+#click_test1 label:nth-of-type(2){
+    background: #ffa;
+    top: 40px;
+}
+#click_test1 label:nth-of-type(3){
+    background: #aff;
+    top: 80px;
+}
+
+#click_test1 .result{
+    margin-left: 80px;
+    width: 420px; height: 100%;
+    background: #ccc;
+}
+
+#click_test1 input#click0:checked ~ .result{
+    background: #faf;
+}
+#click_test1 input#click1:checked ~ .result{
+    background: #ffa;
+}
+#click_test1 input#click2:checked ~ .result{
+    background: #aff;
+}
+
+/* 네비게이션 슬라이드(좌우 이동) */
+#pagerSlider{
+    width: 100%; height: 360px;
+    margin: 0 auto;
+    position: relative;
+    background: #aff;
+    padding: 10px 0;
+    overflow: hidden;
+}
+#pagerSlider input[type="radio"]{
+    display: none;
+    position: absolute;
+}
+#pagerSlider input:nth-child(1){left: 0;}
+#pagerSlider input:nth-child(2){left: 20px;}
+#pagerSlider input:nth-child(3){left: 40px;}
+
+
+
+#pagerSlider .pager{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0;
+    z-index: 1;
+}
+#pagerSlider .pager label{
+    display: inline-block;
+    vertical-align: middle;
+    width: 16px; height: 16px;
+    border-radius: 50%;
+    text-align: center;
+    border:1px solid #f00;
+    cursor: pointer;
+    margin: 0 5px;
+    background: #777;
+    box-shadow: inset 2px 2px 4px rgba(0, 0, 0, 0.75);
+    transition: background 1s, box-shadow 1s;
+}
+
+#pagerSlider input#slide1:checked ~ .pager label:nth-child(1){
+    background: #f00;
+    box-shadow: none;
+}
+#pagerSlider input#slide2:checked ~ .pager label:nth-child(2){
+    background: #f00;
+    box-shadow: none;
+}
+#pagerSlider input#slide3:checked ~ .pager label:nth-child(3){
+    background: #f00;
+    box-shadow: none;
+}
+
+#pagerSlider .frame{
+    width: 300%; height: 100%;
+    background: #ffa;
+    transition: margin-left 1s;
+}
+/* 좌우 슬라이드는 개별 이미지 공간을 묶은 부모영역의 위치를 조정시켜야 함 (반드시 margin-left(또는 left)를 사용해야 함. 단, margin-right는 브라우저의 가로 스크롤바만 증가시킴) */
+#pagerSlider .frame .slide{
+    width: calc(100% / 3); height: 100%;
+    background: #faa;
+    float: left;
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+#pagerSlider .frame .slide_1{background-image: url(../img/img7.jpg);}
+#pagerSlider .frame .slide_2{background-image: url(../img/img8.jpg);}
+#pagerSlider .frame .slide_3{background-image: url(../img/img9.jpg);}
+
+
+#pagerSlider .frame .slide h3{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #333;
+    font-size: 28px;
+}
+
+
+#pagerSlider input#slide1:checked ~ .frame{margin-left: 0%;}
+#pagerSlider input#slide2:checked ~ .frame{margin-left: -100%;}
+#pagerSlider input#slide3:checked ~ .frame{margin-left: -200%;}
+
+
+
+/* =============네비게이션 슬라이드(페이드 방식============ */
+
+#pagerFade{
+    width: 100%; height: 400px;
+    margin: 0 auto;
+    position: relative;
+    background-color: #ccf;
+    background-image: url(../img/img4.jpg);
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#pagerFade input[type="radio"]{
+    display: none;
+}
+#pagerFade input:nth-child(1){left: 0;}
+#pagerFade input:nth-child(2){left: 20px;}
+#pagerFade input:nth-child(3){left: 40px;}
+
+
+#pagerFade .pager{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0;
+}
+#pagerFade .pager label{
+    width: 40px; height: 4px;
+    background-color: #999;
+    display: inline-block;
+    margin: 0 5px;
+    box-shadow: inset 1px 1px 2px rgba(0, 0, 0, 0.5);
+    z-index:1;
+    cursor: pointer;
+    background-size: cover;
+    background-position: 50% 50%;
+    vertical-align: bottom;
+    transition: width 0.5s, height 0.5s, background-image 0.5s;
+}
+
+#pagerFade input#fade1:checked ~ .pager label:nth-child(1){
+    background-color: #f90;
+    box-shadow: none;
+    width: 60px; height: 40px;
+    background-image: url(../img/img4.jpg);
+    box-shadow:0 0 2px #f90;
+}
+#pagerFade input#fade2:checked ~ .pager label:nth-child(2){
+    background-color: #f90;
+    box-shadow: none;
+    width: 60px; height: 40px;
+    background-image: url(../img/img5.jpg);
+    box-shadow:0 0 2px #f90;
+}
+#pagerFade input#fade3:checked ~ .pager label:nth-child(3){
+    background-color: #f90;
+    box-shadow: none;
+    width: 60px; height: 40px;
+    background-image: url(../img/img6.jpg);
+    box-shadow:0 0 2px #f90;
+}
+
+#pagerFade .frame{
+    width: 100%; height: 100%;
+    background-size: cover;
+    background-position: 50% 50%;
+    transition: background-image 0.s;
+}
+
+#pagerFade input#fade1:checked ~ .frame{background-image: url(../img/img4.jpg);}
+#pagerFade input#fade2:checked ~ .frame{background-image: url(../img/img5.jpg);}
+#pagerFade input#fade3:checked ~ .frame{background-image: url(../img/img6.jpg);}
+
+
+#tab1{
+    width: 800px; height: 400px;
+    margin: 0 auto;
+    background: #ccc;
+}
+#tab1 input[type="radio"]{
+    display: none;
+}
+#tab1 .tabBtn{
+    height: 40px;
+    background: #aaf;
+}
+#tab1 .tabBtn label{
+    float: left;
+    width: calc(100% / 3); height: 100%;;
+    text-align: center;
+    line-height: 40px;
+    background-color: #2af;
+    color: #fff;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#tab1 input#t_1:checked ~ .tabBtn label:nth-child(1){
+    background-color: #05f;
+}
+#tab1 input#t_2:checked ~ .tabBtn label:nth-child(2){
+    background-color: #05f;
+}
+#tab1 input#t_3:checked ~ .tabBtn label:nth-child(3){
+    background-color: #05f;
+}
+
+#tab1 .tab_cont{
+    width: 100%; height: 360px;
+    background: #faa;
+    position: relative;
+}
+#tab1 .tab_cont .cont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    padding: 20px 10px;
+    display: none;
+}
+/* 
+[position:absolute;의 z방향 위치]
+#1. 형제간에 동일한 z-index가 적용되었을 때 : 막내가 가장 전면으로 배치
+#2. 부모자식간에 동일한 z-index가 적용되었을 때 : 자식이 가장 전면으로 배치(단, 자식의 z-index값이 음수가 아닌 경우)
+*/
+#tab1 .tab_cont .cont .box{
+    float: left;
+    width: calc(100% / 3 - 20px); height: 320px;
+    margin: 0 10px;
+    background-color: #fff;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#tab1 .tab_cont .cont1 .box:nth-child(1){
+    background-image: url(../img/img1.jpg);
+}
+#tab1 .tab_cont .cont1 .box:nth-child(2){
+    background-image: url(../img/img2.jpg);
+}
+#tab1 .tab_cont .cont1 .box:nth-child(3){
+    background-image: url(../img/img3.jpg);
+}
+#tab1 .tab_cont .cont2 .box:nth-child(1){
+    background-image: url(../img/img4.jpg);
+}
+#tab1 .tab_cont .cont2 .box:nth-child(2){
+    background-image: url(../img/img5.jpg);
+}
+#tab1 .tab_cont .cont2 .box:nth-child(3){
+    background-image: url(../img/img6.jpg);
+}
+#tab1 .tab_cont .cont3 .box:nth-child(1){
+    background-image: url(../img/img7.jpg);
+}
+#tab1 .tab_cont .cont3 .box:nth-child(2){
+    background-image: url(../img/img8.jpg);
+}
+#tab1 .tab_cont .cont3 .box:nth-child(3){
+    background-image: url(../img/img9.jpg);
+}
+
+
+
+#tab1 input#t_1:checked ~ .tab_cont .cont1{
+    display: block; 
+}
+#tab1 input#t_2:checked ~ .tab_cont .cont2{
+    display: block; 
+}
+#tab1 input#t_3:checked ~ .tab_cont .cont3{
+    display: block; 
+}
+
+
+
+/* 탭버튼 및 탭박스(동적 구성 + 페이드 효과 */
+#tab2{
+    width: 800px; height: 400px;
+    margin: 0 auto;
+    /*   */
+}
+#tab2 input[type="radio"]{display: none;}
+
+#tab2 .tabBtn{width: 100%; height: 40px; position: relative;}
+#tab2 .tabBtn label{
+    float: left; 
+    width: calc(100% / 3); height: 100%;
+    text-align: center;
+    line-height: 40px;
+    color: #999;
+    cursor: pointer;
+    position: relative;
+    z-index: 1;
+}
+#tab2 .tabBtn .bar{
+    position: absolute;
+    width: calc(100% / 3); height: 2px; height: 100%;
+    background: #333;
+    /* left: 0; */
+    bottom: 0;
+    transition: left 1s, color 1s;
+}
+
+#tab2 input#t_a:checked ~ .tabBtn label:nth-child(1){
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.5s;
+    transition-delay: 1s;
+}
+#tab2 input#t_b:checked ~ .tabBtn label:nth-child(2){
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.5s;
+    transition-delay: 1s;
+}
+#tab2 input#t_c:checked ~ .tabBtn label:nth-child(3){
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.5s;
+    transition-delay: 1s;
+}
+
+#tab2 input#t_a:checked ~ .tabBtn span{left: 0;}
+#tab2 input#t_b:checked ~ .tabBtn span{left: calc(100%/ 3);}
+#tab2 input#t_c:checked ~ .tabBtn span{left: calc(100%*2 / 3);}
+
+
+#tab2 .tab_cont{
+    width: 100%; height: 360px;
+    border-top: 1px solid #333;
+    position: relative;
+}
+#tab2 .tab_cont .cont{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    padding: 20px 10px;
+    /* display: none; */
+    z-index: -1;
+    opacity: 0;
+}
+/* 
+[position:absolute;의 z방향 위치]
+#1. 형제간에 동일한 z-index가 적용되었을 때 : 막내가 가장 전면으로 배치
+#2. 부모자식간에 동일한 z-index가 적용되었을 때 : 자식이 가장 전면으로 배치(단, 자식의 z-index값이 음수가 아닌 경우)
+*/
+#tab2 .tab_cont .cont .box{
+    float: left;
+    width: calc(100% / 3 - 20px); height: 320px;
+    margin: 0 10px;
+    background-color: #fff;
+    background-position: 50% 50%;
+    background-size: cover;
+}
+#tab2 .tab_cont .cont1 .box:nth-child(1){
+    background-image: url(../img/img1.jpg);
+}
+#tab2 .tab_cont .cont1 .box:nth-child(2){
+    background-image: url(../img/img2.jpg);
+}
+#tab2 .tab_cont .cont1 .box:nth-child(3){
+    background-image: url(../img/img3.jpg);
+}
+#tab2 .tab_cont .cont2 .box:nth-child(1){
+    background-image: url(../img/img4.jpg);
+}
+#tab2 .tab_cont .cont2 .box:nth-child(2){
+    background-image: url(../img/img5.jpg);
+}
+#tab2 .tab_cont .cont2 .box:nth-child(3){
+    background-image: url(../img/img6.jpg);
+}
+#tab2 .tab_cont .cont3 .box:nth-child(1){
+    background-image: url(../img/img7.jpg);
+}
+#tab2 .tab_cont .cont3 .box:nth-child(2){
+    background-image: url(../img/img8.jpg);
+}
+#tab2 .tab_cont .cont3 .box:nth-child(3){
+    background-image: url(../img/img9.jpg);
+}
+
+#tab2 input#t_a:checked ~ .tab_cont .cont1{
+    z-index: 1; opacity: 1;
+    transition: opacity 0.5s; transition-delay: 1s;
+}
+#tab2 input#t_b:checked ~ .tab_cont .cont2{
+    z-index: 1; opacity: 1;
+    transition: opacity 0.5s; transition-delay: 1s;
+}
+#tab2 input#t_c:checked ~ .tab_cont .cont3{
+    z-index: 1; opacity: 1; 
+    transition: opacity 0.5s; transition-delay: 1s;
+}
+
+
+
+
+
+.btn_active{
+    border: none;
+    background: #2af;
+    width: 120px; height: 60px;
+    text-align: center;
+    line-height: 60px;
+    font-size: 20px;
+    color: #fff;
+    border-radius: 30px;
+}
+.btn_active:active{
+    box-shadow: inset 1px 1px 3px rgba(0, 0, 0, 0.5) , inset -1px -1px 3px rgba(255, 255, 255, 0.75);
+    background: #19e;
+}
+
+
+
+.ficon i{
+    font-size: 100px;
+    margin: 0 20px;
+}
+.ficon > i:nth-child(1){
+    color: orange;
+    text-shadow: 3px 2px 3px #f00;
+}
+.ficon i:nth-child(2){
+    background: skyblue;
+    border-radius: 30px;
+    color: #fff;
+}
+
+.ficon .outline{
+    display: inline-block;
+    text-align: center;
+    width: 150px; height: 150px;
+    border-radius: 50%;
+    background: #cff;
+}
+.ficon .outline > i{
+    color: pink;
+    line-height: 150px;
+}
+.ficon i:nth-child(4){
+    color: rosybrown;
+    text-shadow: 0 2px 3px #cfcfcf;
+    text-decoration-line:underline;
+}
+.ficon i:nth-child(5){
+    filter: blur(1px);
+    color: red;
+}

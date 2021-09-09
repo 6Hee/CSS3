@@ -1,0 +1,91 @@
+/* 링크 관련 가상 행동 선택자 */
+.a_focus{color: red;}
+.a_focus:focus{color: orange;}
+/* 웹접근성 차원에서는 작성이 요구됨 */
+
+
+.a_active:active{color: red;}
+/* 동적구현에 대한 통제를 위해 자바스크립트를 사용 */
+
+
+/* 속성 선택자 */
+.attr_selector_01 input[type]{background-color: #ffffaa; border:none}
+/* type이라는 속성을 갖고 있는 input 태그에 스타일을 적용하세요 */
+.attr_selector_01 input[type="password"]{background-color: #ffaaff;}
+/* type이라는 속성의 속성값을 password로 갖고 있는 input 태그에 스타일을 적용하세요 */
+
+
+.attr_selector_02 p[class^="d"]{color: #ff9900;} 
+/* 속성명이 지정된 글자로 <<시작>>0하는 요소에만 스타일을 적용해주세요 */
+
+.attr_selector_02 p[class$="lk"]{font-weight: bold;}
+/* 속성명이 지정된 글자로 종료되는 요소에만 스타일을 적용해주세요 */
+
+.attr_selector_02 p[class*="fo"]{font-style: italic;}
+/* 속성명에 지정된 글자가 포함된 요소에만 스타일을 적용해 주세요 */
+
+.attr_selector_02 p[class~="dishes"]{font-size: 40px;}
+/* 속성명에 지정된 단어를 포함한 요소에만 스타일을 적용해 주세요 */
+
+.attr_selector_02 p[kjh]{background-color: #aaffff;}
+
+[class*="des"]{background-color: #ffffaa;}
+
+
+.attr_ex a[href*="ab"]{color: red;}
+
+
+
+/* 수도 선택자 */
+.nth_selector li:nth-child(3){color: #0088ff;}
+/* nth-child(양의정수)를 써야할 대상은 형제 구조에서 몇번째 자식인지를 찾아가는 과정*/
+/* nth-child(n)의 문제점은 첫번째가 성격이 다른 선택자가 배치되더라도 감지하는 것이
+어렵다. */
+.nth_selector li:first-child{color: #f00;}
+.nth_selector li:last-child{color: #0f0;}
+.nth_selector li:nth-child(2n){background-color: #ffa;}
+.nth_selector li:nth-child(odd){background-color: #faf;}
+
+
+/* 동일한 태그의 순서를 찾아가는 :nth-of-type(n) */
+
+.nthType_selector li:nth-of-type(3){color: #0088ff;}
+.nthType_selector li:first-of-type{color: #f00;}
+.nthType_selector li:last-of-type{color: #0f0;}
+
+
+.nth_ex li:nth-child(2) a{color: red;}
+.nth_ex li:nth-of-type(3) a{font-size: 24px;}
+/* 수도 선택자는 부모의 입장에서 몇번째 자식인가를 지정하는 것이 아님. 
+본인이 몇번째 자식의 위치인가가 중요 */
+
+div.contain_selector{background-color: #faf;}
+.contain_selector p.myfav{color: #fff;}
+
+
+div.contain_ex{background-color: orange;}
+.contain_ex div#space{color: white;}
+
+/* css 선택자의 명시도(점수 부여법) */
+#css_score #score{color: #f00;} /*100+100 = 200*/
+#css_score p{color: orange;}    /* 100+1 = 101 */
+div .level{color: #0099ff !important;}     /*1+10 = 11*/
+
+#section .txt_cont{background-color: #f99;}
+div#section .part p{background: #f80;}
+div .part #txt_test{background-color: #09f;}
+
+/* 
+#section .txt_cont = 100+10 = 110
+div#section .part p = 1+100+10+1 = 112
+div .part #txt_test = 1+10+100 = 111
+*/
+
+/* 추후 진행될 반응형웹에서는 각 디바이스 사이즈별로 css를 조정해야한다. 
+!important를 작성하게 되면 css조정이 사실상 불가능하다 */
+
+/* [웹사이트를 구성하는 필수 요소]
+ - 컬러 : 메인컬러(80%) / 보조컬러(10~15%) / 강조컬러(5%)
+ - 폰트 : 메인폰트(80~85%) / 보조폰트(10%) / 강조폰트(5%)
+ - 레이아웃 : 구조적 설계 
+ - 콘텐츠 : 텍스트 + 이미지 또는 영상 */

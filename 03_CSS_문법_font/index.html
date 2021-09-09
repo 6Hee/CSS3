@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h3>폰트의 서체 적용</h3>
+    <h4>1. 외부에서 서체를 가져온다. google fonts라는 사이트로부터 
+        링크 연동을 진행</h4>
+    
+    <p>영문과 한글 혼용시, font-family: '영문서체명', '한글서체명', serif; 
+        ==> 영문서체는 한글영역에서 표현못함 / 한글서체는 영문과 한글 모두 표현 가능
+    </p>
+    <h4>2. 자체 서버에 저장된 폰트를 사용하고자 할 때, transfonter.org 
+        사이트로 접속하여 폰트의 원본파일을 변환작업(eot, ttf, woff, woff2, svg
+        체크박스 모두 체크할 것!)을 시킨 후 다운받아 가져온다.
+        css에서 각 폰트 파일 연동을 선언한다.
+    </h4>
+
+    <!-- <h4 class="title">맛있는 레시피</h4> -->
+
+    <h3>폰트의 크기 (font-size) : px em rem pt</h3>
+    <h4>고정형 단위 : px pt </h4>
+    <p class="unit_px">고정형 단위 px</p>
+    <p class="unit_pt">고정형 단위 pt</p>
+
+    <h4>유동형 단위</h4>
+    <div class="unit_em">
+        <p class="em_txt">부모의 값에 의한 유동형 단위 em</p>
+    </div>
+
+    <div class="unit_rem">
+        <p class="rem_txt">조상의 값에 의한 유동형 단위 rem</p>
+    </div>
+    <div class="unit_vw">
+        <p class="vw_txt">브라우저의 가로 사이즈를 기준으로 변동되는 단위</p>
+    </div>
+    <div class="unit_vh">
+        <p class="vh_txt">브라우저의 세로 사이즈를 기준으로 변동되는 단위</p>
+    </div>
+
+    <h3>폰트의 가중치(굵게-bold, 중간-normal, 얇게-light)
+    </h3>
+    <p class="fw_100">font_weight100</p>
+    <p class="fw_200">font_weight100</p>
+    <p class="fw_300">font_weight100</p>
+    <p class="fw_400">font_weight100</p>
+    <p class="fw_500">font_weight100</p>
+    <p class="fw_600">font_weight100</p>
+    <p class="fw_700">font_weight100</p>
+    <p class="fw_800">font_weight100</p>
+    <p class="fw_900">font_weight100</p>
+</body>
+</html>

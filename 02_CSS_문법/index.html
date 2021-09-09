@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS의 선택자</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   <h2>선택자 파트</h2>
+   <h3>전체 선택자(*) : 문서상에 존재하는 모든 태그에 스타일을 적용</h3>    
+   
+   <h3>태그(요소명) 선택자 : 각괄호 내부의 첫 선언요소명을 기준으로 스타일 적용시 사용</h3>
+
+   <h3>클래스 선택자 : 태그 내부에 추가로 작성된 클래스(class) 속성과 
+       그 속성이 담고 있는 속성값을 기준으로 선택하여 스타일 적용시 사용</h3>
+
+    <div class="class_selector">
+        <p class="1">바람과 함께 사라지다</p>
+        <p class="hit hit_01">아몬드 봉봉</p>
+        <p class="fav_icon mySelect">엄마는 외계인</p>
+        <p class="hit">민트초코</p>
+        <p class="hit">슈팅스타</p>
+    </div>
+    <hr>
+    <h4>클래스 선택지 선언시 주의사항</h4>
+    <p>1. 클래스명을 선언시 첫글자는 숫자를 넣을 수 없음(단, 영문 이후에 나오는 숫자는 상관없음. 예시 box1)</p>
+    <p>2. 클래스명은 복수의 클래스명 선언이 가능(단, 첫번째 클래스명 작성 이후 반드시 한칸을 띄우고
+        두번째 클래스 명을 작성해야 함)
+    </p>
+    <p>3. 클래스명 선언시 반드시 의미를 부여하여 이름을 지어주어야 함</p>
+    <p>4. 클래스명 내부 단어를 연결시, 사칙연산 기호를 작성하지 말 것! 특수문자 사용하지 말 것!
+        (단 '단어_단어'사용을 추천</p>
+    <p>5. 클래스명은 재활용 또는 재사용이 가능 (<-> 아이디 선택자)</p>
+
+    <h3>아이디 선택자 : 태그 내부에 id 라는 속성에 선언된 속성값을 선택하여 요소에 스타일 적용시 사용</h3>
+    <div class="id_selector">
+        <p id="txt_1">소나타</p>
+        <p id="car">카니발</p>
+        <p id="car">아반떼</p>
+        <p>산타페</p>
+    </div>
+
+    <script>
+        document.querySelector("#car").style.background = "#aaffff";
+    </script>
+
+    <h4>아이디 선택자 선언시 주의사항</h4>
+    <p>1. 아이디 선택자 선언시 숫자가 먼저 작성되면 안됨</p>
+    <p>2. 복수의 아이디명 사용 불가</p>
+    <p>3. 동일한 아이디명도 사용불가(=> css에서는 스타일 동시 적용이 가능하나, 자바 스크립트에서는 맨 처음 나오는
+        아이디명만 인정</p>
+    <p>4. 가급적이면 덩치가 큰 영역을 감싸는 공간에 부여하면 추후에 명시도를 올려서 적용하기가 수월해짐</p>
+
+
+    <h3>자식 선택자 : 부모와 자식 관계가 확실한 요소에 스타일 적용시 사용</h3>
+    <h3>자손(자식을 포함한 자손) 선택자 : 어떤 조상을 지정한 상태에서 어딘가 존재할 후손을 찾아서 스타일 적용시 사용</h3>
+    <ul class="menu">
+        <li><a href="#">회사 소개</a></li>
+        <li><a href="#">경영 소개</a></li>
+        <li><a href="#">제품 소개</a></li>
+        <li><a href="#">고객 센터</a></li>
+    </ul>
+
+    <h3>인접 선택자 : 형제간의 서열이 낮은 순서로 접근하여 스타일 
+        적용 사용 (인접 선택자에서 서열순으로 선택할 수 있는 기호는 '+'뿐이다) </h3>
+
+    <ul>
+        <li class="cur_page"><a href="#">About</a></li>
+        <li><a href="#">Project</a></li>
+        <li class="target_page"><a href="#">Portfolio</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+
+    <h3>내림 형제 선택자 : </h3>
+    <ul>
+        <li class="current"><a href="">브랜드</a></li>
+        <li><a href="">주요 메뉴</a></li>
+        <li class="partnership">파트너쉽</class=></li>
+        <li><a href="">이벤트</a></li>
+    </ul>
+
+    <h3>복수(병렬) 선택자 : 한번에 여러가지 선택자를 지정하여 동일한 스타일을 적용시 사용</h3>
+    <div class="several_selector">
+        <p>HTML5</p>
+        <span>css3</span>
+        <h6>javacript</h6>
+    </div>
+
+    <h3>가상 공간 선택자(before / after)</h3>
+    <a class="port" href="#">포트폴리오</a>
+
+    <h3>마우스 오버 관련 선택자 : 마우스가 영역 내로 진입했을 때(mouseenter) & 마우스가 
+        영역 밖으로 나갔을 때(mouseleave)</h3>
+    <div class="change_bg"></div>
+
+    <div class="com_menu">
+        <ul>
+            <li><a href="#">회사소개</a></li>
+            <li><a href="#">오뚜기 제품</a></li>
+            <li><a href="#">0'kitchen</a></li>
+            <li><a href="#">홍보센터</a></li>
+        </ul>
+    </div>
+
+</body>
+</html>

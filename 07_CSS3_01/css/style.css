@@ -1,0 +1,224 @@
+@charset "utf-8";
+
+.radius_01{
+    width: 200px;
+    height: 200px;
+    border-radius: 20px;
+    background: #aff;
+    background-image: url(../img/land_01.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.radius_02{
+    width: 200px;
+    height: 200px;
+    border-radius: 100%;
+    background-image: url(../img/land_02.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.radius_03{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 20px 30px 40px;
+    background-image: url(../img/land_03.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.radius_04{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 40px;
+    background-image: url(../img/land_04.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+.radius_05{
+    width: 200px;
+    height: 200px;
+    border-radius: 10px 40px 0px;
+    background-image: url(../img/land_05.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+
+.quarter_radius{
+    width: 100px;
+    height: 100px;
+    background: #09e;
+    border-radius: 100% 0 0 0;
+}
+
+.half_radius{
+    width: 100px;
+    height: 200px;
+    background: #f80;
+    border-radius: 100px 0 0 100px;
+}
+
+.ellipse_radius{
+    width: 200px;
+    height: 100px;
+    background: #aaf;
+    border-radius: 50%;
+}
+.capsule_radius{
+    width: 200px;
+    height: 100px;
+    background: #faa;
+    border-radius: 100px;
+}
+
+
+#ex_01{width: 300px;height: 100px; background: #cff; border-radius: 10px; border: #aaf 1px solid;}
+#ex_02{width: 300px;height: 100px; background: #cff; border-radius: 100px; border: #aaf 1px solid;}
+#ex_03{width: 300px;height: 100px; background: #cff; border-radius: 100%; border: #aaf 1px solid;}
+#ex_04{width: 100px;height: 100px; background: #cff; border-radius: 100%; border: #aaf 1px solid;}
+
+
+
+.unbalance_radius{
+    width: 200px;
+    height: 200px;
+    background: #faf;
+    border-radius:38% 62% 63% 37% / 41% 43% 56% 59%;
+}
+/* 감성 디자인 사이트를 구성시 배경 오브젝트로 활용 */
+
+
+.shadow_space_rect{
+    width: 240px;
+    height: 240px;
+    background: #aaf;
+    transition: box-shadow 0.5s;
+}
+.shadow_space_rect:hover{
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.75);
+}
+.shadow_space_circle{
+    width: 240px;
+    height: 240px;
+    background: #faf;
+    border-radius: 50%;
+    transition: box-shadow 0.5s;
+}
+.shadow_space_circle:hover{
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.75);
+}
+.inner_shadow{
+    width: 240px;
+    height: 240px;
+    background: #0af;
+    border-radius: 20px;
+    transition: box-shadow 0.5s;
+}
+.inner_shadow:hover{
+    box-shadow: inset -5px -5px 10px rgba(0, 0, 0, 0.75);
+}
+
+.neomorphism_box{
+    width: 300px;
+    height: 300px;
+    background: #edefef;
+    padding: 100px;
+}
+.neomorphism_box div{
+    width: 300px;
+    height: 300px;
+    border-radius: 16px;
+    box-shadow: inset 5px 5px 5px rgba(255,255,255,0.5), 
+    inset -5px -5px 5px rgba(255,255,255,0.5),
+    5px 5px 5px rgba(0,0,0,0.05),
+    -5px -5px 5px rgba(255,255,255,0.5);
+}
+
+.gr_linear{
+    width: 400px;
+    height: 200px;
+
+}
+.gr_radial_01{
+    width: 400px;
+    height: 200px;
+    background: #1e5799; /* Old browsers */
+    background: -moz-radial-gradient(center, ellipse cover,  #1e5799 0%, #2989d8 50%, #f98686 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(center, ellipse cover,  #1e5799 0%,#2989d8 50%,#f98686 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(ellipse at center,  #1e5799 0%,#2989d8 50%,#f98686 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#f98686',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+}
+.gr_radial_02{
+    width: 400px;
+    height: 200px;
+    background: #1e5799; /* Old browsers */
+    background: -moz-radial-gradient(circle,  #1e5799 0%, #2989d8 50%, #f98686 100%); /* FF3.6-15 */
+    background: -webkit-radial-gradient(circle,  #1e5799 0%,#2989d8 50%,#f98686 100%); /* Chrome10-25,Safari5.1-6 */
+    background: radial-gradient(circle,  #1e5799 0%,#2989d8 50%,#f98686 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1e5799', endColorstr='#f98686',GradientType=1 ); /* IE6-9 fallback on horizontal gradient */
+
+}
+
+/* 멀티 백그라운드는 먼저 선언된 이미지가 전면으로 배치가 됨 */
+.multi_bg{
+    width: 400px;
+    height: 400px;
+    background-color: #ddd;
+    background-image: url(../img/kakao_01.jpg), url(../img/kakao_02.jpg);
+    background-position: 0 10%, 100% 100%;
+    background-repeat: no-repeat, repeat-y; /*한번 선언만으로도 모드 배경 이미지에 대한 통제가 가능 no-repeat */
+    background-size: 250px auto, auto 50%;
+    background-attachment: fixed;
+}
+
+.content_box{
+    width: 200px;
+    height: 160px;
+    padding: 50px;
+    background: #08f;
+    box-sizing: content-box;
+}
+.content_box div{
+    width: 100%;
+    height: 100%;
+    background: #f94;
+}
+
+
+.border_box{
+    width: 200px;
+    height: 160px;
+    padding: 50px;
+    background: #08f;
+    box-sizing: border-box;
+}
+.border_box div{
+    width: 100%;
+    height: 100%;
+    background: #f94;
+}
+
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+#kakao{
+    width: 1200px;
+    padding: 20px;
+    margin: 0 auto;
+    background: #ddd;
+    font-size: 0;
+}
+#kakao div{
+    width: 25%;
+    padding: 0 10px;
+    display: inline-block;
+}
+#kakao div img{
+    display: block;
+    width: 100%;
+}

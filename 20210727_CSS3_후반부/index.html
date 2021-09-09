@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS3 - 후반부</title>
+    <link rel="stylesheet" href="./css/flaticon.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h3>텍스트 그림자 부여하기</h3>
+    <div class="text_shadow">
+        <h2>TEXT SHADOW</h2>
+    </div>
+
+
+    <h3>텍스트 그라디언트 효과</h3>
+    <div class="text_gr">
+        <h2>TEXT GRADIENT</h2>
+    </div>
+
+    
+    <h3>텍스트 영역을 가진 공간 내부에서 ...으로 종료시키기 : text-overflow</h3>
+    <h2 class="text_overflow">2021년 00 초등학교 동문회를 개최합니다. 일시 : 2021년 07월 27일</h2>
+
+
+    <h3>단어에 대한 공간 영역의 통제</h3>
+    <div class="word_space_01">
+        <p>qwerqweqrqwerqwerqwerqwerqwerqwqerqwerqwerqqwerqwerqwerqwqewrqwerqwerqwerqwerqwerqwerqwerqwerqwerqwerqwerqweqrwqwerqwer</p>
+    </div>
+
+    <div class="word_space_02">
+        <p>나라말이 중국과 달라나라말이 중국과 달라나라말이 중국과 달라나라말이 중국과 달라나라말이 중국과 달라나라말이 중국과 달라나라말이 중국과 달라나라말이 중국과 달라나라말이 중국과 달라나라말이 중국과 달라나라말이 중국과 달라</p>
+    </div>
+
+
+    <h3>단어 사이 간격 조정(word-spacing) / 글자 사이 간격 조정(letter-spacing)</h3>
+    <div class="word_space">
+        <p>Special Dishes in Today</p>
+    </div>
+    <div class="letter_space">
+        <p>회원가입 하러가기</p>
+    </div>
+
+    <pre>
+        가나다라
+    </pre>
+
+
+    <h3>공간의 개념상 접근 가능한 영역을 선언</h3>
+    <div class="white_space">
+        <p class="default">화이트 스페이스 기본값 화이트 스페이스 기본값</p>
+        <p class="noWrap">화이트 스페이스 nowrap 화이트 스페이스 nowrap</p>
+        <div class="pre">
+            화이트 스페이스 pre 
+            화이트 스페이스 pre
+        </div>
+    </div>
+
+
+    <h3>변형 - translate(이동) : 본인의 사이즈를 이동</h3>
+
+    <h4>팝업창 구성</h4>
+    <p>윈도우 팝업창 - 작은 브라우저로 구성(Javascript)</p>
+    <p>레이어(또는 모달(Modal)) 팝업창 : 기본 브라우저 내부에서 갖고 있는 팝업창을 가리킴</p>
+
+
+    <input type="radio" name="loginBox" id="loginBtn">
+    <label class="login" for="loginBtn">로그인</label>
+
+    <input type="radio" name="loginBox" id="login_close">
+    <label class="close" for="login_close">×</label>
+
+
+    <div class="dark"></div>
+    <div class="popup">
+        <span class="close">×</span>
+        <div class="cont">
+            <form action="" name="login" method="POST">
+                <div>
+                    <label for="userid">아이디</label>
+                    <input type="text" placeholder="아이디 입력" autocomplete="off" id="userid"> 
+                </div>
+                <div>
+                    <label for="userpw">패스워드</label>
+                    <input type="password" placeholder="패스워드 입력" autocomplete="off" id="usepw"> 
+                </div>
+                <div class="submit_btn">
+                    <input type="submit" value="로그인">
+                </div>
+            </form>
+        </div>
+    </div> 
+
+
+
+    <h3>filter</h3>
+    <h4>blur 효과 부여하기</h4>
+    <div class="blur_fx"></div>
+
+    <h4>brightness(명도) 효과 - 0% ~ 100% ~ 그 이상의 값</h4>
+    <div class="brightness_fx"></div>
+
+
+    <h4>contrast(대조) 효과 - 0% ~ 100% ~ 그 이상의 값</h4>
+    <div class="contrast_fx"></div>
+
+
+    <h4>grayscale(흑백톤) 효과 - 0% ~ 100%</h4>
+    <div class="grayscale_fx"></div>
+
+
+    <h4>hue-rotate(색상 각도) - 0 ~ 360deg</h4>
+    <div class="hue_rotate"></div>
+
+
+    <h4>invert(반전) 효과 - 0% ~ 100%</h4>
+    <div class="invert"></div>
+
+
+    <h4>saturate(채도) 효과 - 0% ~ 100%</h4>
+    <div class="saturate"></div>
+
+
+    <h4>sepia(빛바랜 이미지) 효과</h4>
+    <div class="sepia_fx"></div>
+
+
+
+    <h3>애니메이션 효과 : animation + @keyframes</h3>
+    <p>만화영상 : 여러장의 종이를 기반으로 각 동적인 파트를 구현</p>
+    <p>keyframes : 시간을 통제하여 대상물을 동적인 상태로 구현</p>
+    <div class="ani_01">
+        <img src="./img/cha1.png" alt="">
+    </div>
+
+
+    <hr>
+
+
+    <h4>자동 슬라이드 이미지 - 페이드 효과 적용</h4>
+    <div class="fadeImg"></div>
+
+
+    <h4>자동 슬라이드 이미지 - 좌우로 이동하는 효과 적용</h4>
+    <div class="slider1">
+        <div class="slide_cover">
+            <div><h2>1</h2></div>
+            <div><h2>2</h2></div>
+            <div><h2>3</h2></div>
+        </div>
+    </div>
+
+
+    <hr>
+
+
+    <!--
+        선택자1 + 선택자2 : 바로 다음에 오는 형제를 선택
+        선택자1 ~ 선택자2 : 다음에 오는 형제중에서 하나를 선택할 때 사용
+
+        nth-child(n) vs nth-of-type(n)
+    -->
+
+    <h3>클릭 요소에 따른 색상 변화</h3>
+    <div id="click_test1">
+        <input type="radio" name="test1" id="click0" title="0번" checked>
+        <label for="click0"></label>
+        <input type="radio" name="test1" id="click1" title="1번">
+        <label for="click1"></label>
+        <input type="radio" name="test1" id="click2" title="2번">
+        <label for="click2"></label>
+
+        <div class="result"></div>
+    </div>
+
+
+<hr>
+
+    <!-- 네비게이션 슬라이드(좌우 이동)-->
+
+    <h3>네비게이션 슬라이드(좌우 이동)</h3>
+    <div id="pagerSlider">
+        <input type="radio" name="nav1" id="slide1">
+        <label for="slide1"></label>
+        <input type="radio" name="nav1" id="slide2">
+        <label for="slide2"></label>
+        <input type="radio" name="nav1" id="slide3">
+        <label for="slide3"></label>
+
+
+        <div class="pager">
+            <label for="slide1">1</label>
+            <label for="slide2">2</label>
+            <label for="slide3">3</label>
+        </div>
+
+
+
+        <div class="frame">
+            <div class="slide slide_1"><h3>slide_1</h3></div>
+            <div class="slide slide_2"><h3>slide_2</h3></div>
+            <div class="slide slide_3"><h3>slide_3</h3></div>
+        </div>
+    </div>
+
+
+
+<hr>
+
+    <!-- 네비게이션 슬라이드(페이드)-->
+    <h3>네비게이션 슬라이드(페이드)</h3>
+    <div id="pagerFade">
+        <input type="radio" name="nav2" id="fade1">
+        <input type="radio" name="nav2" id="fade2">
+        <input type="radio" name="nav2" id="fade3">
+        <div class="pager">
+            <label for="fade1">1</label>
+            <label for="fade2">2</label>
+            <label for="fade3">3</label>
+        </div>
+
+        <div class="frame">배경 이미지가 변경되는 장소</div>
+    </div>
+
+
+
+<hr>
+
+    <!-- 탭버튼 및 탭박스(정적 구성) -->
+    <h3>탭버튼 및 탭박스(정적 구성)</h3>
+    <div id="tab1">
+        <input type="radio" name="tab_1" id="t_1" checked>
+        <input type="radio" name="tab_1" id="t_2">
+        <input type="radio" name="tab_1" id="t_3">
+        <div class="tabBtn">
+            <label for="t_1">Interior-1</label>
+            <label for="t_2">Interior-2</label>
+            <label for="t_3">Interior-3</label>
+        </div>
+        <div class="tab_cont">
+            <div class="cont cont1">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <div class="cont cont2">
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+            </div>
+            <div class="cont cont3">
+                <div class="box">7</div>
+                <div class="box">8</div>
+                <div class="box">9</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <!-- )탭버튼 및 탭박스(동적 구성 + 페이드 효과 -->
+
+    <h3>탭버튼 및 탭박스(동적 구성 + 페이드 효과)</h3>
+    <div id="tab2">
+        <input type="radio" name="tab_2" id="t_a" checked>
+        <input type="radio" name="tab_2" id="t_b">
+        <input type="radio" name="tab_2" id="t_c">
+        <div class="tabBtn"><!--position:relative;-->
+            <label for="t_a">Interior-1</label>
+            <label for="t_b">Interior-2</label>
+            <label for="t_c">Interior-3</label>
+            <span class="bar"></span><!--position:absolute;-->
+        </div>
+        <div class="tab_cont">
+            <div class="cont cont1">
+                <div class="box">1</div>
+                <div class="box">2</div>
+                <div class="box">3</div>
+            </div>
+            <div class="cont cont2">
+                <div class="box">4</div>
+                <div class="box">5</div>
+                <div class="box">6</div>
+            </div>
+            <div class="cont cont3">
+                <div class="box">7</div>
+                <div class="box">8</div>
+                <div class="box">9</div>
+            </div>
+        </div>
+    </div>
+
+
+
+    <h3>다단 편집</h3>
+    <div class="multi_line">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Debitis voluptate sint nam molestias, inventore dolore facere voluptates quaerat possimus tempora delectus, autem veniam sequi consequatur, ducimus culpa. Totam, id sint. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quo et repudiandae labore, modi corporis eos nostrum quod? Sit doloremque dicta ipsum optio placeat, veniam nesciunt commodi at eum laborum minus.</p>
+    </div>
+
+    <div class="multi_box">
+        <div><h3>1</h3></div>
+        <div><h3>2</h3></div>
+        <div><h3>3</h3></div>
+        <div><h3>4</h3></div>
+        <div><h3>5</h3></div>
+        <div><h3>6</h3></div>
+        <div><h3>7</h3></div>
+        <div><h3>8</h3></div>
+        <div><h3>9</h3></div>
+    </div>
+
+    <h3>:active - 클릭을 했을 때</h3>
+
+    <br>
+
+    <button class="btn_active" type="button">로그인</button>
+
+
+    <br><br><br>
+
+
+
+
+    <h3>:active - 클릭을 했을 때</h3>
+
+    <br>
+
+    <button class="btn_active">로그인</button>
+
+
+
+    <hr>
+    <br><br><br>
+<!--================= flaticon =================== -->
+    <div class="ficon">
+        <i class="flaticon flaticon-sun"></i>
+        <i class="flaticon flaticon-sunset"></i>
+        <div class="outline"><i class="flaticon flaticon-flamingo"></i></div>
+        <i class="flaticon flaticon-sunbed"></i>
+        <i class="flaticon flaticon-sun-1"></i>
+    </div>
+</body>
+</html>

@@ -1,0 +1,81 @@
+@charset "uft-8";
+
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+
+#ex_01 .wrapper{
+    height: 600px; width: 600px;
+    margin: 50px auto;
+    background: #ccc;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+#ex_01 .wrapper .item{width: auto; height: auto; display: table;}
+#ex_01 .wrapper .item p{
+    display: block;
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+}
+#ex_01 .wrapper .item:nth-child(1){background: #faf; grid-column: 1/3; grid-row: 1/2;}
+#ex_01 .wrapper .item:nth-child(2){background: #aaf; grid-row: 1/3;}
+#ex_01 .wrapper .item:nth-child(3){background: #faa; grid-row: 3/4; grid-column: 2/4;}
+#ex_01 .wrapper .item:nth-child(4){background: #ffa; grid-row: 2/4;}
+#ex_01 .wrapper .item:nth-child(5){background: #afa;}
+
+#ex_01 .wrapper:hover .item:nth-child(1){background: #faf; grid-column: 2/4; grid-row: 1/2;}
+#ex_01 .wrapper:hover .item:nth-child(2){background: #aaf; grid-column: 3/4; grid-row: 2/4;}
+#ex_01 .wrapper:hover .item:nth-child(3){background: #faa; grid-column: 1/3;}
+#ex_01 .wrapper:hover .item:nth-child(4){background: #ffa; grid-column: 1/2; grid-row: 1/3;}
+#ex_01 .wrapper:hover .item:nth-child(5){background: #afa; grid-column: 2/3; grid-row: 2/3;}
+
+
+
+#ex_02 .wrapper{
+    width: 820px; height: 820px;
+    margin: 50px auto;
+    background: #000;
+    display: grid;
+    grid-template-columns: 160px 620px 40px;
+    grid-template-rows: 250px 300px 125px 125px;
+    grid-template-columns: repeat(3);
+    grid-template-rows: repeat(4);
+}
+#ex_02 .wrapper .item{
+    border: 10px solid #000;
+}
+
+#ex_02 .wrapper .item:nth-child(1){
+    background: #fff; 
+}
+#ex_02 .wrapper .item:nth-child(2){
+    background: red; 
+    grid-column: 2/4; grid-row: 1/3;
+}
+#ex_02 .wrapper .item:nth-child(3){
+    background: #fff; 
+    grid-column: 2/3; grid-row: 3/5;
+}
+#ex_02 .wrapper .item:nth-child(4){
+    background: #fff;
+}
+#ex_02 .wrapper .item:nth-child(5){
+    background: blue; 
+    grid-row: 3/5; 
+}
+#ex_02 .wrapper .item:nth-child(6){
+    background: #fff; 
+    grid-column: 3/4; 
+    grid-row: 3/4;
+}
+#ex_02 .wrapper .item:nth-child(7){
+    background: yellow; 
+    grid-column: 3/4; 
+    grid-row: 4/5;
+}

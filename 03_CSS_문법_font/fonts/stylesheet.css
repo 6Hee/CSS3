@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'AHNJUNGGEUN';
+    src: url('AHNJUNGGEUN.eot');
+    src: url('AHNJUNGGEUN.eot?#iefix') format('embedded-opentype'),
+        url('AHNJUNGGEUN.woff2') format('woff2'),
+        url('AHNJUNGGEUN.woff') format('woff'),
+        url('AHNJUNGGEUN.ttf') format('truetype'),
+        url('AHNJUNGGEUN.svg#AHNJUNGGEUN') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+

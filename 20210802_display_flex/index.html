@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>display_flex</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    
+    <h2>부모의 영역에 관한 속성</h2>
+    <hr>
+    <div id="flex_direction">
+        <div class="flex_container">
+            <div class="flex_item">BX-1</div>
+            <div class="flex_item">BX-2</div>
+            <div class="flex_item">BX-3</div>
+            <div class="flex_item">BX-4</div>
+        </div>
+    </div>
+
+
+    <hr>
+
+    
+    <div id="flex_wrap">
+        <div class="flex_container">
+            <div class="flex_item">BX-1</div>
+            <div class="flex_item">BX-2</div>
+            <div class="flex_item">BX-3</div>
+            <div class="flex_item">BX-4</div>
+        </div>
+    </div>
+
+
+    <hr>
+
+    <h3>justify-content : 가로방향의 공간 위치를 정렬</h3>
+    <div id="justify_content">
+        <div class="flex_container">
+            <div class="flex_item">BX-1</div>
+            <div class="flex_item">BX-2</div>
+            <div class="flex_item">BX-3</div>
+            <div class="flex_item">BX-4</div>
+        </div>
+    </div>
+
+
+    <hr>
+    <h3>align-items : 세로방향의 공간 위치를 정렬</h3>
+    <div id="align_items">
+        <div class="flex_container">
+            <div class="flex_item">BX-1</div>
+            <div class="flex_item">BX-2</div>
+            <div class="flex_item">BX-3</div>
+            <div class="flex_item">BX-4</div>
+        </div>
+    </div>
+
+
+    <hr>
+
+
+    <h3>부모의 공간을 기준으로 상단 파트 구성하기</h3>
+    <header id="h_01">
+        <div class="wrap">
+            <div class="logo">
+                <a href="#"><img src="./img/KakaoTalk_20210802_131213107.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Project</a></li>
+                    <li><a href="#">Portfolio</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+    <h3>부모의 공간을 기준으로 상단 파트 구성하기</h3>
+    <header id="h_02">
+        <div class="wrap">
+            <div class="logo">
+                <a href="#"><img src="./img/KakaoTalk_20210802_131213107.png" alt=""></a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">About</a>
+                        <ul>
+                            <li><a href="">Profile</a></li>
+                            <li><a href="">Skills</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Project</a>
+                        <ul>
+                            <li><a href="">UIUX</a></li>
+                            <li><a href="">Design</a></li>
+                            <li><a href="">Develop</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Portfolio</a>
+                        <ul>
+                            <li><a href="">Web</a></li>
+                            <li><a href="">App</a></li>
+                            <li><a href="">Etc</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+
+
+    <h3>상품박스(8개)의 display:flex; 적용</h3>
+    <section id="pd_frame">
+        <div class="wrap">
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+            <div class="box"></div>
+        </div>
+    </section>
+
+
+    <hr>
+    <h3>align-items : 세로방향의 공간 위치를 정렬</h3>
+    <div id="align_content">
+        <div class="flex_container">
+            <div class="flex_item">BX-1</div>
+            <div class="flex_item">BX-2</div>
+            <div class="flex_item">BX-3</div>
+            <div class="flex_item">BX-4</div>
+        </div>
+    </div>
+
+
+    <section class="item_box">
+        <div class="left"></div>
+        <div class="right"></div>
+    </section>
+
+    <section class="content_box">
+        <div class="left"></div>
+        <div class="right"></div>
+    </section>
+
+
+    <h2>자식의 요소에서 적용되는 플렉스 박스 : flex-grow(확대), flex-shrink(축소), order(표현되는 순서를 지정)</h2>
+
+
+    <h3>자식 영역의 확대 비율</h3>
+    <div id="flex_grow">
+        <div class="flex_container">
+            <div class="flex_item">BX-1</div>
+            <div class="flex_item">BX-2</div>
+            <div class="flex_item">BX-3</div>
+            <div class="flex_item">BX-4</div>
+        </div>
+    </div>
+
+
+    <h3>자식 영역의 축소 비율</h3>
+    <div id="flex_shrink">
+        <div class="flex_container">
+            <div class="flex_item">BX-1</div>
+            <div class="flex_item">BX-2</div>
+            <div class="flex_item">BX-3</div>
+            <div class="flex_item">BX-4</div>
+        </div>
+    </div>
+
+
+    <h3>자식의 순서를 재정의하고자 할 때</h3>
+    <div id="order">
+        <div class="flex_container">
+            <div class="flex_item">BX-1</div>
+            <div class="flex_item">BX-2</div>
+            <div class="flex_item">BX-3</div>
+            <div class="flex_item">BX-4</div>
+        </div>
+    </div>
+
+
+</body>
+</html>

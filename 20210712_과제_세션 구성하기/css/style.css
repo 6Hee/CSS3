@@ -1,0 +1,426 @@
+@charset "utf-8";
+
+*{}
+html, body{margin: 0; padding: ;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+
+#ex_1_1{
+    height: 300px;
+    padding: 100px 0;
+    background-color: #ddd;
+}
+#ex_1_1 .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background-color: #ffa;
+}
+#ex_1_1 .wrap div{
+    width: -webkit-calc(25% - 20px);
+    width: -moz-calc(25% - 20px);
+    width: calc(25% - 20px);
+    height: 100%;
+    background-color: #faf;
+    margin: 0 10px;
+    float: left;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+#ex_1_1 .wrap div:nth-child(1){
+    background-image: url(../img/artist_1.jpg);
+}
+#ex_1_1 .wrap div:nth-child(2){
+    background-image: url(../img/artist_2.jpg);
+}
+#ex_1_1 .wrap div:nth-child(3){
+    background-image: url(../img/artist_3.jpg);
+}
+#ex_1_1 .wrap div:nth-child(4){
+    background-image: url(../img/artist_4.jpg);
+}
+
+/* inline-block 적용 */
+#ex_1_2{
+    height: 300px;
+    padding: 100px 0;
+    background-color: #ddd;
+}
+#ex_1_2 .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    font-size: 0;
+}
+#ex_1_2 .wrap div{
+    width: calc(25% - 20px);
+    height: 300px;
+    display: inline-block;
+    background: #afa;
+    margin: 0 10px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+#ex_1_2 .wrap div:nth-child(1){
+    background-image: url(../img/artist_1.jpg);
+}
+#ex_1_2 .wrap div:nth-child(2){
+    background-image: url(../img/artist_2.jpg);
+}
+#ex_1_2 .wrap div:nth-child(3){
+    background-image: url(../img/artist_3.jpg);
+}
+#ex_1_2 .wrap div:nth-child(4){
+    background-image: url(../img/artist_4.jpg);
+}
+
+
+#ex_2_1{
+    height: 400px;
+    padding: 100px 0;
+    background-color: #ddd;
+}
+#ex_2_1 .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #ffa;
+}
+#ex_2_1 .wrap h2{
+    padding-bottom: 50px;
+    line-height: 50px;
+    font-size: 40px;
+    text-align: center;
+}
+#ex_2_1 .wrap .cont{
+    height: 300px;
+} /*하단 콘텐츠의 영역을 별도로 분리시키고자 하기위함*/
+#ex_2_1 .wrap .cont div{
+    width: calc(25% - 20px);
+    height: 100%;
+    margin: 0 10px;
+    background-color: #aff;
+    float: left;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+#ex_2_1 .wrap .cont div:nth-child(1){
+    background-image: url(../img/artist_1.jpg);
+}
+#ex_2_1 .wrap .cont div:nth-child(2){
+    background-image: url(../img/artist_2.jpg);
+}
+#ex_2_1 .wrap .cont div:nth-child(3){
+    background-image: url(../img/artist_3.jpg);
+}
+#ex_2_1 .wrap .cont div:nth-child(4){
+    background-image: url(../img/artist_4.jpg);
+}
+
+
+#ex_2_2{
+    height: 400px;
+    padding: 100px 0;
+    background-color: #ddd;
+}
+#ex_2_2 .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #ffa;
+}
+#ex_2_2 .wrap h2{
+    padding-bottom: 50px;
+    line-height: 50px;
+    font-size: 40px;
+    text-align: center;
+    text-transform: uppercase;
+}
+#ex_2_2 .wrap .cont{
+    height: 300px;
+    font-size: 0;
+}
+#ex_2_2 .wrap .cont div{
+    width: calc(25% - 20px);
+    height: 100%;
+    margin: 0 10px;
+    background-color: #3bf;
+    font-size: 16px;
+    display: inline-block;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+#ex_2_2 .wrap .cont div:nth-child(1){
+    background-image: url(../img/artist_1.jpg);
+}
+#ex_2_2 .wrap .cont div:nth-child(2){
+    background-image: url(../img/artist_2.jpg);
+}
+#ex_2_2 .wrap .cont div:nth-child(3){
+    background-image: url(../img/artist_3.jpg);
+}
+#ex_2_2 .wrap .cont div:nth-child(4){
+    background-image: url(../img/artist_4.jpg);
+}
+
+
+.w_1000{
+    width: 100%;
+    height: 300px;
+    background-color: #fb7;
+    margin: 0 auto;
+}
+.w_fixed_500{
+    width: 500px;
+    height: 100px;
+    background: #faf;
+}
+.w_50_per{
+    width: 50%;
+    height: 100px;
+    background: #aaf;
+}
+.w_calc{
+    width: calc(50% - 20px);
+    height: 100px;
+    background: #afa;
+}
+
+
+#ex_3_1{
+    height: 500px;
+    padding: 100px 0;
+    background-color: #ddd;
+}
+#ex_3_1 .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #ffa;
+}
+#ex_3_1 .wrap h2{
+    padding-bottom: 50px;
+    line-height: 50px;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#ex_3_1 .wrap .cont{
+    height: 400px;
+}
+#ex_3_1 .wrap .cont .box{
+    width: calc(25% - 20px);
+    height: 100%;
+    background: #aff;
+    margin: 0 10px;
+    float: left;
+}
+#ex_3_1 .wrap .cont .box .img_part{
+    height: 300px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+#ex_3_1 .wrap .cont .box:nth-child(1) .img_part{
+    background-image: url(../img/artist_1.jpg);
+}
+#ex_3_1 .wrap .cont .box:nth-child(2) .img_part{
+    background-image: url(../img/artist_2.jpg);
+}
+#ex_3_1 .wrap .cont .box:nth-child(3) .img_part{
+    background-image: url(../img/artist_3.jpg);
+}
+#ex_3_1 .wrap .cont .box:nth-child(4) .img_part{
+    background-image: url(../img/artist_4.jpg);
+}
+
+#ex_3_1 .wrap .cont .box .txt_part{
+    width: 100%;
+    margin: 10px 0;
+    height: 80px;
+    background: #fff;
+    display: table;
+}
+#ex_3_1 .wrap .cont .box .txt_part .txt_center{
+    display: table-cell;
+    vertical-align: middle;
+}
+#ex_3_1 .wrap .cont .box .txt_part .txt_center h4{
+    font-size: 24px;
+    padding-bottom: 20px;
+    padding: 0 10px 20px;
+    line-height: 1;
+}
+#ex_3_1 .wrap .cont .box .txt_part .txt_center p{
+    font-size: 18px;
+    line-height: 1;
+    padding: 0 10px;
+}
+
+#ex_4{
+    height: 400px;
+    padding: 100px 0;
+    background-color: #ddd;
+}
+#ex_4 .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #ffa;
+}
+#ex_4 .wrap h2{
+    padding-bottom: 50px;
+    line-height: 1;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#ex_4 .wrap .cont{
+    font-size: 0;
+    background: #faa;
+}
+#ex_4 .wrap .cont .box{
+    width: calc(25% - 20px);
+    height: 300px;
+    background: #faf;
+    margin: 0 10px;
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+    background-size: cover;
+    background-position: 50% 50%;
+    overflow: hidden;
+}
+
+#ex_4 .wrap .cont .box:nth-child(1){
+    background-image: url(../img/artist_1.jpg);
+}
+#ex_4 .wrap .cont .box:nth-child(2){
+    background-image: url(../img/artist_2.jpg);
+}
+#ex_4 .wrap .cont .box:nth-child(3){
+    background-image: url(../img/artist_3.jpg);
+}
+#ex_4 .wrap .cont .box:nth-child(4){
+    background-image: url(../img/artist_4.jpg);
+}
+
+#ex_4 .wrap .cont .box .dark{
+    width: 100%;
+    height: 80px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+    position: absolute;
+    left: 0;
+    bottom: -80px;
+    display: table;
+    transition: bottom 0.5s;
+}
+#ex_4 .wrap .cont .box:hover .dark{bottom: 0;}
+#ex_4 .wrap .cont .box .dark .txt_center{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+}
+#ex_4 .wrap .cont .box .dark .txt_center h4{
+    font-size: 24px;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+#ex_4 .wrap .cont .box .dark .txt_center p{
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+#ex_5{
+    height: 400px;
+    padding: 100px 0;
+    background-color: #ddd;
+}
+#ex_5 .wrap{
+    width: 1200px;
+    height: 100%;
+    margin: 0 auto;
+    background: #ffa;
+}
+#ex_5 .wrap h2{
+    padding-bottom: 50px;
+    line-height: 1;
+    font-size: 40px;
+    text-transform: uppercase;
+    text-align: center;
+}
+#ex_5 .wrap .cont{
+    font-size: 0;
+    background: #faa;
+}
+#ex_5 .wrap .cont .box{
+    width: calc(25% - 20px);
+    height: 300px;
+    background: #faf;
+    margin: 0 10px;
+    font-size: 16px;
+    display: inline-block;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+#ex_5 .wrap .cont .box:nth-child(1){
+    background-image: url(../img/artist_1.jpg);
+}
+#ex_5 .wrap .cont .box:nth-child(2){
+    background-image: url(../img/artist_2.jpg);
+}
+#ex_5 .wrap .cont .box:nth-child(3){
+    background-image: url(../img/artist_3.jpg);
+}
+#ex_5 .wrap .cont .box:nth-child(4){
+    background-image: url(../img/artist_4.jpg);
+}
+
+#ex_5 .wrap .cont .box .dark{
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    opacity: 0;
+    color: #fff;
+    display: table;
+}
+#ex_5 .wrap .cont .box:hover .dark{
+    opacity: 1;
+}
+#ex_5 .wrap .cont .box .dark .txt_center{
+    display: table-cell;
+    vertical-align: middle;
+    padding: 0 10px;
+    text-align: center;
+}
+#ex_5 .wrap .cont .box .dark .txt_center h4{
+    font-size: 24px;
+    line-height: 1;
+    padding-bottom: 20px;
+}
+#ex_5 .wrap .cont .box .dark .txt_center p{
+    font-size: 18px;
+    line-height: 1;
+}
+
+
+.img_box{
+    width: 300px;
+    height: 300px;
+    background-image: url(../img/artist_1.jpg);
+    background-size: cover;
+    background-position: 50% 50%;
+    position: relative;
+}
+.img_box img{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    left: calc(50% - 50px);
+    top: calc(50% - 50px);
+}

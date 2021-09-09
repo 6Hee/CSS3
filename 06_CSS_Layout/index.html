@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS - Layout</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <h2>레이아웃</h2>
+    <p>float(띄우다) : 부모공간에서 좌측으로 띄워서 가로 정렬할 것이다.</p>
+    <p>display : block / inline / inline-block / none / table / table-cell(공간 대비하여 중앙에
+        콘텐츠{복수의 요소}를 위치시킬 수 있는 역할)
+    </p>
+    <p>position : static / relative / absolute / fixed (이미지의 겹침현상을 표현가능한 위치설정)</p>
+
+    <h3>float : left / right / none  ==>  float의 의미는 '띄우다'  ==>  
+        포스트잍 같은 존재로 만들어버림</h3>
+    <div class="float_left">
+        <ul>
+            <li><a href="">1_menu</a></li>
+            <li><a href="">2_menu</a></li>
+            <li><a href="">3_menu</a></li>
+            <li><a href="">4_menu</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="float_right">
+        <ul>
+            <li><a href="">1_menu</a></li>
+            <li><a href="">2_menu</a></li>
+            <li><a href="">3_menu</a></li>
+            <li><a href="">4_menu</a></li>
+        </ul>
+    </div>
+
+    <hr>
+
+    <div class="box_left">
+        <div class="bx bx1">box1</div>
+        <div class="bx bx2">box2</div>
+        <div class="bx bx3">box3</div>
+        <div class="bx bx4">box4</div>
+        <div class="bx bx1">box1</div>
+        <div class="bx bx2">box2</div>
+        <div class="bx bx3">box3</div>
+        <div class="bx bx4">box4</div>
+        <div class="bx bx1">box1</div>
+        <div class="bx bx2">box2</div>
+        <div class="bx bx3">box3</div>
+        <div class="bx bx4">box4</div>
+        <div class="bx bx1">box1</div>
+        <div class="bx bx2">box2</div>
+        <div class="bx bx3">box3</div>
+        <div class="bx bx4">box4</div>
+        <div class="bx bx1">box1</div>
+        <div class="bx bx2">box2</div>
+        <div class="bx bx3">box3</div>
+        <div class="bx bx4">box4</div>
+        <!--after : 형제가 float으로 선언되었다면 하부에서 여기까지라는 마지노 선을 선언해 버림 -> 부모의 공간으로 전달되게 끔 만들어버림 -->
+    </div>
+
+    <div class="bottom_box"></div>
+
+
+    <p>float을 선언하는 것은 다음번 위치한 것을 "내 옆으로 와주세요"라고 선언한 것과 동일</p>
+
+    <div class="pd_list">
+        <div class="pd_box">1</div>
+        <div class="pd_box">2</div>
+        <div class="pd_box">3</div> 
+        <!--after-->   
+    </div>
+    <p>이벤트</p>
+
+    <hr>
+
+    <div class="pd_list_external">
+        <div class="pd_box">1</div>
+        <div class="pd_box">2</div>
+        <div class="pd_box">3</div>    
+    </div>
+    <div class="clear"></div><!--한번 끊고서 하단으로 정렬시켜주는 강제 해제-->
+    <p>이벤트</p>
+
+    <hr>
+
+    <div class="pd_list_external">
+        <div class="pd_box">1</div>
+        <div class="pd_box">2</div>
+        <div class="pd_box">3</div>    
+    </div>
+    <p class="evt">이벤트</p><!--clear:both;-->
+
+
+    <hr>
+
+    <h4>float:left;와 float:right;를 활용한 상단 헤더 구성하기</h4>
+    <div id="header">
+        <div class="logo">
+            <a href="">LOGO</a>
+        </div>
+        <div class="menu">
+            <ul>
+                <li><a href="#">1_회사소개</a></li>
+                <li><a href="#">2_경영소개</a></li>
+                <li><a href="#">3_제품소개</a></li>
+                <li><a href="#">4_고객센터</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <hr>
+
+    <ul class="float_style_01">
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+        <!--after-->
+    </ul>
+
+    <hr>
+
+    <ul class="float_style_02">
+        <li><a href="#">메뉴1</a></li>
+        <li><a href="#">메뉴2</a></li>
+        <li><a href="#">메뉴3</a></li>
+        <li><a href="#">메뉴4</a></li>
+        <h2>마이페이지</h2>
+    </ul>
+
+
+    <div class="float_style_03">
+        <div class="box_01">BOX-01</div>
+        <div class="box_02">BOX-02</div>
+        <div class="box_03">BOX-03</div>
+        <div class="box_04">BOX-04</div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="float_style_04">
+        <div class="box_01">BOX-01</div>
+        <div class="box_02">BOX-02</div>
+        <div class="box_03">BOX-03</div>
+        <div class="box_04">BOX-04</div>
+    </div>
+    <div class="clear"></div>
+
+    <div class="snoopy">
+        <div class="image">1</div>
+        <div class="image">2</div>
+        <div class="image">3</div>
+        <div class="image">4</div>
+        <div class="image">5</div>
+    </div>
+
+<hr><hr>
+
+
+    <h2>display 유형 : block, inline, inline-block</h2>
+    <h3>display : block;</h3>
+    <div class="d_block">
+        <div>HTML</div>
+        <div>CSS3</div>
+        <div>Javascript</div>
+    </div>
+
+    <h3>display : inline;</h3>
+    <div class="d_inline">
+        <div>HTML</div>
+        <div>CSS3</div>
+        <div>Javascript</div>
+    </div>
+
+    <h3>display : inline-block; (인라인 요소의 특징인 가로배치와 블록 요소의 특징인 
+        공간의 개념(width, height)이 적용
+    </h3>
+    <div class="d_inlineBlock">
+        <div>HTML</div>
+        <div>CSS3</div>
+        <div>Javascript</div>
+    </div>
+
+    <div class="v_align">
+        <img src="./img/awards.png" alt="">
+        <span>2021년 최우수상</span>
+    </div>
+<hr>
+    <ul class="center_menu">
+        <li><a href="">멤버쉽</a></li>
+        <li><a href="">회원권 특혜</a></li>
+        <li><a href="">시즌 이용 안내</a></li>
+        <li><a href="">이벤트</a></li>
+    </ul>
+
+<hr><hr>
+
+    <h3>display:table과 table-cell</h3>
+    <!--<table> -> <tr> -> <td>-->
+    <p>display:table; 역할은 마치 table 태그처럼 공간을 테이블로 구성을 하겠다는 의미</p>
+    <p>display:table-cell; 역할은 td 태그처럼 테이블 내의 cell공간을 구성하겠다는 의미</p>
+
+    <div class="d_table">
+        <h3>중앙 텍스트 배치1</h3>
+    </div>
+
+    <div class="d_table">
+        <span>중앙 텍스트 배치1</span>
+    </div>
+
+    <div class="lineH_center">
+        <h3>중앙 텍스트 배치2</h3>
+        <p>내용</p>
+    </div>
+
+
+    <!--복수의 table-cell 적용시, 복수의 열(column)이 발생한다.-->
+    <div class="d_table_01">
+        <h3>중앙 텍스트 배치2</h3>
+        <h3>중앙 텍스트 배치2</h3>
+    </div>
+
+    <div class="d_group_table"><!--display:table-->
+        <div><!--display:table-cell;-->
+            <h3>중앙 텍스트 배치2</h3>
+            <h3>중앙 텍스트 배치2</h3>
+        </div>
+    </div>
+
+    <div class="product_item">
+        <div class="dark">
+            <div>
+                <h3>BODYFRIEND #12</h3>
+                <a href="#">상품 상세보기</a>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

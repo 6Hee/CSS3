@@ -1,0 +1,388 @@
+@charset "utf-8";
+
+*{box-sizing: border-box;}
+html, body{margin: 0; padding: 0;}
+h1, h2, h3, h4, h5, h6, p{margin: 0;}
+ul, ol{margin: 0; padding: 0; list-style: none;}
+a{text-decoration: none;}
+
+
+
+
+#flex_direction{}
+#flex_direction .flex_container{
+    width: 600px; height: 300px;
+    background: #ddd;
+    margin: 0 auto;
+    display: flex;
+
+    /* flex-direction의 특징은 자식의 나열 방향을 지정할 수 있음, 자식의 가로 또는 세로의 총합이 부모영역보다 클 경우, 부모의 가로 또는 세로값에 맞춰서 자식들의 가로 또는 세로 사이즈를 1/n 으로 재조정 / 자식의 값이 다를 경우 비례에 맞춰서 조정되는 성질을 갖고 있음*/
+
+    flex-direction: row; /*자식 요소를 가로 정방향(부모영역의 좌측부터)으로 배치 - 기본값*/
+    /* flex-direction: row-reverse; */ /*자식 요소를 가로 역방향(부모영역의 우측부터)으로 배치*/
+    /* flex-direction: column; */ /*자식 요소를 세로 정방향(부모영역의 상단부터)으로 배치*/
+    /* flex-direction: column-reverse; /*자식 요소를 세로 역방향(부모영역의 하단부터)으로 배치*/
+}
+#flex_direction .flex_container .flex_item{
+    width: 100px; height: 50px;
+}
+#flex_direction .flex_container .flex_item:nth-child(1){
+    /* width: 400px; */
+    background: #faf;
+}
+#flex_direction .flex_container .flex_item:nth-child(2){
+    background: #aff;
+}
+#flex_direction .flex_container .flex_item:nth-child(3){
+    background: #ff3;
+}
+#flex_direction .flex_container .flex_item:nth-child(4){
+    background: #aaf;
+}
+
+
+#flex_wrap{}
+#flex_wrap .flex_container{
+    width: 600px; height: 300px;
+    background: #ddd;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row; /* 기본값이기 때문에 가로방향에서는 생략 가능 */
+    flex-wrap: nowrap; /* 부모 영역의 1 라인보다 자식의 가로폭 함이 크더라도 복수의 라인을 생성하지 않는다. (사용예시, 탭박스의 상단에 위치한 탭버튼)*/
+    flex-wrap: wrap; /* 부모영역과는 상관없이 자식의 가로폭 합이 크다면 다음줄로 내린다.(복수 라인 생성)*/
+    flex-wrap: wrap-reverse; /**/
+}
+#flex_wrap .flex_container .flex_item{
+    width: 200px; height: 120px;
+}
+#flex_wrap .flex_container .flex_item:nth-child(1){
+    background: #faf;
+}
+#flex_wrap .flex_container .flex_item:nth-child(2){
+    background: #aff;
+}
+#flex_wrap .flex_container .flex_item:nth-child(3){
+    background: #ff3;
+}
+#flex_wrap .flex_container .flex_item:nth-child(4){
+    background: #aaf;
+}
+
+
+
+#justify_content .flex_container{
+    width: 600px; height: 300px;
+    background: #ddd;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start; /*부모영역 기준으로 좌측정렬(~= text-align:left)*/
+    justify-content: flex-end; /*부모영역 기준으로 우측정렬(~= text-align:right) */
+    justify-content: center; /*부모영역 기준으로 가운데정렬(~= text-align:center)*/
+    justify-content: space-between; /*부모영역을 기준으로 가로폭을 활용하여 분배 정렬(부모 영역의 좌우측 끝선 기준으로 배치)*/
+    justify-content: space-around; /*각 자식박스를 기준으로 좌우측 공간을 균등 분배하여 정렬(좌우측 마진값을 동일하게 부여)*/
+}
+
+#justify_content .flex_container .flex_item{
+    width: 100px; height: 120px;
+}
+#justify_content .flex_container .flex_item:nth-child(1){
+    background: #faf;
+}
+#justify_content .flex_container .flex_item:nth-child(2){
+    background: #aff;
+}
+#justify_content .flex_container .flex_item:nth-child(3){
+    background: #ff3;
+}
+#justify_content .flex_container .flex_item:nth-child(4){
+    background: #aaf;
+}
+
+
+
+#align_items .flex_container{
+    width: 600px; height: 300px;
+    background: #ddd;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start; /*부모영역을 기준으로 세로방향에서 상단으로 정렬(기본값) ~= vertical-align:top;*/
+    align-items: flex-end; /*부모영역을 기준으로 세로방향에서 하단으로 정렬 ~= vertical-align:bottom;*/
+    align-items: center; /*부모영역을 기준으로 세로방향에서 중앙으로 정렬 ~= vertical-align:middle;*/
+    align-items: baseline; /*내부 콘텐츠의 하단으로 정렬 ~= vertical-align:baseline;*/
+    align-items: stretch;
+}
+
+#align_items .flex_container .flex_item{
+    /* width: 100px; height: 120px; */
+}
+#align_items .flex_container .flex_item:nth-child(1){
+    background: #faf; font-size: 32px;
+}
+#align_items .flex_container .flex_item:nth-child(2){
+    background: #aff; font-size: 14px;
+}
+#align_items .flex_container .flex_item:nth-child(3){
+    background: #ff3; font-size: 28px;
+}
+#align_items .flex_container .flex_item:nth-child(4){
+    background: #aaf; font-size: 40px;
+}
+
+
+
+#h_01{
+    height: 60px;
+    background: #bcf;
+}
+#h_01 .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    background: #ffa;
+    display: flex;
+    justify-content: space-between; /* 자식의 위치를 가로방향 양쪽기준으로 배분*/
+    align-items: center; /*자식의 위치를 세로방향에서 중앙으로 정렬*/
+    padding: 0 10px;
+}
+#h_01 .wrap .logo{background: #caf;}
+#h_01 .wrap .logo a{
+    font-size: 32px;
+    color: #333;
+}
+#h_01 .wrap .logo a img{
+    display: block; 
+    height: 30px;
+}
+#h_01 .wrap nav{}
+#h_01 .wrap nav ul{
+    display: flex;
+    background: #acf;
+}
+#h_01 .wrap nav ul li{margin: 0 10px;}
+#h_01 .wrap nav ul li a{font-size: 15px; color: #555;}
+
+
+/* display: flex;는 부모와 자식간의 관계에서만 적용가능*/
+
+#h_02{height: 60px; background: #ccc;}
+#h_02 .wrap{
+    width: 1200px; height: 100%;
+    margin: 0 auto;
+    background: #fcf;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+#h_02 .wrap .logo{height: 100%; display: flex; align-items: center;}
+#h_02 .wrap .logo a{}
+#h_02 .wrap .logo a img{display: block; height: 40px;}
+
+#h_02 .wrap nav{}
+#h_02 .wrap nav > ul{display: flex; text-align: center;}
+#h_02 .wrap nav > ul > li{margin: 0 15px; position: relative;}
+#h_02 .wrap nav > ul > li > a{display: block; line-height: 60px; background: #aff; padding: 0 20px;}
+
+#h_02 .wrap nav > ul > li > ul{background: #ccc; max-height: 0; overflow: hidden;}
+#h_02 .wrap nav > ul > li:hover > ul{max-height: 180px; }
+#h_02 .wrap nav > ul > li > ul > li{}
+#h_02 .wrap nav > ul > li > ul > li a{display: block; line-height: 40px; font-size: 14px; color: #777;}
+
+#pd_frame{background: #fc2;}
+#pd_frame .wrap{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding-top: 20px
+}
+#pd_frame .wrap .box{
+    width: calc(25% - 20px);
+    height: 280px;
+    margin: 0 10px 20px;
+    background: #09f;
+}
+
+
+
+#align_content .flex_container{
+    width: 600px; height: 300px;
+    background: #ddd;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: flex-start; /*부모영역의 세로축을 기준으로 상단 위치*/
+    align-content: flex-end; /*부모영역의 세로축을 기준으로 하단 위치*/
+    align-content: center; /*부모영역의 세로축을 기준으로 중앙 위치*/
+    align-content: space-between; /*부모영역의 세로축을 기준으로 상하 분배하여 위치*/
+    align-content: space-around; /*각 자식의 영역을 부모영역의 세로축을 기준으로 상하 동일한 여백을 부여*/
+    align-content: stretch; 
+}
+
+#align_content .flex_container .flex_item{
+    width: 240px; /*height: 120px;*/
+}
+#align_content .flex_container .flex_item:nth-child(1){
+    background: #faf;
+}
+#align_content .flex_container .flex_item:nth-child(2){
+    background: #aff; 
+}
+#align_content .flex_container .flex_item:nth-child(3){
+    background: #ff3;
+}
+#align_content .flex_container .flex_item:nth-child(4){
+    background: #aaf;
+}
+
+/*
+[부모의 영역에...]
+display: flex;
+flex-direction: row 또는 column;
+flex-wrap: wrap;
+justify-content: center 또는 space-between;
+align-items: flex-start 또는 center 
+*/  
+
+
+
+/* 
+align-items vs align-content 
+align-items: 단일(한 줄) 영역을 수직방향에서 요소들을 위치시킬 때
+align-content: 복수의 라인을 수직방향에서 공간을(content) 위치 시킬 때
+*/
+
+.item_box{
+    background: #aaf; 
+    height: 40px; 
+    display: flex; 
+    align-items: center;
+    /* flex-wrap: wrap; */
+    padding: 0 40px;
+    margin-bottom: 120px;
+}
+.item_box .left{
+    width: 100px; height: 80px; 
+    background: #faa;
+}
+.item_box .right{
+    width: 200px; height: 20px;
+    background: #00f;
+}
+
+
+.content_box{
+    background: #aaf; 
+    height: 160px; 
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+    padding: 0 40px;
+    margin-bottom: 120px; 
+    align-items: center;
+}
+.content_box .left{
+    width: 100px; height: 80px; 
+    background: #faa;
+}
+.content_box .right{
+    width: 200px; height: 20px;
+    background: #00f;
+}
+
+
+
+#flex_grow .flex_container{
+    width: 100%; height: 300px;
+    background: #ccc;
+    display: flex;
+    align-items: stretch;
+}
+#flex_grow .flex_container .flex_item{
+    width: auto; height: auto;
+}
+#flex_grow .flex_container .flex_item:nth-child(1){
+    background: #faf;
+    flex-grow: 3;
+}
+#flex_grow .flex_container .flex_item:nth-child(2){
+    background: #aff;
+    flex-grow: 1; 
+}
+#flex_grow .flex_container .flex_item:nth-child(3){
+    background: #ff3;
+    flex-grow: 2;
+}
+#flex_grow .flex_container .flex_item:nth-child(4){
+    background: #aaf;
+    flex-grow: 1;
+}
+
+
+
+#flex_shrink .flex_container{
+    width: 100%; height: 300px;
+    background: #ccc;
+    display: flex;
+    align-items: stretch;
+}
+#flex_shrink .flex_container .flex_item{
+    width: 40%; height: auto;
+}
+#flex_shrink .flex_container .flex_item:nth-child(1){
+    background: #faf;
+    flex-shrink: 2;
+}
+#flex_shrink .flex_container .flex_item:nth-child(2){
+    background: #aff;
+    flex-shrink: 1; 
+}
+#flex_shrink .flex_container .flex_item:nth-child(3){
+    background: #ff3;
+    flex-shrink: 0;
+}
+#flex_shrink .flex_container .flex_item:nth-child(4){
+    background: #aaf;
+    flex-shrink: 1;
+}
+
+
+/*
+flex-shrink: 0; 본인에게 선언된 가로 폭을 그대로 적용
+flex-shrink: 정수값; 지정된 비율에 따라 면적을 축소시킨다는 의미
+*/
+
+#order .flex_container{
+    width: 100%; height: 300px;
+    background: #ccc;
+    display: flex;
+    align-items: stretch;
+}
+#order .flex_container .flex_item{
+    width: auto; height: auto;
+}
+#order .flex_container .flex_item:nth-child(1){
+    background: #faf;
+    flex-grow: 3;
+    order: 3;
+}
+#order .flex_container .flex_item:nth-child(2){
+    background: #aff;
+    flex-grow: 1; 
+    order: 4;
+}
+#order .flex_container .flex_item:nth-child(3){
+    background: #ff3;
+    flex-grow: 2;
+    order: 1;
+}
+#order .flex_container .flex_item:nth-child(4){
+    background: #aaf;
+    flex-grow: 1;
+    order: 2;
+}

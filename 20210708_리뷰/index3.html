@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <link rel="stylesheet" href="./css/style3.css">
+    </head>
+    <body>
+
+        <h2>레이아웃</h2>
+        <h3>float : left, right, none; (좌측 또는 우측으로 배치하여 나머지를 흐르게 한다. - 대상은 본인과 그 다음 형제들을
+            기준으로 잡는다.) clear:both; (다음에 작성된 구조가 이전에 사용된 float에 의해 영향을 받는 것을 막는다. = 끊어서 내려
+            주겠다는 의미)</h3>
+        <p>float 이 선언된 대상의 부모에 :after라는 공간에 display:block;과 clear:both; 값을 선언해 주어야 하는 이유
+            : 높이 공간이 부모 영역에 존재하지 않고 height값이 auto로 적용되었다면, float적용된 대상은 포스트잇 같은 존재(실효 높이 값을
+            부모가 인지를 할 수가 없음 = 배경을 넣어줄 수가 없다는 얘기와 동일하고 하단의 삼촌구조가 침범한다) / 박수 구조상 패딩과 마진 영역이
+            스타일 적용이 안됨
+        </p>
+
+        <h4>float 적용시 부모영역에 높이값이 존재할 경우</h4>
+        <div class="float_frame_01">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+        <div class="float_frame_02">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <h4>float 적용시 부모영역에 높이값이 존재하지 않을 경우</h4>
+
+        <div class="float_frame_03 top">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <div class="float_frame_03 bottom">
+            <div>1</div>
+            <div>2</div>
+            <div>3</div>
+        </div>
+
+        <h4>display:block; vs width:100% (확대 개념 padding 좌우측 추가시)</h4>
+
+        <div class="display_block"></div>
+        <!-- 공간을 그대로 한줄을 가져가겠다는 의미(패딩 추가시 내부에 패딩 영역이 잡힌다.) -->
+
+        <div class="width_100per"></div>
+        <!-- 공간의 영역의 가로값을 브라우저의 가로값을 가져다가 사용하겠다는 것을 의미(패딩 추가시 기존 100%라는 값에 추가로 확대된다) -->
+
+        <hr>
+
+        <h2>과제 12</h2>
+
+        <div id="ex_12">
+            <div class="ex_12_top"></div>
+            <div class="ex_12_bottom"></div>
+        </div>
+
+        <hr>
+
+        <h2>과제 13</h2>
+
+        <div id="ex_13">
+            <div class="ex_13_left"></div>
+            <div class="ex_13_right"></div>
+        </div>
+
+        <hr>
+
+        <h2>과제 14</h2>
+
+        <div id="ex_14">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+        <hr>
+
+        <h2>과제 15</h2>
+
+        <div id="ex_15">
+            <div class="box">
+                <div class="img"></div>
+                <h4>Loewe</h4>
+            </div>
+            <div class="box">
+                <div class="img"></div>
+                <h4>Dior Men</h4>
+            </div>
+            <div class="box">
+                <div class="img"></div>
+                <h4>Ahluwalia</h4>
+            </div>
+            <div class="box">
+                <div class="img"></div>
+                <h4>MSGM</h4>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>과제 16</h2>
+
+        <div id="ex_16">
+            <div class="img_part"></div>
+            <div class="txt_part">
+                <h4>Prada</h4>
+                <p>Can we chalk up all the suits with shorts to the continued effect of Zoom
+                    dressing? The blazer-up-top-and-airy-boxers-on-the-bottom look appeared across
+                    the European runways, reconfiguring suiting for a more casual lifestyle.</p>
+            </div>
+        </div>
+
+        <hr>
+
+        <h2>과제 17</h2>
+
+        <div id="ex_17">
+            <div class="img_part"></div>
+            <div class="txt_part">
+                <h4>Shop the Crisscross-Denim Trend Because It’s Here to Stay</h4>
+                <p>Straight-leg, skinny, and boyfriend jeans are mainstay silhouettes in most
+                    denim wardrobes. But for an au courant refresh, look no further than the best
+                    crisscross jeans of the season. Featuring overlapping waists from high-rise to
+                    low-slung, this asymmetrical denim look flaunts a freshness that reads subtle
+                    and not overly trendy.</p>
+            </div>
+        </div>
+
+<hr>
+
+        <h2>과제 18</h2>
+
+        <div id="ex_18">
+            <div class="top">
+                <div class="img_part"></div>
+                <div class="txt_part">
+                    <h4>Rick Owens</h4>
+                    <p>A year of covering it up has given way to showing it all off. Silk shirts at
+                        Etro were unbuttoned to the navel, while the guys at Burberry had no shirts at
+                        all. And don’t forget Jacquemus’s crop top.</p>
+                </div>
+            </div>
+            <div class="bottom">
+                <div class="img_part"></div>
+                <div class="txt_part">
+                    <h4>Burberry</h4>
+                    <p>In a season surprisingly short on jackets, coats, and hoodies, knitwear
+                        became the predominant method of getting graphics across. At JW Anderson crests
+                        and strawberries nodded to British heritage, while Hermès and Giorgio Armani
+                        presented abstract flower designs that brought a gentle femininity to menswear.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="img_space">
+            <div class="bottom_box">
+                <div>
+                    <h3>Title</h3>
+                    <p>context</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="img_space_table">
+            <div class="dark">
+                <div>
+                    <h3>Title</h3>
+                    <p>context</p>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
